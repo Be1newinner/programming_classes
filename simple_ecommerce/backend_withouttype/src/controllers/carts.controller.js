@@ -1,6 +1,7 @@
 import { CartModel } from "../models/carts.model.js";
+import { TAX } from "../constants/rates.js"
 
-export async function addItemInCartController(req, res) {
+export async function addItemQuanityInCartController(req, res) {
   try {
     const {
       _id,
@@ -34,7 +35,7 @@ export async function addItemInCartController(req, res) {
       0
     );
     const total = subtotal - discount;
-    const tax = total * 0.18;
+    const tax = total * TAX;
 
     if (_id) {
       const data = await CartModel.updateOne(
@@ -69,8 +70,62 @@ export async function addItemInCartController(req, res) {
   }
 }
 
+export async function increaseItemQuanityInCartController(req, res) {
+  try {
+    const {
+      _id,
+      item,
+      uid,
+    } = req.body;
+
+    const { title, price, mrp, img, sku } = item;
+
+    if (!_id) {
+      const newCart = new CartModel({
+        uid,
+        items: [
+          { title, price, mrp, img, sku, qty: 1 }
+        ],
+        total: price + (TAX * price),
+        subtotal: price,
+        discount: mrp - price,
+        tax: TAX * price,
+      });
+
+      const cart = await newCart.save();
+      return res.status(201).json({ message: "Cart created successfully", cart });
+    }
+
+    const fetchCart = await CartModel.findById(_id).lean();
+
+    
+
+
+
+
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: error.message, data: null });
+  }
+}
+
 export async function getAllItemsOfCartController(req, res) {
   try {
+
+    const data = await CartModel.find({});
+    if (!data) {
+      return res.status(404).json({
+        message: "No Products Found!",
+        data: null,
+      });
+    }
+
+    return res.status(200).json({
+      message: "Products Fetched Successfully!",
+      data,
+    })
+
   } catch (error) {
     return res.status(500).json({
       message: error.message,
@@ -78,6 +133,7 @@ export async function getAllItemsOfCartController(req, res) {
     });
   }
 }
+
 export async function updateItemQuantityInCartController(
   req,
   res
@@ -90,18 +146,7 @@ export async function updateItemQuantityInCartController(
     });
   }
 }
-export async function removeItemFromCartController(
-  req,
-  res
-) {
-  try {
-  } catch (error) {
-    return res.status(500).json({
-      message: error.message,
-      data: null,
-    });
-  }
-}
+
 export async function clearCartController(req, res) {
   try {
   } catch (error) {
