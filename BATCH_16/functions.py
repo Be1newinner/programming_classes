@@ -29,7 +29,8 @@ fullname("Karan","Kumar", 21)
 '''
 
 
-### Optional Arguments
+''' 
+Optional Arguments
 def fullname(fname, lname, age=25):
     name = fname + " " + lname
     print("I am" , name)
@@ -38,3 +39,20 @@ def fullname(fname, lname, age=25):
 fullname("Vijay","Kumar", 25)
 fullname("Ajay","Kumar")
 fullname("Karan","Kumar", 21)
+'''
+
+''' 
+Return Values
+
+'''
+
+def sum(a,b):
+    total = a + b
+    return total
+
+# result = sum(7,6)
+# result = 13
+
+print(sum(7,6))
+#print(13)
+
