@@ -96,9 +96,10 @@ export async function increaseItemQuanityInCartController(req, res) {
       return res.status(201).json({ message: "Cart created successfully", cart });
     }
 
-    const fetchCart = await CartModel.findById(_id).lean();
+    const fetchCart = await CartModel.updateOne({ _id }, {
+      items:
+    })
 
-    
 
 
 

@@ -15,7 +15,7 @@ const ProductSchema = new Schema(
   }
 );
 
-const UserSchema = new Schema(
+const CartSchema = new Schema(
   {
     items: { type: [ProductSchema], required: true },
     total: { type: Number, required: true, min: 0 },
@@ -30,4 +30,4 @@ const UserSchema = new Schema(
   }
 );
 
-export const CartModel = model("User", UserSchema);
+export const CartModel = model("Cart", CartSchema);
