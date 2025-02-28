@@ -9,6 +9,8 @@ const productSchema = new Schema({
   sku: String,
   rating: Number,
   description: String,
+}, {
+  timestamps: true
 });
 
 export const ProductModel = model("Product", productSchema);
