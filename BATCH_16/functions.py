@@ -70,8 +70,6 @@ result = sum(5,6)
 
 print(result)
 
-'''
-
 # Recursive function
 
 # Find factorial of a number
@@ -87,3 +85,78 @@ result = fact(5)
 print(result)
 
 # return 5 * 4 * 3 * 2 * 1 * 0 * -1
+
+# Decorators
+def repeater(n):
+   def my_decorator(func):
+    def wrapper(a,b):
+        print("Let's Start Sum Function", n)
+        return str(func(a,b)) + "\n" + "Function End"
+    return wrapper
+   return my_decorator
+   
+@repeater(5)
+def sum(a,b):
+    return a + b
+    
+print(sum(5,6))
+
+# Higher Order Function
+def sum(a,b):
+    return a + b
+
+
+def multi(a,b):
+    return a * b
+    
+
+def result(func, a, b):
+    return func(a,b) + 2 
+    
+
+print(result(sum, 5, 7))
+
+# Simple Decorator
+
+def my_decorator(func):
+  def wrapper():
+    print("Let's Start Sum Function")
+    func()
+    print("Sum Function End")
+  return wrapper
+  
+@my_decorator
+def sum():
+    print("Hello")
+    
+print(sum())
+
+
+# Decorator with function Argumnets
+
+def my_decorator(func):
+  def wrapper(a,b):
+    print("Let's Start Sum Function")
+    func(a,b)
+    print("Sum Function End")
+  return wrapper
+  
+@my_decorator
+def sum( a , b ):
+    print(a + b)
+    
+sum(7,8)
+
+# Decorator with function Argumnets and return
+def my_decorator(func):
+  def wrapper(a,b):
+    print("Let's Start Sum Function")
+    return str(func(a,b)) + "\nSum Function End"
+  return wrapper
+  
+@my_decorator
+def sum( a , b ):
+    return a + b
+    
+print(sum(7,8))
+'''
