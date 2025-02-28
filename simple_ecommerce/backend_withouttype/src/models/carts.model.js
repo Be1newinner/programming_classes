@@ -1,5 +1,4 @@
 import mongoose, { model, Schema } from "mongoose";
-import { UserModel } from "./users.model.js";
 
 const CartSchema = new Schema(
   {
@@ -18,19 +17,13 @@ const CartSchema = new Schema(
     tax: { type: Number, required: true, min: 0, default: 0 },
     discount: { type: Number, required: true, min: 0, default: 0 },
     _id: {
-      type: mongoose.Schema.Types.ObjectId, ref: "users", validate: {
-        validator: async function (value) {
-          const data = await UserModel.exists({ _id: value });
-          console.log("VALIDATION USER ", data)
-          return data;
-        },
-        message: "User is invalid!"
-      }
-    },
+      type: mongoose.Schema.Types.ObjectId, ref: "users"
+    }
   },
   {
     autoIndex: true,
-    _id: false
+    _id: false,
+    timestamps: true
   }
 );
 
