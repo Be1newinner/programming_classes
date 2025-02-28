@@ -1,0 +1,48 @@
+<html>
+<head>
+   <title>THE FLEX</title>
+<style>
+.parent {
+height: 500px;
+width: 500px;
+background: red;
+/* overflow: visible;  hidden, scroll, auto, visible 
+overflow-y: none;
+overflow-x: scroll;
+*/
+/*
+display: none;  none 
+opacity: 0; 0 to 1 ya percent
+visibility: hidden;  visible , hidden 
+*/
+display: flex;
+flex-direction: row; /* row , column, column-reverse */
+flex-wrap: wrap-reverse; /* wrap, no-wrap */
+}
+
+.child {
+height: 150px;
+width: 150px;
+background: blue;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="parent">
+
+<div class="child">1</div>
+<div class="child">2</div>
+<div class="child">3</div>
+<div class="child">4</div>
+<div class="child">5</div>
+<div class="child">6</div>
+<div class="child">7</div>
+<div class="child">8</div>
+
+</div>
+<h1>hello</h1>
+</body>
+</html>
