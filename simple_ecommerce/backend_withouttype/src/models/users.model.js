@@ -9,7 +9,7 @@ const UserSchema = new Schema(
     gender: { type: String, enum: ["MALE", "FEMALE", "OTHER"] },
     role: {
       type: String,
-      enum: ["VENDOR", "USER", "ADMIN"]
+      enum: ["USER", "ADMIN"]
     },
     password: {
       type: String,
@@ -19,6 +19,7 @@ const UserSchema = new Schema(
   },
   {
     autoIndex: true,
+    timestamps: true
   }
 );
 
