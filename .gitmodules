@@ -1,0 +1,3 @@
+[submodule "simple-ecommerce"]
+	path = simple-ecommerce
+	url = https://github.com/Be1newinner/simple_ecommerce_for_students
