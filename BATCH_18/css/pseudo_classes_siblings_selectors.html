@@ -1,0 +1,89 @@
+<html>
+<head>
+   <title>Pseudo Classes Sibling Selector</title>
+   
+  <style>
+ 
+ ul:first-child li:first-child {
+    color: red;
+  }
+  
+  li:nth-child(even) {
+    color: orange;
+    font-size: 24px;
+  }
+  
+  li:nth-child(odd) {
+    color: blue;
+    font-size: 20px;
+  }
+  
+  li:last-child {
+    color: green;
+  }
+  
+  li:nth-child(n + 3) {
+    background: magenta;
+  }
+  
+  li:nth-child(-n + 3) {
+    text-decoration: underline;
+  }
+  
+  dd:first-of-type {
+    color: pink;
+  }
+  
+   dd:last-of-type {
+    color: blue;
+  }
+  
+  dl *:nth-child(2) {
+    color: blue;
+    font-size: 40px;
+  }
+    
+  dd:nth-of-type(2) {
+    color: red;
+    font-size: 24px;
+  }
+  
+  </style>
+   
+</head>
+<body>
+
+<ul>
+
+<li> cow </li>
+<li> cow 1 </li>
+<li> cow 3 </li>
+<li> cow 2</li>
+<li> cow 4</li>
+
+</ul>
+
+<ul>
+
+<li> cow </li>
+<li> cow 1 </li>
+<li> cow 3 </li>
+<li> cow 2</li>
+<li> cow 4</li>
+
+</ul>
+
+<dl>
+  <dt>Fruits</dt>
+  <dd>Mango</dd>
+  <dd>grapes</dd>
+  <dd>Banana</dd>
+  
+  <dt>Fruits</dt>
+  <dd>Mango</dd>
+  <dd>grapes</dd>
+  <dd>Banana</dd>
+</dl>
+
+</body>
+</html>
