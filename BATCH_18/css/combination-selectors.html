@@ -1,0 +1,58 @@
+<html>
+<head>
+   <title>Selectors</title>
+
+<style>
+
+/* descendant selector */
+div span {
+color: red;
+}
+
+div .green {
+font-size: 30px;
+}
+
+/* child selector */
+div > span {
+font-weight: 900;
+}
+
+
+
+.green {
+color: yellow;
+}
+
+div p ~ span {
+   text-decoration: underline;
+}
+
+div p + span {
+   text-decoration: line-through;
+   font-size: 72px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div>
+<span>Direct Child das</span>
+<p>Hello <span>Spdas das</span> </p>
+<p>Hello</p>
+<span>Direct Child das</span>
+<p>Hello <span class="green">Spdas das</span> </p>
+<p>Hello</p>
+<span>Direct Child das</span>
+<span>Direct Child das</span>
+
+</div>
+
+<p id="first">Hello</p>
+<p>Hello</p>
+<p class="second green">Hello</p>
+<span class="second">Spdas das</span>
+</body>
+</html>
