@@ -12,27 +12,60 @@
     overflow-y: auto;
       */
       display: flex;
-      flex-wrap: wrap;
       flex-direction: row;
-      justify-content: space-evenly ; /* left, center, right, space-between, space-around, space-evenly */
-    align-items: center;  /* flex-start, center,  flex-end,  */
-      align-content: space-around; /* flex-start, center, flex-end, space-between, space-around, space-evenly */
-    }
+      /*
+      justify-content: space-evenly ;  left, center, right, space-between, space-around, space-evenly 
+      */
+      /* align-items: center;   flex-start, center,  flex-end,  */
+      /* align-content: flex-start;  flex-start, center, flex-end, space-between, space-around, space-evenly  */
+      /* gap: 10px; */
+      /* row-gap: 10px; */
+      /* column-gap: 20px; */
+   
+      /* gap: 5px 50px; */
+
+      }
+      
+      
     
     .child{
       background: blue;
       height: 130px;
       width: 130px;
+      flex-shrink: 1;
+    }
+    
+    .child1 {
+      flex-shrink: 4;
+      background: green;
+    }
+    
+        
+    .child2 {
+
+      background: pink;
+    }
+    
+        
+    .child3 {
+
+      background: orange;
+    }
+    
+        
+    .child4 {
+
+      background: yellow;
     }
    </style>
 </head>
 <body>
 
 <div class="parent">
-<div class="child">1</div>
-<div class="child">2</div>
-<div class="child">3</div>
-<div class="child">4</div>
+<div class="child child1">1</div>
+<div class="child child2">2</div>
+<div class="child child3">3</div>
+<div class="child child4">4</div>
 <div class="child">5</div>
 <div class="child">6</div>
 <div class="child">7</div>
