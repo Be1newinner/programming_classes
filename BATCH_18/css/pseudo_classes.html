@@ -1,0 +1,59 @@
+<html>
+<head>
+   <title>Pseudo Classes</title>
+
+<style>
+    
+    a {
+        color: green;
+        font-weight: 900;
+      
+      &:hover {
+        color: white;
+        background: green;
+      }
+      
+      &:active {
+        color: red;
+      }
+    
+      &:visited {
+        color: purple;
+      }
+    
+    }
+    
+    
+    p {
+     color: red;
+          
+     & + span {
+          color: yellow;
+     }
+    }
+    
+    input {
+     background: red;
+     
+     &:focus {
+      background: green;
+     }
+     
+     &:disabled {
+       background: black;
+     }
+    }
+    
+    
+</style>
+
+</head>
+<body>
+
+<a href="https://google.com">Google</a>
+<a href="https://fb.com">Facebook</a>
+
+<input type="email" placeholder="type your email!" disabled="true" />
+
+</body>
+</html>
