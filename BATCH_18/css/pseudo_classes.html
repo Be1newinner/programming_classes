@@ -44,7 +44,15 @@
      }
     }
     
+    div p+h1, div span+h1, div p+a, div span+a{
+     color: orange
+    }
     
+
+    div :is(p, span) + :is(h1,a) {
+     color: orange
+    }
+
 </style>
 
 </head>
@@ -52,6 +60,18 @@
 
 <a href="https://google.com">Google</a>
 <a href="https://fb.com">Facebook</a>
+
+<div>
+ <h1>Noohara</h1>
+ <p>Hello</p>
+ <h1>Bye</h1>
+ <span>Go</span>
+ <h1>Shinchan</h1>
+ <p>Helloa</p>
+ <a>Byea</a>
+ <span>Goa</span>
+ <a>Shinchana</a>
+</div>
 
 <input type="email" placeholder="type your email!" disabled="true" />
 

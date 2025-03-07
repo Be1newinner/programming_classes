@@ -1,0 +1,42 @@
+<html>
+<head>
+   <title>Sample</title>
+   
+<style>
+
+a[target] {
+  color: green;
+}
+
+a[target=_blank] {
+  color: red;
+}
+
+a[href$='.in'] {
+  color: green;
+  font-weight: 900;
+}
+
+a[href^='https'] {
+  color: red;
+  font-weight: 900;
+}
+
+a[href*='web'] {
+  color: orange;
+  font-weight: 900;
+}
+
+</style>
+   
+</head>
+<body>
+
+<a href="https://Google.com" >Google</a>
+<a href="https://shipsar.in" target="_blank" >shipsar</a>
+<a href="https://shipsar.in" target="parent" >shipsar</a>
+<a href="http://web.shipsar.in" >shipsar web</a>
+<a href="https://blogs.shipsar.in" >shipsar blogs</a>
+
+</body>
+</html>
