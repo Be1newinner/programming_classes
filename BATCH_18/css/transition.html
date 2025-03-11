@@ -1,0 +1,39 @@
+<html>
+<head>
+   <title>Sample</title>
+    <style>
+      div {
+       width: 100px;
+        height: 100px;
+        background: red;
+      }
+    
+      .box {
+        background: green;
+        /* transition: background 2s,transform 0.5s; 
+        transition: all 2s;
+        */
+        transition-property: transform, background;
+        transition-duration: 0.5s, 2s;
+        transition-delay: 2s;
+        
+        
+          &:hover {
+            transform: skewY(45deg) scale(1.5); 
+            background: magenta;
+          }
+  }
+      
+    </style>
+</head>
+<body>
+<div class="box">
+ Vijay
+</div>
+
+<div>
+ 
+</div>
+
+</body>
+</html>

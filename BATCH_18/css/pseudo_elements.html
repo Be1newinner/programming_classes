@@ -1,0 +1,62 @@
+<html>
+<head>
+   <title>Sample</title>
+
+<style>
+
+ul > li {
+color: red;
+list-style-type: "🐀";
+
+&:hover {
+ list-style-type: "🐹";
+}
+
+&::after {
+ content: " <= ";
+ color: green;
+}
+
+&::before {
+content: "🐇 ";
+width: 20px;
+height: 20px;
+background: white;
+position: absolute;
+}
+
+&:hover::before {
+background: red;
+}
+
+&:nth-child(3n + 2) {
+  &::after {
+    content: " 😑 ";
+    color: green;
+  }
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<p>Pseudo Elements</p>
+
+<ul>
+<li>Cow</li>
+<li>Dog</li>
+<li>Cat</li>
+<li>Cow</li>
+<li>Dog</li>
+<li>Cat</li>
+<li>Cow</li>
+<li>Dog</li>
+<li>Cat</li>
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .product-card {
+            width: 250px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .product-price {
+            color: #27ae60;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buy-button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .buy-button:hover {
+            background: #c0392b;
+        }
+        
+        .product-card:hover .buy-button {
+          background: green;
+        }
+        
+        .product-card:hover :is(.product-price, .product-title) {
+          color: red;
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="product-card">
+        <div class="product-image">
+            <img src="https://fastly.picsum.photos/id/782/536/354.jpg?hmac=eWN0fyMjNQNklPhoPoqUarvKzjk7zYoevQGyFR6NaX0" alt="Product Image">
+        </div>
+        <div class="product-title">Awesome Product</div>
+        <div class="product-price">$49.99</div>
+        <button class="buy-button">Buy Now</button>
+    </div>
+
+</body>
+</html>
+
