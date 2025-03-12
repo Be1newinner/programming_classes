@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-Only Website Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+          width: 100%;
+          max-width: 1280px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        body {
+            background: #f4f4f4;
+        }
+
+        /* Navbar */
+        .navbar, header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .navbar {
+         display: none;
+        }
+
+        .navbar span {
+            display: block;
+            padding: 8px 0;
+        }
+
+        /* Sidebar (acts as top section now) */
+        .sidebar {
+            background: #444;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            max-width: 500px;
+            min-width: 200px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        
+        
+        @media screen and (min-width : 768px) {
+        .sidebar {
+         display: block;
+        }   
+        }
+        
+      @media screen and (min-width : 420px) {  
+      .navbar {
+       display: flex;
+       gap: 10px;
+      }
+      
+      .main-content {
+            display: flex;
+        }
+      
+      header svg {
+       display: none;
+      }
+      
+        }
+        
+        
+      @media screen and (min-width : 640px) {   
+        }
+        
+        
+      @media screen and (min-width : 1024px) {   
+        }
+        
+        
+      @media screen and (min-width : 1280px) {   
+        }
+        
+        
+      @media screen and (min-width : 1536px) {   
+        }
+    </style>
+</head>
+<body>
+
+<header>
+<div class="container">
+    <div class="navbar">
+        <span>Home</span>
+        <span>About</span>
+        <span>Contact</span>
+        <span>Login</span>
+        <span>Blog</span>
+        <span>Shop</span>
+    </div>
+    
+<svg xmlns="http://www.w3.org/2000/svg" fill="white"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
+
+</div>
+</header>
+
+    <div class="sidebar">
+        Sidebar Content
+    </div>
+
+    <div class="main-content container">
+        <div class="section">Section 1 Content</div>
+        <div class="section">Section 2 Content</div>
+           <div class="section">Section 3 Content</div>
+        <div class="section">Section 4 Content</div>
+           <div class="section">Section 5 Content</div>
+        <div class="section">Section 6 Content</div>
+    </div>
+
+    <div class="footer">Footer</div>
+
+</body>
+</html>
+
