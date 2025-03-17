@@ -77,3 +77,34 @@ import datetime
         difference = d1 - d2
 
 '''
+
+
+import datetime
+
+# For Current Date
+# print(datetime.date.today())
+
+# Create a new date
+# dob = datetime.date(2004,7,1)
+# today = datetime.date.today()
+
+# print(dob, today, (today - dob))
+
+# Get Day, weekday, year and month from a date
+# print(today.weekday()) # 0 - 6
+# print(today.year)
+# print(today.month)
+# print(today.day)
+
+# For Current Time
+dt = datetime.datetime.now()
+# print(dt)
+# print(dt.year)
+# print(dt.month)
+# print(dt.day)
+# print(dt.weekday())
+# print(dt.hour)
+# print(dt.minute)
+# print(dt.second)
+# print(dt.microsecond)
+print(dt.strftime("%d/%m/%y %H:%M:%S"))
