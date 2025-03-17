@@ -1,0 +1,267 @@
+<html>
+<head>
+   <title>THE BAND</title>
+   <style>
+    * {
+     padding: 0;
+     margin: 0;
+    scroll-behavior: smooth;
+    }
+    
+    body {
+     padding-top: 45px;
+
+    }
+   
+     header {
+    background-color: black;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    padding: 0 10px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+     }
+     
+     navbar > ul {
+     list-style-type: none;
+     display: flex;
+     gap: 20px;
+     
+     & > li {
+       padding: 15px 20px;
+       cursor: pointer;
+       
+       &:hover {
+        background: rgb(204,204,204);
+        color: black;
+       }
+     }
+     }
+     
+     .search_icon {
+      height: 100%;
+      padding: 12px 16px;
+      cursor: pointer;
+      
+       &:hover {
+        background: red;
+        color: black;
+       }
+     }
+     
+     #hero_section {
+      width: 100%;
+      background: black;
+      background-image: url('https://www.w3schools.com/w3images/chicago.jpg');
+      background-size: cover;
+      aspect-ratio: 16/9;
+      position: relative;
+      max-height: 100vh;
+      
+      & > div {
+      position: absolute;
+      bottom: 40px;
+      color: white;
+      right: 50%;
+      transform: translateX(50%);
+      
+      & > p {
+       text-align: center;
+       font-size: 20px;
+      }
+      }
+     }
+     
+     .container {
+     width: 768px;
+     margin-left: auto;
+     margin-right:auto;
+     }
+     
+     #band_section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;     
+      padding: 80px 0;
+      }
+     
+     #band_section > :is(h2,p) {
+      text-align: center;
+     }
+     
+    #band_section > p:nth-of-type(2) {
+      text-align: justify;
+     }
+     
+     .person_container{
+       display: flex;
+justify-content: space-between;
+
+      & p {
+      text-align: center;
+      margin-bottom: 10px;
+      } 
+      
+      & img {
+      border-radius: 10px;
+      box-shadow: 0px 2px 4px 0px gray;
+      } 
+     }
+     
+     #tour_dates_section {
+      background: black;
+      color: white;
+      
+      & > .container {
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        
+        & > :is(h2, p) {
+         text-align: center;
+        }
+      }
+     }
+     
+     .month_container {
+       display: flex;
+       flex-direction: column;
+       
+       & > div {
+        background: white;
+        color: black;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        
+        &:not(:nth-of-type(3)) {
+         border-bottom: 1px solid gray;
+        }
+       }
+       
+       & .sold_out {
+        background: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 0px 10px;
+       }
+       
+       & .counter{
+        height: 18px;
+        width: 18px;
+        background: black;
+        color: white;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+       }
+       
+     }
+     
+   </style>
+</head>
+<body>
+
+<header>
+ <navbar>
+   <ul>
+     <li> 
+     <a href="#hero_section">HOME</a>
+     </li>
+     <li> <a href="#band_section">BAND</a> </li>
+     <li> <a href="#tour_dates_section">TOUR </a></li>
+     <li> <a>CONTACT </a></li>
+     <li> <a>MORE </a></li>
+   </ul>
+ </navbar>
+ 
+ <div class="search_icon">
+<svg  width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</div>
+</header>
+
+<main>
+<section id="hero_section">
+<div>
+<p>New York</p>
+<p>The atmosphere in New York is lorem ipsum.</p>
+</div>
+</section>
+
+<section id="band_section" class="container">
+ <h2> THE BAND </h2>
+ <p>We love music</p>
+ <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ 
+ <div class="person_container">
+   <div>
+     <p>Vijay Kumar</p>
+     <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Vijay" height="153" width="153" />
+   </div> 
+  <div>
+     <p>Vijay Kumar</p>
+     <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Vijay" height="153" width="153" />
+   </div> 
+  <div>
+     <p>Vijay Kumar</p>
+     <img src="https://www.w3schools.com/w3images/bandmember.jpg" alt="Vijay" height="153" width="153" />
+   </div> 
+ </div>
+</section>
+
+<section id="tour_dates_section">
+<div class="container">
+ <h2> TOUR DATES </h2>
+ <p>Remember to book your tickets!</p>
+ 
+ <div class="month_container">
+  <div>
+  <div>
+   <span>September</span>
+   <span class="sold_out">Sold Out</span>
+  </div>
+  </div>
+  <div>
+  <div>
+   <span>October</span>
+   <span class="sold_out">Sold Out</span>
+  </div>
+  </div>
+  <div>
+  <div>
+   <span>November</span>
+  </div>
+  <div class="counter"><span>3</span></div>
+ </div>
+ 
+ </div>
+
+ <div class="cards_container">
+ </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14025.513062112626!2d77.22901879999999!3d28.49826495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce13c441de79b%3A0x5425680b78d2adc6!2sGayatri%20Institute%20of%20PS%20%26%20S%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1742211693493!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+Powered by shipsar.in
+</footer>
+
+</body>
+</html>
