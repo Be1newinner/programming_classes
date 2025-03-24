@@ -1,9 +1,11 @@
 const express = require("express");
+const multer = require("multer");
 
 /*
  ****API Request METHODS
 
  DOCS https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods
+const upload = multer({ dest: 'uploads/' })
 
 1. GET  => unsecured data Share, small data retrieve
 2. POST => Secured Data Share, Big retrieve, New Data Add Database
@@ -20,6 +22,8 @@ CONNECT
 
 const app = express();
 app.use(express.json()) // to fetch data from Body
+app.use(express.urlencoded())
+const upload = multer({ dest: 'uploads/' })
 
 const PORT = 3001;
 
@@ -29,6 +33,8 @@ const PORT = 3001;
     1. params
     2. query
     3. body
+        a. json => application/json
+        b. formdata => multipart/form-data
 
 */
 
@@ -60,6 +66,7 @@ app.get("/contact/vijay", (req, res) => {
     })
 })
 
+
 app.get("/:productID/about", (req, res) => {
 
     // const query = req.query;
@@ -75,10 +82,26 @@ app.get("/:productID/about", (req, res) => {
     })
 })
 
-app.post("/", (req, res) => {
+app.post("/", upload.single('avatar'), (req, res) => {
 
     // const { name, age } = req.query;
     const body = req.body;
+
+    // console.log(req)
+    console.log(body);
+
+    res.send({
+        data: "HELLO I AM VIJAY! POST",
+        body
+    })
+})
+
+app.post("/images", upload.array('avatar', 4), (req, res) => {
+
+    // const { name, age } = req.query;
+    const body = req.body;
+
+    // console.log(req)
     console.log(body);
 
     res.send({
