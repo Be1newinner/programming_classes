@@ -1,9 +1,10 @@
 const express = require("express");
 const connectDB = require("./src/config/db");
 const UserRouter = require("./src/routes/users.route.js");
+const ProductRouter = require("./src/routes/productRoutes.js");
 
 const app = express();
-const PORT = 8000;
+const PORT = 8001;
 
 app.use(express.json())
 
@@ -14,6 +15,7 @@ app.get("/", (_, res) => {
 })
 
 app.use("/users", UserRouter);
+app.use("/products", ProductRouter);
 // app.use("/products", ProductRouter);
 
 connectDB().then(() => {
@@ -21,5 +23,5 @@ connectDB().then(() => {
         console.log("YOUR BACKEND IS RUNNING AT PORT ", PORT);
     })
 }).catch((error) => {
-    console.error(error);
+    console.error(error.message);
 })
