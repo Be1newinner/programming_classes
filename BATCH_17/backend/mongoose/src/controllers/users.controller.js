@@ -1,4 +1,5 @@
 const { UserModel } = require("../models/users.models.js");
+const { TextJoiner, verifyPassword } = require("../utils/hashing.js");
 
 exports.fetchAllUsers = async (req, res) => {
     try {
@@ -72,7 +73,27 @@ exports.loginUser = async (req, res) => {
         // }, "-__v, -password")
 
         const data = await UserModel.findOne({
-            email, password
+            email
+        }).select({
+            password: true,
+        }).lean()
+
+
+        if (!data) {
+            res.status(404).send({ error: "user not found!" });
+            return;
+        }
+
+        const hashedPassword = await verifyPassword(password, data.password)
+        console.log({ hashedPassword });
+
+        if(!hashedPassword) {
+            res.status(404).send({ error: "password invalid!" });
+            return;
+        } 
+
+        const user = await UserModel.findOne({
+            email
         }).select({
             __v: false,
             password: false,
@@ -82,14 +103,14 @@ exports.loginUser = async (req, res) => {
 
         // console.log(data)
 
-        if (!data) {
+        if (!user) {
             res.status(404).send({ error: "Invalid credentials!" });
             return;
         }
 
         res.status(200).send({
-            user_id: data._id,
-            name: data.name,
+            user_id: user._id,
+            name: user.name,
             email
         })
 

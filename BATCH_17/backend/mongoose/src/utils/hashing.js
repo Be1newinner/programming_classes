@@ -1,8 +1,18 @@
+const argon2 = require('argon2');
+
+async function hashPassword(text) {
+    return await argon2.hash(text);
+}
+
+async function verifyPassword(password, hashedpassword) {
+    return await argon2.verify(hashedpassword, password)
+}
+
 function TextJoiner(text, limit = 10) {
     let splitted = text.toLowerCase().replaceAll(" ", "").split("")
     let nums = splitted.map(e => String(e.charCodeAt()))
     let length = nums.join("").length;
-    if(length < limit) throw new Error("text is too short!")
+    if (length < limit) throw new Error("text is too short!")
 
     while (length > limit) {
         let i = 0
@@ -20,3 +30,8 @@ function TextJoiner(text, limit = 10) {
 
     return nums.join("");
 }
+
+
+
+
+module.exports = { TextJoiner, hashPassword, verifyPassword }
