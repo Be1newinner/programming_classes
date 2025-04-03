@@ -61,7 +61,8 @@ exports.loginUser = async (req, res) => {
     try {
 
         const { email, password } = req.body;
-
+        const cookies = req.cookies;
+        console.log("cookies", cookies)
         // const data = await UserModel.findOne({
         //     email, password
         // }, {
@@ -120,7 +121,11 @@ exports.loginUser = async (req, res) => {
             return;
         }
 
-        res.cookie("refresh_token", tokens.refreshToken).status(200).send({
+        res.cookie("refresh_token", tokens.refreshToken, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "strict"
+        }).status(200).send({
             user_id: user._id,
             name: user.name,
             email,

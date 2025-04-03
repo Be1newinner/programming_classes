@@ -4,13 +4,16 @@ const express = require("express");
 const connectDB = require("./src/config/db");
 const UserRouter = require("./src/routes/users.route.js");
 const ProductRouter = require("./src/routes/productRoutes.js");
+const swaggerDocs = require("./src/config/swagger.js");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 const PORT = 8001;
 
-// console.log(process.env.SECRET_TOKEN)
+swaggerDocs(app)
 
 app.use(express.json())
+app.use(cookieParser())
 
 app.get("/", (_, res) => {
     res.send({
