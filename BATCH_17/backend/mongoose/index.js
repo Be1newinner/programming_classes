@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const connectDB = require("./src/config/db");
 const UserRouter = require("./src/routes/users.route.js");
@@ -5,6 +7,8 @@ const ProductRouter = require("./src/routes/productRoutes.js");
 
 const app = express();
 const PORT = 8001;
+
+// console.log(process.env.SECRET_TOKEN)
 
 app.use(express.json())
 

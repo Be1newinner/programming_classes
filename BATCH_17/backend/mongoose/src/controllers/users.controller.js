@@ -1,5 +1,6 @@
 const { UserModel } = require("../models/users.models.js");
 const { TextJoiner, verifyPassword } = require("../utils/hashing.js");
+const { generateLoginTokens } = require("../utils/jwt.js");
 
 exports.fetchAllUsers = async (req, res) => {
     try {
@@ -87,10 +88,10 @@ exports.loginUser = async (req, res) => {
         const hashedPassword = await verifyPassword(password, data.password)
         console.log({ hashedPassword });
 
-        if(!hashedPassword) {
+        if (!hashedPassword) {
             res.status(404).send({ error: "password invalid!" });
             return;
-        } 
+        }
 
         const user = await UserModel.findOne({
             email
@@ -108,10 +109,22 @@ exports.loginUser = async (req, res) => {
             return;
         }
 
-        res.status(200).send({
+        const tokens = await generateLoginTokens({
+            id: user._id,
+            email: user.email,
+            role: "USER"
+        });
+
+        if (!tokens) {
+            res.status(500).send({ error: "Internal server error!" })
+            return;
+        }
+
+        res.cookie("refresh_token", tokens.refreshToken).status(200).send({
             user_id: user._id,
             name: user.name,
-            email
+            email,
+            accesToken: tokens.accessToken
         })
 
     } catch (error) {
