@@ -1,5 +1,5 @@
 
-const data = require("./src/offline/products.json");
+// const data = require("./src/offline/products.json");
 const express = require("express");
 
 const productsData = [
@@ -105,7 +105,6 @@ const productsData = [
     }
 ]
 
-
 const app = express();
 const PORT = 8000;
 
@@ -135,7 +134,7 @@ app.delete("/", (req, res) => {
     res.send("WELCOME TO MY HOMEPAGE! DELETE")
 })
 
-app.get("/contact", (req, res) => {
+app.get("/contact", (X-Powered-Byreq, res) => {
     res.send("WELCOME TO MY CONTACT!")
 })
 
@@ -153,7 +152,7 @@ app.get("/about/:slug/blog/:id", (req, res) => {
 })
 
 app.get("/products", (req, res) => {
-    res.send({
+    res.status(200).send({
         data: productsData,
         message: "Products fetched successfully!"
     })
