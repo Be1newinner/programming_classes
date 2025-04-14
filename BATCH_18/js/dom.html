@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Demo - Student Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f7;
+        padding: 20px;
+      }
+      h1 {
+        color: #2c3e50;
+      }
+      .student-list {
+        background: #fff;
+        padding: 10px;
+        border-radius: 6px;
+        margin-top: 10px;
+      }
+      .student-list li {
+        padding: 5px;
+        border-bottom: 1px solid #ccc;
+      }
+      .highlight {
+        background-color: yellow;
+      }
+      #addStudentForm input {
+        padding: 5px;
+        width: 200px;
+      }
+      #addStudentForm button {
+        padding: 5px 10px;
+      }
+      #changeHeadingBtn {
+        margin-top: 10px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="mainHeading">Welcome to Student Dashboard</h1>
+    <p>This is a demo page to teach DOM manipulation.</p>
+
+    <img
+      src="https://via.placeholder.com/150"
+      alt="Profile Pic"
+      id="profilePic"
+    />
+
+    <h2>Student List</h2>
+    <ul id="students" class="student-list">
+      <li>Alice</li>
+      <li>Bob</li>
+      <li>Charlie</li>
+    </ul>
+
+    <form id="addStudentForm">
+      <input type="text" id="studentName" placeholder="Enter student name" />
+      <button type="submit">Add Student</button>
+    </form>
+
+    <button id="changeHeadingBtn">Change Heading Text</button>
+
+    <script>
+      // const h1 = document.getElementsByTagName("h1")[0];
+      // h1.innerText;
+      // h1.innerHTML;
+      // document.getElementById("students");
+      // document.getElementById("students").innerHTML;
+      // document.getElementById("students").innerText;
+      // document.getElementsByClassName("student-list")[0];
+      // document
+      //   .getElementsByClassName("student-list")[0]
+      //   .getElementsByTagName("li");
+      // document
+      //   .getElementsByClassName("student-list")[0]
+      //   .getElementsByTagName("li")[1].innerText;
+      // document.querySelector("#students > li:nth-child(2)");
+      // document.querySelector("h1");
+      // document.querySelectorAll("li");
+      // document.querySelectorAll("li")[0];
+      // document.querySelectorAll("li")[0].innerText;
+      // document.querySelectorAll("li")[0].innerText = "Vijay";
+      // document.querySelectorAll("li").forEach((e) => {
+      //   e.innerText = "Vijay";
+      // });
+
+      const li = document.querySelectorAll("li")[1];
+      console.log(li)
+      li.innerHTML = "<h1 style='color:red'>" + li.innerText + "</h1>"
+
+    </script>
+  </body>
+</html>
