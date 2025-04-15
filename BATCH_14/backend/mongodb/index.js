@@ -1,19 +1,25 @@
-// MONGODB SERVER = LOCAL ( CLUSTER )
-// MULTIPLE DATABSE, every company will have its own database
-//  => Multiple collections = folders
-// ==> multiple documnets = entries
+const express = require('express')
+const connectDB = require('./connectDB')
+const { MoviesModel } = require('./src/models/movies.model')
+const app = express()
+const port = 3002
 
-/*
-e.g. ecommerce = database
+app.get('/', async (req, res) => {
+  const data = await MoviesModel.create({
+    title: "Bat Man",
+    duration: 200,
+    rating: 8.9,
+    isWatched: true,
+    genres: ["action", "thriller"]
+  })
+  res.send({ data })
+})
 
-collections ( array format ) => products, categories, users, orders, carts
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
+}).catch((error) => {
+  console.log(error);
+})
 
-documents = ( object format )
-products collections = 
-1. {
- "title": "Apple iphone",
-  "price" : 8000
-}
-
-
-*/
