@@ -1,12 +1,20 @@
 const express = require("express");
-const AuthRouter = require("./src/routes/auth.routes.js")
+const connectDB = require("./src/config/connectDB.js");
+const AuthRouter = require("./src/routes/auth.routes.js");
+const ProductsRouter = require("./src/routes/products.routes.js");
 
 const app = express();
-const PORT = 8000;
+const PORT = 8004;
+
 app.use(express.json())
 
-app.use(AuthRouter);
+app.use("/auth", AuthRouter)
+app.use("/products", ProductsRouter)
 
-app.listen(PORT, () => {
-    console.log("SERVER HAS STARTED AT PORT ", PORT);
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("SERVER HAS STARTED AT PORT ", PORT);
+    })
+}).catch(error => {
+    console.log(error)
 })
