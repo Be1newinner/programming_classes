@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Page</title>
+    <style>
+      /*
+          selector {
+            property: value;
+          }
+      */
+
+      #first_div,
+      #second_div {
+        /* background: red; */
+        background-color: red;
+        height: 100px;
+        width: 100px;
+
+        /*
+          border-width: 10px;
+          border-style: solid; options =>  solid, dotted, dashed, double
+          border-color: blue;
+
+          border-left-width: 5px;
+          border-left-style: dashed;
+          border-left-color: blue;
+
+          border-top-width: 10px;
+          border-top-style: dotted;
+          border-top-color: green;
+
+          border-bottom-width: 5px;
+          border-bottom-style: solid;
+          border-bottom-color: orange;
+
+          border-right-width: 15px;
+          border-right-style: double;
+          border-right-color: yellow;
+
+          => Short hand properties 
+          border-left: 5px dashed blue;
+          border-top: 10px dotted green;
+          border-bottom: 8px solid orange;
+          border-right: 8px solid orange;
+        */
+
+        border: 5px solid blue;
+      }
+
+      #first_div {
+        /* 
+        padding: 10px; 
+        padding: 20px 50px;
+        
+        padding: 20px 50px 0px 5px;
+
+        padding-left: 10px;
+        padding-right: 50px;
+        padding-top: 0px;
+        padding-bottom: 50px;
+        */
+      }
+
+      #first_child {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline CSS
+     <div style="background: red; height: 100px; width: 200px">
+      <span>Hello</span>
+    </div> -->
+
+    <div id="first_div">
+      <div id="first_child">
+        <span>Hello</span>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- br is self closing element. -->
+    <!-- <hr /> this is horizontal line -->
+
+    <div id="second_div">
+      <span>Hello 2</span>
+    </div>
+  </body>
+</html>
