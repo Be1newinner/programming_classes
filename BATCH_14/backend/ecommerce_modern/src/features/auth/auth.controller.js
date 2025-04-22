@@ -1,10 +1,15 @@
 const AuthModel = require("../models/auth.model");
-const { loginService } = require("../services/auth.services");
+const { loginService } = require("./auth.services");
 
 async function loginController(req, res) {
     try {
         const { email, password } = req.body;
         const user = await loginService({ email, password })
+
+        if (!user) {
+            return res.status(401).send({ message: "User not found!" })
+        }
+
         res.send({ data: user })
     } catch (error) {
         console.log(error);
