@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+
+    <style>
+      /* descendent selector */
+      /* .parent span {
+        background: red;
+      } */
+
+      .parent {
+        background-color: aqua;
+
+        & span {
+          font-size: 22px;
+        }
+
+        /* child selector */
+        & > span {
+          font-weight: bold;
+        }
+
+        /* General sibling selector */
+        & ~ div {
+          background-color: pink;
+        }
+
+        /* Adjacent sibling selector */
+        & + div {
+          background-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Types of selectors -->
+    <!-- 
+        1. simple selector
+        2. combinational selectors
+        3. pseudo selectors
+        4. pseudo elements selctor
+    -->
+    <div>
+      <span>hi</span>
+      <p>
+        <span>hello</span>
+        <span>bye</span>
+      </p>
+      <p>somehting p</p>
+      <span>hello span</span>
+      <p>somehting p</p>
+    </div>
+
+    <hr />
+
+    <div class="parent">
+      <span>hi</span>
+      <p>
+        <span>hello</span>
+        <span>bye</span>
+      </p>
+      <p>somehting p</p>
+      <span>hello span</span>
+      <p>somehting p</p>
+    </div>
+
+    <div>
+      <span>hi</span>
+      <p>
+        <span>hello</span>
+        <span>bye</span>
+      </p>
+      <p>somehting p</p>
+      <span>hello span</span>
+      <p>somehting p</p>
+    </div>
+
+    <div>
+      <span>hi</span>
+      <p>
+        <span>hello</span>
+        <span>bye</span>
+      </p>
+      <p>somehting p</p>
+      <span>hello span</span>
+      <p>somehting p</p>
+    </div>
+  </body>
+</html>

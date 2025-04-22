@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo class Selectors</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      ::selection {
+        background-color: yellow;
+        color: blue
+      }
+
+      a {
+        color: GREEN;
+
+        &:hover {
+          font-size: 26px;
+        }
+
+        &:active {
+          font-weight: 900;
+        }
+
+        &:visited {
+          color: red;
+        }
+      }
+
+      div {
+        background-color: red;
+
+        /* &:nth-child(3) {
+          background-color: orange;
+        } */
+
+        /* &:nth-of-type(1) {
+          background-color: orange;
+        } */
+
+        &:first-of-type {
+          background-color: orange;
+        }
+
+        &:last-of-type {
+          background-color: orange;
+        }
+      }
+
+      /* li:nth-child(even) {
+        background-color: red;
+      } */
+      /* li:nth-child(odd) {
+        background-color: red;
+      } */
+      /* li:nth-child(2) {
+        background-color: red;
+      }
+      li:nth-child(2n + 3) {
+        background-color: red;
+      } */
+
+      input {
+        background-color: green;
+
+        &:focus {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://ship.com">SHIP</a>
+    <a href="https://ship2.com">SHIP</a>
+
+    <div>
+      <span>hi</span>
+      <p>
+        <span>hello</span>
+        <span>bye</span>
+      </p>
+      <p>somehting p</p>
+      <span>hello span</span>
+      <p>somehting p</p>
+    </div>
+
+    <hr />
+
+    <div class="parent">
+      <span>hi</span>
+      <p>
+        <span>hello</span>
+        <span>bye</span>
+      </p>
+      <p>somehting p</p>
+      <span>hello span</span>
+      <p>somehting p</p>
+    </div>
+
+    <div>
+      <span>hi</span>
+      <p>
+        <span>hello</span>
+        <span>bye</span>
+      </p>
+      <p>somehting p</p>
+      <span>hello span</span>
+      <p>somehting p</p>
+    </div>
+
+    <div>
+      <span>hi</span>
+      <p>
+        <span>hello</span>
+        <span>bye</span>
+      </p>
+      <p>somehting p</p>
+      <span>hello span</span>
+      <p>somehting p</p>
+    </div>
+
+    <ul>
+      <li>cow</li>
+      <li>dog</li>
+      <li>parrot</li>
+      <li>lion</li>
+      <li>cheetah</li>
+    </ul>
+
+    <input disabled />
+  </body>
+</html>
