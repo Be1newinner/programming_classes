@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .parent {
+        background-color: red;
+        height: 100px;
+        width: 100px;
+        padding: 10px;
+
+        &:hover {
+          /* transition: all 1s; */
+          transition-property: all;
+          transition-duration: 1s;
+          /* transition-delay: 1s; */
+
+          background-color: blue;
+          /* transform: scale(1.2); */
+          /* transform: scaleX(1.2); */
+          /* transform: scaleY(1.2); */
+          /* transform: translate(-120px); */
+          /* transform: translateX(-120px); */
+          /* transform: translateY(50px); */
+          /* transform: translateY(-50px); */
+          /* transform: translate(-50px, 20px); */
+          /* transform: rotate(45deg); */
+          /* transform: rotateX(45deg); */
+          /* transform: rotateY(45deg); */
+          /* transform: rotateZ(45deg); */
+          /* transform: skew(25deg); */
+          /* transform: skewX(25deg); */
+          transform: skewY(25deg);
+        }
+      }
+
+      .container {
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+        transition: all 200ms;
+
+        &:active {
+            transform: scale(0.9) rotate(10deg);
+        }
+
+        & img {
+            cursor: pointer;
+            transition: all 250ms;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <span>Hello</span>
+    </div>
+
+    <div class="container">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Grosser_Aletschgletscher_3178.JPG/1024px-Grosser_Aletschgletscher_3178.JPG"
+
+        height="200px"
+        width="200px"
+      />
+    </div>
+  </body>
+</html>
