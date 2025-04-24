@@ -16,8 +16,47 @@
         display: flex;
         height: 100vh;
         width: 100vw;
-        justify-content: center;
-        align-items: center;
+        /* justify-content: center; */
+        /* align-items: center; */
+      }
+
+      /* @keyframes backgroundChange {
+        from {
+            background-color: red;
+        }
+
+        to {
+            background-color: blue;
+        }
+      } */
+      @keyframes backgroundChange {
+        0% {
+          background-color: orange;
+          transform: translateY(0) translateX(0);
+        }
+
+        /* 25% {
+
+        }
+
+        26% {
+
+        }
+
+        27% {
+
+        } */
+
+        /* 50% {
+          background-color: green;
+          transform: translateY(-300px);
+        } */
+
+        100% {
+          background-color: blue;
+          /* transform: translateY(-300px) translateX(300px); */
+          transform: translateY(600px);
+        }
       }
 
       .parent {
@@ -25,6 +64,20 @@
         height: 100px;
         width: 100px;
         padding: 10px;
+        animation-name: backgroundChange;
+        animation-duration: 2s;
+        /* animation-delay: 2s; */
+        /* animation-direction: normal reverse alternate; */
+        /* animation-direction: alternate-reverse; */
+        animation-direction: alternate;
+        animation-iteration-count: 2;
+        /* animation-fill-mode: forwards; */
+        animation-fill-mode: reverse;
+        /* animation-timing-function: ease; */
+        /* animation-timing-function: ease-in; */
+        /* animation-timing-function: ease-out; */
+        animation-timing-function: cubic-bezier( 0.68, -0.55, 0.265, 1.55 );
+        
 
         &:hover {
           /* transition: all 1s; */
@@ -58,19 +111,18 @@
         transition: all 200ms;
 
         &:active {
-            transform: scale(0.9) rotate(10deg);
+          transform: scale(0.9) rotate(10deg);
         }
 
         & img {
-            cursor: pointer;
-            transition: all 250ms;
+          cursor: pointer;
+          transition: all 250ms;
 
-            &:hover {
-                transform: scale(1.2);
-            }
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
-
     </style>
   </head>
   <body>
@@ -81,7 +133,6 @@
     <div class="container">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Grosser_Aletschgletscher_3178.JPG/1024px-Grosser_Aletschgletscher_3178.JPG"
-
         height="200px"
         width="200px"
       />
