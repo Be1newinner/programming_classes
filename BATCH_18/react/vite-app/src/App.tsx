@@ -1,48 +1,25 @@
-import "./App.css"
+import { useState } from "react";
 
 export default function App() {
+  // let count = 5;
 
-  const items = [
-    {
-      id: 1,
-      text: "task 1"
-    },
-    {
-      id: 2,
-      text: "task 2"
-    },
-    {
-      id: 3,
-      text: "task 3"
-    },
-    {
-      id: 4,
-      text: "task 4"
-    }
-  ]
+  const [count, setCount] = useState(5)
 
+  function increase() {
+    // alert(count)
+    // setCount(8)
+    setCount(count + 1)
+  }
 
   return (
-    <div className="todo_container">
-      <h1>TODO LIST</h1>
-      <hr />
-      <input placeholder="add items..." />
-      <button className="black">ADD ITEM</button>
-
-      <div className="content">
-        {items.map((e) => {
-          return (
-            <div key={e.id}>
-              <p>{e.text}</p>
-              <div>
-                <button>Delete</button>
-                <button>Edit</button>
-              </div>
-            </div>
-          )
-        })}
+    <div>
+      <h1>hello</h1>
+      <p>{count}</p>
+      <div>
+        <button onClick={increase}>increase</button>
+        <button>decrease</button>
+        <button>reset</button>
       </div>
     </div>
-
   )
 }
