@@ -1,4 +1,5 @@
-const AuthModel = require("../models/auth.model");
+const { hashPassword } = require("../../shared/utils/hashing");
+const AuthModel = require("../auth/auth.model");
 const { loginService } = require("./auth.services");
 
 async function loginController(req, res) {
@@ -7,10 +8,11 @@ async function loginController(req, res) {
         const user = await loginService({ email, password })
 
         if (!user) {
-            return res.status(401).send({ message: "User not found!" })
+            res.status(401).send({ message: "Invalid Password!" })
+            return;
         }
 
-        res.send({ data: user })
+        res.send({ data: "Logged In!" })
     } catch (error) {
         console.log(error);
         res.send({ message: "Unexpected Error!" })
@@ -20,11 +22,12 @@ async function loginController(req, res) {
 const registerController = async (req, res) => {
     try {
         const { email, password, name, age } = req.body;
-        console.log(email, password)
+
+        const hashedPassword = await hashPassword(password);
 
         const user = await AuthModel.create({
             email: email,
-            password: password,
+            password: hashedPassword,
             name: name,
             age: age
         })

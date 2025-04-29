@@ -1,13 +1,21 @@
-import AuthModel from "../models/auth.model";
+import { verifyPassword } from "../../shared/utils/hashing.js";
+import AuthModel from "../auth/auth.model.js";
 
 export async function loginService({ email, password }) {
     const user = await AuthModel.findOne({
         email: email,
-        password: password
     }).select({
-        password: false,
-        __v: false
+        password: true,
+        _id: false
     }).lean()
 
-    return user;
+    console.log({ user })
+
+    if (!user) throw new Error("USER DOESN'T EXIST")
+
+    const isValiPassword = await verifyPassword(password, user.password)
+
+    console.log(isValiPassword)
+
+    return isValiPassword;
 } 
