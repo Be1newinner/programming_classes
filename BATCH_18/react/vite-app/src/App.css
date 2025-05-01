@@ -13,7 +13,6 @@ body {
 }
 
 .todo_container {
-  height: 500px;
   width: 500px;
   background-color: azure;
   border-radius: 10px;
