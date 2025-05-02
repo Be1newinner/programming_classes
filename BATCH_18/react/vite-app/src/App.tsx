@@ -63,6 +63,33 @@ export default function App() {
     setAddInput("")
   }
 
+
+  function deleteTodo(id: number) {
+    // alert(id);
+    // 
+    // 1
+    // const tempArray = items.filter(e=>e.id != id)
+    // setItems(tempArray)
+    // 
+    // 2
+    // setItems(items.filter(e => e.id != id))
+    //
+    // 3 
+    setItems(prev => prev.filter(e => e.id != id))
+  }
+
+
+  function editTodo(id: number) {
+    const tempArray = [...items];
+    const index = tempArray.findIndex((e) => e.id == id);
+    const new_input = prompt(`Edit todo no. ${index}`, tempArray[index].text);
+
+    if (!new_input) return;
+
+    tempArray[index].text = new_input;
+    setItems(tempArray);
+  }
+
   return (
     <div className="todo_container max-h-[calc(100dvh-100px)] overflow-y-auto">
       <h1>TODO LIST</h1>
@@ -79,8 +106,8 @@ export default function App() {
             <div key={e.id}>
               <p>{e.text}</p>
               <div className="*:border *:!border-gray-400 *:shadow">
-                <button>Delete</button>
-                <button>Edit</button>
+                <button onClick={() => deleteTodo(e.id)}>Delete</button>
+                <button onClick={() => editTodo(e.id)}>Edit</button>
               </div>
             </div>
           )
