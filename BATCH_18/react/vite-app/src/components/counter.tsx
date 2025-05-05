@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "./App.css"
 import { House } from "lucide-react";
 
-export default function App() {
+export default function Counter() {
   // let count = 5;
 
   const [count, setCount] = useState(5)
@@ -12,6 +11,8 @@ export default function App() {
     // setCount(8)
     setCount(count + 1)
   }
+
+  console.log("Hello in Counter")
 
   return (
     <div className="animate">
