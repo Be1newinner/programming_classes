@@ -1,6 +1,10 @@
+-- DB RELATED QUERIES
+
 SELECT datname FROM pg_database;
 SELECT table_schema, table_name FROM information_schema.tables;
 SELECT * FROM information_schema.tables;
+
+-- STUDENTS TABLE 
 
 CREATE TABLE students (
  id int,
@@ -9,21 +13,24 @@ CREATE TABLE students (
  course varchar(50)
 );
 
+INSERT INTO students ( id, name, roll_no, course ) VALUES 
+( 1, 'Vijay', 1, 'BCA' ),
+( 2, 'Ajay', 2, 'BCA' );
+
+INSERT INTO students ( id, name, roll_no, course ) VALUES 
+( 3, 'Vijay K', 3, 'MCA' ),
+( 4, 'Ajay K', 4, 'MCA' );
+
 SELECT * FROM students;
 SELECT * FROM students WHERE course = 'MCA';
 SELECT * students WHERE id = 4;
 SELECT name FROM students WHERE id = 4;
 SELECT id, name FROM students;
 
+-- UPDATE QUERIES
+UPDATE students SET name = 'AJAY KUMAR' WHERE id = 4;
 
-INSERT INTO students ( id, name, roll_no, course ) VALUES 
-( 1, 'Vijay', 1, 'BCA' ),
-( 2, 'Ajay', 2, 'BCA' );
-
-
-INSERT INTO students ( id, name, roll_no, course ) VALUES 
-( 3, 'Vijay K', 3, 'MCA' ),
-( 4, 'Ajay K', 4, 'MCA' );
+DELETE FROM students WHERE id = 2;
 
 
 -- DUMMY DAT INSERTION
