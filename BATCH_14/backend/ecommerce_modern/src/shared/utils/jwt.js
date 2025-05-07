@@ -1,3 +1,6 @@
+const jwt = require('jsonwebtoken');
+
+
 // Tokens
 // login token / refresh token
 // access token
@@ -21,3 +24,25 @@
 // 
 // 
 // 
+
+const jwtPassword = "Vijay456"
+
+function generateLoginTokens({ email, id }) {
+    const accessToken = jwt.sign({ email, id }, jwtPassword);
+    const refreshToken = jwt.sign({ email, id }, jwtPassword);
+
+    return {
+        accessToken,
+        refreshToken
+    }
+}
+
+function verifyToken(token) {
+    const decoded = jwt.verify(token, "dsadasdasd5969549a6dsa");
+    return decoded;
+}
+
+module.exports = {
+    generateLoginTokens,
+    verifyToken
+}
