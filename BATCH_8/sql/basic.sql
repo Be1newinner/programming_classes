@@ -82,10 +82,14 @@ SELECT * FROM teachers WHERE gender <> 'Other' AND salary <= 50000;
 SELECT id, name, gender, salary FROM teachers WHERE gender = 'Male' OR gender = 'Female' LIMIT 10;
 
 -- IN Operator e.g. IN ( 'NAME' , 'NAME 1' , 'NAME 2' )
+SELECT * FROM teachers WHERE name = 'Teacher_1' OR name = 'Teacher_2' OR name = 'Teacher_3' OR name = 'Teacher_4';
+SELECT * FROM teachers WHERE name IN ( 'Teacher_1' , 'Teacher_2', 'Teacher_3', 'Teacher_4' );
 
 -- BETWEEN Operator e.g. BETWEEN 10 AND 20
-
+SELECT * FROM teachers WHERE salary BETWEEN 50000 AND 70000 ;
 
 -- LIKE and ILIKE Operator
 SELECT * FROM students WHERE name LIKE 'V%';
-SELECT * FROM students WHERE name LIKE '%V';
+SELECT * FROM students WHERE name ILIKE 'v%';
+SELECT * FROM students WHERE name LIKE '%K';
+
