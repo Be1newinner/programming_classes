@@ -62,9 +62,30 @@ FROM generate_series(1, 1000) AS gs;
 
 
 SELECT * FROM teachers;
+
+-- SQL OPERATORS
+-- < , > , <= , >= , <> , != , AND , OR , IN, LIKE , ILIKE , BETWEEN , IS NUL , NOT
+
+-- greater than operator
 SELECT id, name, gender, salary FROM teachers WHERE salary > 50000;
+
+-- less than operator
 SELECT id, name, gender, salary FROM teachers WHERE salary < 50000;
+
+-- equal to operator
 SELECT id, name, gender, salary FROM teachers WHERE gender = 'Male';
+
+-- less than equal to operator , AND Operator
 SELECT * FROM teachers WHERE gender <> 'Other' AND salary <= 50000;
+
+-- OR Operator and LIMIT Command
 SELECT id, name, gender, salary FROM teachers WHERE gender = 'Male' OR gender = 'Female' LIMIT 10;
 
+-- IN Operator e.g. IN ( 'NAME' , 'NAME 1' , 'NAME 2' )
+
+-- BETWEEN Operator e.g. BETWEEN 10 AND 20
+
+
+-- LIKE and ILIKE Operator
+SELECT * FROM students WHERE name LIKE 'V%';
+SELECT * FROM students WHERE name LIKE '%V';
