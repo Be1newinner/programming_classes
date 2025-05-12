@@ -1,28 +1,25 @@
-import "./App.css";
-// import Counter from "./components/counter"
-import SideEffect from "./components/SideEffect";
+// Default Import
+import Box3 from "./components/Box";
+import { Box4, Box5 } from "./components/Box";
 
-// import Dasdasd from "./components/Box";
-// import { Box2, Box3 } from "./components/Box";
-
-// import Dasdasd, { Box2, Box3 } from "./components/Box";
-import * as Boxes from "./components/Box";
-
-export default function UseEffect() {
+export default function App() {
   return (
-    <>
-      <SideEffect />
-      {/* <Counter /> */}
-
-      {/* <Dasdasd name="Vijay" color="bg-red-500" />
-      <Dasdasd name="Ajay" color="bg-blue-500" />
-      <Box2 name="Karan" color="bg-green-500" />
-      <Box3 name="Arjun" color="bg-orange-500" /> */}
-
-      <Boxes.Box2 name="Vijay" color="bg-red-500" />
-      <Boxes.default name="Ajay" color="bg-blue-500" />
-      <Boxes.Box3 name="Karan" color="bg-green-500" />
-      <Boxes.default name="Arjun" color="bg-orange-500" />
-    </>
+    <div>
+      <h1>Hello</h1>
+      <Box3 name="Vijay" />
+      <Box3 name="Ajay" />
+      <Box4 />
+      <Box5 />
+    </div>
   );
 }
+
+// Compoenent
+// function Box() {
+//   return (
+//     <div className="bg-red-500 h-28 w-28">
+//       <h1>HEllo</h1>
+//       <p>Bye</p>
+//     </div>
+//   );
+// }

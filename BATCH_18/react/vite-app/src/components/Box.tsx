@@ -1,27 +1,29 @@
-// Default Export
-export default function Box({ name, color }) {
+// Compoenent
+
+// Default export
+export default function Box3({ name }) {
   return (
-    <div className={"w-48 h-48 " + color}>
-      <h1>Hello, {name}</h1>
-      <p>SOme details</p>
+    <div className="bg-red-500 h-28 w-28">
+      <h1>HEllo, {name}</h1>
+      <p>Bye</p>
     </div>
   );
 }
 
-// Named Export
-export function Box2({ name, color }) {
+export function Box4() {
   return (
-    <div className={"w-48 h-48 " + color}>
-      <h1>Hello, {name}</h1>
+    <div className="bg-green-500 h-28 w-28">
+      <h1>HEllo</h1>
+      <p>Bye</p>
     </div>
   );
 }
 
-// Named Export
-export function Box3({ name, color }) {
+export function Box5() {
   return (
-    <div className={"w-48 h-48 " + color}>
-      <h1>Hello, {name}</h1>
+    <div className="bg-orange-500 h-28 w-28">
+      <h1>HEllo</h1>
+      <p>Bye</p>
     </div>
   );
 }
