@@ -10,6 +10,7 @@ export default function Box3({ name }) {
   );
 }
 
+// Named export
 export function Box4() {
   return (
     <div className="bg-green-500 h-28 w-28">
