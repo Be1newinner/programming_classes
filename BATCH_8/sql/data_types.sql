@@ -60,9 +60,23 @@ INSERT INTO rest (interval) VALUES ('2 hours 30 minutes');
 
 -- 5. Arrays ------------------------------------------------------------------------------------------------
 
-
 CREATE TABLE arr (
  id SERIAL PRIMARY KEY,
  names VARCHAR(20)[],
  marks INT[]
 );
+
+INSERT INTO arr (names, marks) VALUES (ARRAY['Vijay', 'Ajay', 'Karan'], ARRAY[10,15,12]);
+
+SELECT * FROM arr;
+
+-- 6. ENUM ------------------------------------------------------------------------------------------------
+
+CREATE TYPE gender_enum AS ENUM ('MALE', 'FEMALE', 'OTHER');
+
+CREATE TABLE enum (
+    id SERIAL PRIMARY KEY,
+    gender gender_enum
+    );
+
+INSERT INTO enum (gender) VALUES ('MALE');
