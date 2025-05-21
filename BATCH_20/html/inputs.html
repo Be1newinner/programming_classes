@@ -8,15 +8,22 @@
 
 <div>
 <label for="fullname">Full Name</label>
-<input type="text" id="fullname" name="fullname" placeholder="input your name!" value="" />
+<input type="text" id="fullname" name="fullname" placeholder="input your name!" value="" required minlength="3" maxlength="10"/>
 </div>
 
 <br />
 
 <div>
 <label for="email">Email: </label>
-<input type="email" id="email" name="email" placeholder="input your email!" value="" />
+<input type="email" id="email" name="email" placeholder="input your email!" value="be1newinner@gmail.com" required disabled />
 </div>
+
+<br />
+
+<label for="age">age: </label>
+<input type="number" id="age" name="age" placeholder="input your age!" value="" required max="120" min="18" />
+</div>
+
 
 <br />
 
@@ -43,6 +50,20 @@ Female
 <input type="radio" id="gender_other" name="gender"  value="other" />
 Other
 </label>
+
+</div>
+
+<br />
+
+<div>
+
+<label for="course">course</label>
+<select name="course">
+<option value="1">BCA</option>
+<option value="2">MCA</option>
+<option value="3">BA</option>
+<option value="4">MA</option>
+</select>
 
 </div>
 

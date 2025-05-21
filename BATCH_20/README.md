@@ -1,3 +1,2 @@
-#!/bin/bash
-Rohit
+Rohit, Rajat
 Course: Full Stack Advanced
