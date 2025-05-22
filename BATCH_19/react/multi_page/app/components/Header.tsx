@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router";
+import Slider from "./Slider"
 
 const menuItems = [
   { name: "Home", path: "/" },
@@ -13,6 +14,7 @@ export default function Header() {
 
   return (
     <header className="flex justify-between items-center p-2 py-4 bg-sky-200">
+      <Slider />
       <h1 className="font-medium text-2xl">Asaan Hai Coding</h1>
       <nav>
         <ul className="flex gap-4">
@@ -36,6 +38,7 @@ export default function Header() {
           })}
         </ul>
       </nav>
+      
     </header>
   );
 }
