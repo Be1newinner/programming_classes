@@ -6,8 +6,8 @@ CREATE TABLE roles (id SERIAL PRIMARY KEY, title varchar(50));
 CREATE TABLE addresses (id SERIAL PRIMARY KEY, address1 varchar(50), address2 varchar(50), city varchar(20), state varchar(50), pincode int);
 CREATE TABLE stocks (id SERIAL PRIMARY KEY, product_id int, qty int);
 
-INSERT INTO products (title, price, mrp, category_id) VALUES ('Wireless Mouse', 799, 999, 1);
-INSERT INTO categories (title) VALUES ('Electronics');
+-- INSERT INTO products (title, price, mrp, category_id) VALUES ('Wireless Mouse', 799, 999, 1);
+-- INSERT INTO categories (title) VALUES ('Electronics');
 
 -- Create Tables with Foriegn keys constraints;
 
@@ -79,6 +79,9 @@ DROP TABLE stocks;
 DROP TABLE users;
 DROP TABLE roles;
 
+DELETE FROM products WHERE id < 1000;
+
+
 -- CREATE TABLE products (
 --   id SERIAL PRIMARY KEY,
 --   title VARCHAR(50),
@@ -97,6 +100,8 @@ INSERT INTO roles (title) VALUES
 ('user'),
 ('vendor'),
 ('moderator');
+
+INSERT INTO roles (title) VALUES ('moderator');
 
 INSERT INTO categories (title) VALUES 
 ('Electronics'),
@@ -273,9 +278,9 @@ INSERT INTO users (name, age, email, password, phone, role_id, curr_address_id) 
 ('Arjun Desai', 34, 'arjun@example.com', 'pass12345678', '9876543224', 3, 57),
 ('Megha Pandey', 27, 'megha@example.com', 'pass12345678', '9876543225', 2, 61),
 ('Rohit Nair', 32, 'rohit@example.com', 'pass12345678', '9876543226', 4, 65),
-('Tanya Dutt', 26, 'tanya@example.com', 'pass12345678', '9876543227', 3, 69),
-('Harshita Malhotra', 31, 'harshita@example.com', 'pass12345678', '9876543228', 2, 73),
-('Nikhil Bansal', 28, 'nikhil@example.com', 'pass12345678', '9876543229', 1, 77);
+('Tanya Dutt', 26, 'tanya@example.com', 'pass12345678', '9876543227', 3, 64),
+('Harshita Malhotra', 31, 'harshita@example.com', 'pass12345678', '9876543228', 2, 53),
+('Nikhil Bansal', 28, 'nikhil@example.com', 'pass12345678', '9876543229', 1, 27);
 
 -- SELECT ALL DATA
 SELECT * FROM users;
@@ -285,52 +290,18 @@ SELECT * FROM products;
 SELECT * FROM roles;
 SELECT * FROM addresses;
 
--- Joins
--- Types of JOINS
--- 1. INNER JOIN – “Match only when both sides have data”
-SELECT users.name, roles.title
-FROM users
-INNER JOIN roles ON users.role_id = roles.id;
-
--- 2. LEFT JOIN – “All from the left, matching from the right”
-SELECT users.name, roles.title
-FROM users
-LEFT JOIN roles ON users.role_id = roles.id;
-
--- 3. RIGHT JOIN – “All from the right, matching from the left”
-SELECT roles.title, users.name
-FROM users
-RIGHT JOIN roles ON users.role_id = roles.id;
-
--- 4. FULL OUTER JOIN – “Everything from both sides”
-SELECT users.name, roles.title
-FROM users
-FULL OUTER JOIN roles ON users.role_id = roles.id;
-
--- 5. CROSS JOIN – “All combinations (Cartesian product)”
-SELECT u.name, r.title
-FROM users u
-CROSS JOIN roles r;
 
 
--- Other examples
-SELECT 
-  p.title AS product,
-  c.title AS category,
-  s.qty AS stock_qty
-FROM products p
-JOIN categories c ON p.category_id = c.id
-JOIN stocks s ON p.id = s.product_id;
+-- SEQUENCE
 
-SELECT 
-  u.name,
-  u.email,
-  r.title AS role,
-  a.address1,
-  a.city,
-  a.state,
-  a.pincode
-FROM users u
-JOIN roles r ON u.role_id = r.id
-JOIN addresses a ON u.curr_address_id = a.id;
+select * from pg_sequences;
+ALTER SEQUENCE categories_id_seq RESTART WITH 1;
+ALTER SEQUENCE products_id_seq RESTART WITH 1;
+ALTER SEQUENCE users_id_seq RESTART WITH 1;
+ALTER SEQUENCE roles_id_seq RESTART WITH 4;
 
+DELETE FROM categories WHERE id > 6;
+DELETE FROM products;
+DELETE FROM users;
+
+DELETE FROM roles WHERE id=4;
