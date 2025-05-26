@@ -1,1 +1,1 @@
-Students: Zaif, Ali, Pratham, Nishant
+Students: Zaif, Ali
