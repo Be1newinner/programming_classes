@@ -43,14 +43,23 @@ def add_todo(body: TodoInput):
         "message": "Adding todo!"
         }
 
-@app.patch("/todo")
-def update_todo():
-    return {
-        "message": "updating todo!"
-        }
+@app.patch("/todo/:{id}")
+def update_todo(body: TodoInput, id: int):
+    for item in todo_list:
+        if item["id"] == id:
+            if body.title is not None:
+                item["title"] = body.title
+            if body.completed is not None:
+                item["completed"] = body.completed
+        return {"message": "Todo updated!"}
 
-@app.delete("/todo")
-def delete_todo():
+@app.delete("/todo/:{id}")
+def delete_todo(id: int):    
+    for item in todo_list:
+        if item["id"] == id:
+            todo_list.remove(item)
+    
     return {
-        "message": "deleting todo!"
+        "message": "deleting todo!",
+        "data": todo_list
         }
