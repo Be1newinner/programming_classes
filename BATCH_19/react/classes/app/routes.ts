@@ -25,6 +25,12 @@ export const routesList = [
     route: "/reference",
     path: "routes/reference_hook.tsx",
   },
+  {
+    id: 4,
+    title: "Reducer Hook",
+    route: "/reducer",
+    path: "routes/reducer_hook.tsx",
+  },
 ];
 
 export default [
