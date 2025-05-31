@@ -19,6 +19,12 @@ export const routesList = [
     route: "/forms_advanced",
     path: "routes/forms_advance.tsx",
   },
+  {
+    id: 3,
+    title: "Use Ref Hook",
+    route: "/reference",
+    path: "routes/reference_hook.tsx",
+  },
 ];
 
 export default [
