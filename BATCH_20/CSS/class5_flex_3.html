@@ -1,0 +1,59 @@
+<html>
+<head>
+   <title>Class 4 - Positioning (flex)</title>
+<style>
+
+.parent {
+width: 450px;
+height:450px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+
+background: orange;
+/*
+*/
+}
+
+.child {
+height: 100px;
+width: 100px;
+background: blue;
+flex-grow: 1;
+}
+
+.child2 {
+ flex-grow: 3;
+ background: green;
+} 
+
+/*
+P_450
+C_ALL_300
+Left_150
+
+3-1 = 2 + 3 = 5
+150 / 5 = 30
+
+C1_130
+C2_190
+C3_130
+
+*/
+
+</style>
+
+</head>
+<body>
+<h1>
+    <u>The Flex</u>
+</h1>
+
+<div class="parent">
+
+<div class="child">1</div>
+<div class="child child2">2</div>
+<div class="child">3</div>
+</div>
+</body>
+</html>
