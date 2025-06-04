@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Class 6 - flex Basis</title>
+<style>
+
+.parent {
+width: 450px;
+height:450px;
+display: flex;
+background: orange;
+font-size: 24px;
+color: white;
+flex-wrap:wrap;
+}
+
+.child {
+height: 100px;
+width: 100px;
+background: blue;
+order: 1;
+}
+
+.child:nth-child(even) {
+background: green;
+}
+
+.child1 {
+flex-basis: 30%;
+}
+
+.child2 {
+flex-basis: 50%;
+order: 2;
+}
+
+.child3 {
+flex-basis: 20%;
+}
+
+.child4 {
+flex-basis: 100%;
+}
+
+</style>
+
+</head>
+<body>
+<h1>
+ <u>The Flex Basis</u>
+</h1>
+
+<div class="parent">
+
+<div class="child child1">1</div>
+<div class="child child2">2</div>
+<div class="child child3">3</div>
+<div class="child child4">4</div>
+<div class="child">5</div>
+<div class="child">6</div>
+<div class="child">7</div>
+<div class="child">8</div>
+<div class="child">9</div>
+
+</div>
+</body>
+</html>
