@@ -1,0 +1,13 @@
+name: fastapi_sqlalchemy
+channels:
+  - pkgs/main
+dependencies:
+  - fastapi=0.112.9
+  - python=3.11
+  - sqlalchemy=2.0.39
+  - uvicorn=0.32.1
+  - pydantic=2.10.3
+  - pydantic-core=2.27.1
+  - asyncpg=0.29.0
+
+prefix: "C:\\Users\\be1ne\\miniconda3\\envs\\fastapi_sqlalchemy"
