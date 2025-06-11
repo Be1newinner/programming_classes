@@ -1,11 +1,14 @@
 <html>
 <head>
- <title>Hemi Restaurant</title>
+
+  <title>Hemi Restaurant</title>
 
 <style>
+
 * {
 padding: 0;
 margin: 0;
+color: rgb(17, 17, 17);
 }
 
 header {
@@ -23,15 +26,58 @@ gap: 20px;
 
 & a {
  text-decoration: none;
- font-size: 30px;
+ font-size: 20px;
  color: black;
 }
 
 }
 
 .hero_section {
-background: grey;
+background: white;
 height: calc(100svh - 80px);
+display: flex;
+gap: 20px;
+
+& .hero_description {
+ background: rgb(242,242,242);
+ border: 2px solid rgb(222,222,222);
+ flex-basis: 50%;
+ box-shadow: 5px 5px 5px 0px rgb(222,222,222);
+ display: flex;
+ flex-direction: column;
+ align-items:center;
+ justify-content: center;
+ gap: 20px;
+ padding: 40px;
+ 
+ & .hero_title {
+    font-size: 20px;
+	font-family: Ubuntu, sans-serif;
+	letter-spacing: 1px;
+	line-height: 24px;
+  }
+  
+  & p {
+    font-size: 36px;
+	font-family: Ubuntu, sans-serif;
+	line-height: 39.6px;
+	text-align: center;
+  }
+  
+  & .description {
+    font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	line-height: 25.6px;
+	text-align: center;
+  }
+ 
+ }
+
+& .hero_image {
+ background: blue;
+ flex-basis: 50%;
+}
+
 }
 
 
@@ -64,6 +110,17 @@ height: calc(100svh - 80px);
 <main>
 
 <section class="hero_section">
+
+<div class="hero_description">
+<span class="hero_title">Taste the Luxury</span>
+<p>Exquisite Culinary Delights</p>
+<span class="description">
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua
+</span>
+<button>CONTACT US</button>
+</div>
+<div class="hero_image">2</div>
+
 
 </section>
 <section>2</section>
