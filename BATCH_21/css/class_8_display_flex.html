@@ -1,0 +1,58 @@
+<html>
+<head>
+   
+   <title>Clas_8: display flex</title>
+
+<style>
+
+.parent {
+background: blue;
+height: 400px;
+width: 400px;
+display: flex;
+flex-wrap: wrap-reverse;
+
+/*
+1. flex direction -> row
+2. child flex-shrink -> 1
+*/
+}
+
+.child {
+background: red;
+height: 100px;
+width: 100px;
+}
+
+/*
+display: block;
+flex-wrap: nowrap;
+flex-wrap: wrap;
+flex-wrap: wrap-reverse;
+
+*/
+
+
+
+</style>
+</head>
+<body>
+
+<div class="parent">
+
+<div class="child">1</div>
+<div class="child">2</div>
+<div class="child">3</div>
+<div class="child">4</div>
+<div class="child">5</div>
+<div class="child">6</div>
+<div class="child">7</div>
+<div class="child">8</div>
+
+<div class="child">9</div>
+<div class="child">10</div>
+
+</div>
+
+</body>
+</html>
