@@ -1,32 +1,35 @@
 <html>
 <head>
-
   <title>Hemi Restaurant</title>
-
 <style>
 
 * {
 padding: 0;
 margin: 0;
 color: rgb(17, 17, 17);
+box-sizing: border-box;
 }
 
 header {
  display: flex;
  justify-content: space-between;
- padding: 0 20px; 
+ padding: 0 1.25rem; 
  align-items:center;
- height: 80px;
+ height: 5rem;
 } 
+
+& img {
+  height: 4rem;
+}
 
 .menu {
 display: flex;
 list-style-type: none;
-gap: 20px;
+gap: 1.25rem;
 
 & a {
  text-decoration: none;
- font-size: 20px;
+ font-size: 1.25rem;
  color: black;
 }
 
@@ -34,59 +37,76 @@ gap: 20px;
 
 .hero_section {
 background: white;
-height: calc(100svh - 80px);
+height: calc(100svh - 5rem);
 display: flex;
-gap: 20px;
+gap: 1.25rem;
 
 & .hero_description {
  background: rgb(242,242,242);
  border: 2px solid rgb(222,222,222);
  flex-basis: 50%;
- box-shadow: 5px 5px 5px 0px rgb(222,222,222);
+ box-shadow: 0.25rem 0.25rem 0.25rem 0rem rgb(222,222,222);
  display: flex;
  flex-direction: column;
  align-items:center;
  justify-content: center;
- gap: 20px;
- padding: 40px;
- 
+ gap: 1.25rem;
+ padding: 2.5rem;
+ border-radius: 0.25rem;
+  
  & .hero_title {
-    font-size: 20px;
+    font-size: 1.25rem;
 	font-family: Ubuntu, sans-serif;
 	letter-spacing: 1px;
-	line-height: 24px;
+	line-height: 1.5rem;
+	text-transform: uppercase;
   }
   
-  & p {
-    font-size: 36px;
+  & h1 {
+    font-size: 3.25rem;
 	font-family: Ubuntu, sans-serif;
-	line-height: 39.6px;
+	line-height: 3.25rem;
 	text-align: center;
+	font-weight: 400;
   }
   
   & .description {
-    font-size: 16px;
 	font-family: "Open Sans", sans-serif;
-	line-height: 25.6px;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
 	text-align: center;
   }
  
  }
 
 & .hero_image {
- background: blue;
+ background-color: blue;
+ background-image: url(assets/hero_section_food.jpg);
  flex-basis: 50%;
+ background-size: cover;
+ border-radius: 0.25rem;
+ background-position: center;
 }
 
 }
 
+
+button {
+border: 2px solid black;
+padding: 10px 20px;
+text-transform: uppercase;
+font-weight: 500;
+font-size: 1rem;
+font-family: Ubuntu, sans-serif;
+
+}
 
 </style>
 
 </head>
 <body>
 <header>
-<img src="assets/logo.webp" height="60px" />
+<img src="assets/logo.webp" />
 
 <navbar>
 <ul class="menu">
@@ -113,13 +133,14 @@ gap: 20px;
 
 <div class="hero_description">
 <span class="hero_title">Taste the Luxury</span>
-<p>Exquisite Culinary Delights</p>
+<h1>Exquisite Culinary Delights</h1>
 <span class="description">
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua
 </span>
 <button>CONTACT US</button>
 </div>
-<div class="hero_image">2</div>
+<div class="hero_image">
+</div>
 
 
 </section>

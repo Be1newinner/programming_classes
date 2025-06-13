@@ -1,0 +1,53 @@
+<html>
+<head>
+   <title>Class 4 - Positioning (flex)</title>
+<style>
+
+* {
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+
+/* 
+box-sizing: content-box;
+*/
+}
+
+.parent {
+width: 450px;
+height:450px;
+display: flex;
+background: orange;
+border: 5px solid black;
+padding: 10px;
+/* margin: 10px; */
+}
+
+.child {
+height: 200px;
+width: 200px;
+background: blue;
+flex-shrink:0;
+}
+
+.child2 {
+background: green;
+flex-shrink:1;
+} 
+
+
+</style>
+
+</head>
+<body>
+<h1>
+    <u>The Flex</u>
+</h1>
+
+<div class="parent">
+
+<div class="child">1</div>
+
+</div>
+</body>
+</html>
