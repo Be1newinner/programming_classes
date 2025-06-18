@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+Class 9 CSS transition</title>
+<style>
+
+.box1 {
+width: 80px;
+height: 80px;
+background: red;
+
+transition-name: all;
+transition-duration: 5s;
+transition-timing-function: cubic-bezier(.1,1.65,.71,-0.62);
+
+transition: all 1s linear;
+/*
+
+transition-delay: 1s;
+transition-timing-function: linear;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+
+1s = 1000ms;
+*/
+}
+
+.box1:hover {
+ background: yellow;
+ height: 400px;
+ 
+ /*
+  transform: rotate(1200deg) translateX(50px); 
+   transform: translateX(500px); 
+
+ */
+;
+ 
+ /*
+ transform: scale();
+ transform: scale(1.2);
+ transform: scale(1.2);
+ transform: scaleY(1.2);
+ transform: scale(1.2,1.5);
+ 
+ transform: translate(-50px);
+ transform: translateX(50px);
+ transform: translateY(50px);
+ transform: translate(50px, 100px);
+
+ transform: rotate(45deg);
+  transform: rotate(-90deg);
+ transform: rotateX(45deg);
+ transform: rotateY(45deg);
+ transform: skew(45deg);
+ transform: skewX(45deg);
+ transform: skewY(45deg);
+
+ */
+}
+
+</style>
+</head>
+<body>
+<div class="box1">
+1
+</div>
+
+</body>
+</html>

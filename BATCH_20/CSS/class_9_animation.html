@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+Class 8 CSS animation</title>
+<style>
+
+@keyframes anim1 {
+from {
+transform: translate(0);
+}
+
+to {
+transform: translate(100px);
+}
+
+}
+
+@keyframes anim1 {
+0% {
+transform: translate(0,0) rotate(0deg);
+}
+
+25% {
+transform: translate(500px,0) rotate(3600deg);
+}
+
+50% {
+transform: translate(500px,500px) rotate(7200deg);
+}
+
+75% {
+transform: translate(0,500px)
+rotate(10800deg);
+}
+
+100% {
+transform: translate(0,0) rotate(0deg);
+}
+
+}
+
+
+.box1 {
+width: 80px;
+height: 80px;
+background: red;
+
+animation-name: anim1;
+animation-duration: 4s;
+animation-delay: 500ms;
+animation-timing-function: cubic-bezier(.1,1.65,.71,-0.62);
+animation-direction: alternate-reverse;
+animation-iteration-count: infinite;
+}
+
+/*
+animation-direction: reverse;
+animation-direction: forward / normal;
+animation-direction: alternate;
+animation-direction: alternate-reverse;
+animation-iteration-count: 2;
+
+*/
+
+</style>
+</head>
+<body>
+<div class="box1">
+1
+</div>
+
+</body>
+</html>
