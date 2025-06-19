@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>Class 3 Batch 22: Form Elements L2</title>
+</head>
+<body>
+
+<h1>Form Elements Part 2</h1>
+
+<form>
+
+<!--
+The validations like required or min, max, minlength, maxlength will only work in the <form> element
+ -->
+
+<label for="fullname">Full Name</label>
+<input type="text" id="fullname" name="fullname" required="true" minlength="3" maxlength="25"  />
+
+<br />
+<br />
+
+<label>Phone Number
+<input type="text" name="phone" />
+</label>
+
+<br />
+<br />
+
+<label>Age
+<input type="number" name="phone" min="18" max="80" required="true" />
+</label>
+
+<br />
+<br />
+
+<div>
+
+<span>Gender: </span>
+
+<label>Male
+<input type="radio" name="gender" value="male" required="true" />
+</label>
+
+<label>Female
+<input type="radio" name="gender" value="female" required="true"/>
+</label>
+
+<label>Other
+<input type="radio" name="gender" value="other" required="true"/>
+</label>
+
+</div>
+
+<br />
+
+<div>
+
+<span>Hobby: </span>
+
+<label>Music
+<input type="checkbox" name="hobby" value="music" />
+</label>
+
+<label>Singing
+<input type="checkbox" name="hobby" value="singing" />
+</label>
+
+<label>Reading
+<input type="checkbox" name="hobby" value="reading" />
+</label>
+
+</div>
+
+<br />
+
+<label>
+Class : 
+<select>
+<option>10th</option>
+<option>11th</option>
+<option>12th</option>
+</select>
+</label>
+
+<br />
+<br />
+
+<label>
+Address : 
+<textarea>
+
+</textarea>
+</label>
+
+<br />
+<br />
+
+<input type="button" value="alert" />
+
+<button>Click Me</button>
+
+<input type="submit" />
+<input type="reset" />
+
+</form>
+
+</body>
+</html>
