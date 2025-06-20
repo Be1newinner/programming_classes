@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+Class 10 Pseudo Classes Selectors
+</title>
+<style>
+
+input {
+&:hover {
+background: red;
+}
+
+&:focus {
+background: pink;
+}
+
+&:disabled {
+background: black;
+}
+
+&:empty {
+  background: orange;
+}
+
+}
+
+
+a {
+color: green;
+}
+
+a:hover {
+font-size: 24px;
+}
+
+a:visited {
+color: orange;
+}
+
+a:active {
+text-decoration: none;
+}
+
+p:empty {
+background: red;
+height: 100px;
+width: 100px;
+}
+
+
+ul > li:nth-child(2n+ 4) {
+ font-size: 10px;
+}
+
+
+ul > li:nth-child(3n+ 4) {
+ font-size: 24px;
+}
+
+ul > li:nth-child(even) {
+ color: green;
+}
+
+ul > li:nth-child(3) {
+ color: blue;
+}
+
+ul > li:nth-last-child(n+3) {
+ color: orange;
+ font-size: 48px;
+}
+
+div span:nth-of-type(1) {
+background: red;
+}
+
+div p:first-child {
+
+}
+
+div p:last-child {
+
+}
+
+div p:first-of-type {
+
+}
+
+div p:last-of-type {
+
+}
+
+
+
+</style>
+</head>
+<body>
+
+<input type="text" disabled />
+<input type="text" value="dsd" />
+
+<br />
+<a href="https://shipsar.in">
+Shipsar
+</a>
+
+<a href="https://asaanhaicoding.in">
+AHC
+</a>
+
+
+<p></p>
+
+<div>
+<p>Kuch ni likha hai</p>
+<span>kuch likha hai</span>
+<p>Kuch ni likha hai 2</p>
+<p>Kuch ni likha hai 3</p>
+<p>Kuch bhi ni likha hai 4</p>
+</div>
+
+
+<ul>
+ <li>Cow</li>
+ <li>Dog</li>
+ <li>Cat</li>
+ <li>Rat</li>
+ <li>Cow</li>
+ <li>Dog</li>
+ <li>Cat</li>
+ <li>Rat</li>
+</ul>
+
+
+</body>
+</html>

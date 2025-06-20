@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Class 10 Combination Selectors</title>
+<style>
+
+/*
+descendent selector
+*/
+
+div p {
+ color: red;
+}
+
+div {
+ & p {
+    color: red;
+ }
+}
+
+div span {
+ font-size: 40px;
+}
+
+div p span {
+ font-weight: 900;
+}
+
+/*
+child selector
+*/
+
+div > span {
+color: blue;
+}
+
+/*
+adjacent sibling selector
+*/
+div span + p > span {
+	letter-spacing: 10px;
+	color: green;
+}
+
+
+div span ~ p > span {
+	text-decoration: underline;
+}
+
+div span ~ p > h2 {
+	text-decoration: underline;
+}
+
+div {
+ & span ~ p {
+	& > span {
+	}
+	
+	& > h2 {
+	}
+ }
+}
+
+</style>
+</head>
+<body>
+
+<div>
+
+<p>HELLO<span>WORLD</span> 2</p>
+
+<span>HELLO WORLD 4</span>
+
+<p>HELLO<span>WORLD3</span> 2</p>
+
+<p>HELLO<span>WORLD5</span> 2</p>
+
+</div>
+
+<p>HELLO WORLD 3</p>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+Class 10 Pseudo Elements Selectors
+</title>
+<style>
+
+::selection {
+background: red;
+color: green;
+}
+
+.name {
+ font-size: 24px;
+}
+
+.name::first-line {
+color: red;
+}
+
+.name::first-letter {
+color: red;
+font-size: 48px;
+}
+
+ul > li {
+ list-style-type: none;
+
+ &::before {
+ content : "😂 => ";
+ background: red;
+}
+
+ &::after {
+ content : " <== ";
+ background: green;
+}
+}
+
+</style>
+</head>
+<body>
+
+<p class="name">MR. Vijay Kumar. the lore mipsum. to the somewher roaming aorubnd to the space to thre vicnerse vijay suk mhj kij. MR. Vijay Kumar. the lore mipsum. to the somewher roaming aorubnd to the space to thre vicnerse vijay suk mhj kij </p>
+
+<ul>
+ <li>Cow</li>
+ <li>Dog</li>
+ <li>Cat</li>
+ <li>Rat</li>
+</ul>
+
+
+</body>
+</html>
