@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Class 11 Media Query</title>
+<style>
+
+section {
+	background: green;
+    padding: 4rem 0;
+ 
+ & > div {
+   width: 100%;
+   max-width: 67.5rem; /* 1080px */
+   min-width: 200px;
+   background: blue;
+   margin: 0px auto;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   
+   & > div {
+    width: calc(67.5rem / 3 - 6.7px);
+	background: red;
+	height: 200px;
+   }
+ }
+}
+
+section:nth-child(odd) {
+ 	background: white;
+}
+
+.child2 {
+	height: 200px;
+	width: 200px;
+	background: green;
+}
+
+@media (min-width: 420px) {
+  .child2 {
+  	background: red;
+  }
+}
+
+@media (min-width: 640px) {
+  .child2 {
+  	background: blue;
+  }
+}
+
+@media (min-width: 768px) {
+  .child2 {
+  	background: orange;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<h1>Responsive Designing</h1>
+
+<section>
+
+<div class="parent">
+<div class="child">
+child1
+</div>
+<div class="child">
+child2
+</div>
+<div class="child">
+child3
+</div>
+<div class="child">
+child4
+</div>
+<div class="child">
+child5
+</div>
+</div>
+</section>
+
+<section>
+<div class="child2">2</div>
+</section>
+
+<section>
+<div>3</div>
+</section>
+
+<section>
+<div>4</div>
+</section>
+
+
+<section>
+<div>5</div>
+</section>
+
+</body>
+</html>
