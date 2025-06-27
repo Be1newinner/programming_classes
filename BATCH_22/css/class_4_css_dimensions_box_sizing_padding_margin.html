@@ -8,6 +8,18 @@
    
 <style> 
 
+html {
+font-size: 20px; /*
+1 rem is equal to default size of font-size property inside html tag. if the size is not defined in html selector then it will be 16px for most devices.
+
+*/
+}
+
+section {
+height: 15rem;
+width: 15rem;
+}
+
 * {
 padding: 0;
 margin: 0;
@@ -22,14 +34,26 @@ box-sizing: content-box;
 }
 
 div {
- height: 100px;
- width: 100px;
+ height: 100svh;
+ width: 4.5rem;
  background: red;
  padding: 10px;
  border: 5px solid black;
- margin: 10px;
+ margin: 0;
 
  /*
+ 
+  ---- Size Units ----
+  height: 100px;
+  height: 100%;
+  height: 100vh;
+  height: 100svh;
+  width: 100svw;
+  width: calc(100svh - 9px);
+  width: calc(100% - 9px);
+  width: 5rem;
+  1rem = 16px; (approx)
+
  
   ----- Border -----
 
@@ -75,11 +99,13 @@ div {
 
 <body>
 
-<h1>CSS Padding, Margin, height, width, box-sizing</h1>
+<p style="font-size: 1.5rem">CSS Padding, Margin, height, width, box-sizing</p>
 
+<section>
 <div>
 dsdasd
 </div>
+</section>
 
 </body>
 </html>
