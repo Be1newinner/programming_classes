@@ -1,0 +1,77 @@
+<html>
+<head>
+   
+<title>Clas_12: animation</title>
+ 
+<style>
+
+@keyframes move_right {
+
+from {
+ transform: translateX(0px);
+}
+
+to {
+ transform: translateX(100px);
+}
+
+}
+
+@keyframes move_bottom {
+to {
+ transform: translateY(100px);
+}
+}
+
+@keyframes complex_move {
+0% {
+transform: translate(0,0);
+background: red;
+}
+25% {
+transform: translate(200px,0);
+background: blue;
+}
+50% {
+transform: translate(200px,200px);
+background: green;
+}
+75% {
+transform: translate(0,200px);
+background: yellow;
+}
+100% {
+transform: translate(0,0);
+}
+}
+
+/*
+animation-timing-function: ease;
+animation-timing-function: ease-in;
+animation-timing-function: ease-out;
+animation-timing-function: linear;
+animation-iteration-count: 2;
+animation-direction: forward;
+animation-direction: reverse;
+
+*/
+
+.child {
+background: red;
+height: 100px;
+width: 100px;
+animation-name: complex_move;
+animation-duration: 1s;
+animation-timing-function: cubic-bezier(0,1.45,.97,-0.36);
+animation-iteration-count: infinite;
+animation-direction: reverse;
+}
+
+</style> 
+</head>
+<body>
+
+<div class="child">11</div>
+
+</body>
+</html>
