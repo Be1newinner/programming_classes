@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>flex class</title>
+<style>
+
+.parent {
+ height: 550px;
+ width: 550px;
+ background-color: red;
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+ justify-content: space-evenly;
+ 
+ 
+ /*
+	justify-content: left; --default
+	justify-content: flex-start;
+	justify-content: center;
+	justify-content: right;
+	justify-content: space-between;
+	justify-content: space-around;
+
+   display: block;
+   display: inline;
+   display: flex;
+	
+	1. items row direction (x axis) align
+	2. items shrink box me adjust hone k liye
+	
+	flex-wrap: wrap;
+	items shrink nahi hote aur bache hue items next line se start hote hai. aur har line ko flex half part me divide karr deta. alignment top to bottom
+	 
+	flex-wrap: wrap-reverse;
+	alignment bottom to top
+	
+	flex-wrap: nowrap;    -- default
+	
+	flex-direction: row; --default
+	flex-direction: column;
+	flex-direction: column-reverse;
+	flex-direction: row-reverse;
+
+
+ */
+}
+
+.child {
+ height: 100px;
+ width: 100px;
+ background-color: blue;
+}
+
+</style>
+</head>
+<body>
+
+<div class="parent">
+	<div class="child">child 1</div>
+	<div class="child">child 2</div>
+	<div class="child">child 3</div>
+	<div class="child">child 4</div>
+	<div class="child">child 5</div>
+	<div class="child">child 6</div>
+	<div class="child">child 7</div>  
+	<div class="child">child 6</div>
+	<div class="child">child 6</div>
+	<div class="child">child 6</div>
+	<div class="child">child 6</div>
+	<div class="child">child 6</div>
+	<div class="child">child 6</div>
+	  
+</div>
+
+</body>
+</html>
