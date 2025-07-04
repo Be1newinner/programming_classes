@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   
+<title>
+   Class 7 Batch 22: animation
+</title>
+   
+<style> 
+
+@keyframes bg-color {
+0% {}
+
+25% {
+background: blue;
+}
+
+50% {
+background: green;
+}
+
+75% {
+background: pink;
+}
+
+}
+
+@keyframes movement {
+0% {}
+
+25% {
+transform: translate(300px,0);
+border-radius: 50px;
+}
+
+50% {
+transform: translate(300px,300px);
+border-radius: 0;
+}
+
+75% {
+transform: translate(0,300px);
+border-radius: 50px;
+}
+
+}
+
+.parent {
+background: red;
+height: 100px;
+width: 100px;
+
+animation-name: movement;
+animation-duration: 4s;
+animation-iteration-count: 2;
+animation-timing-function: linear;
+animation-direction: alternate-reverse;
+
+/*
+animation-direction: normal;
+animation-direction: reverse;
+animation-direction: alternate;
+animation-direction: alternate-reverse;
+
+animation-timing-function: ease;
+animation-timing-function: ease-in;
+animation-timing-function: ease-out;
+animation-timing-function: linear;
+
+animation-timing-function: cubic-bezier(0,2,1,1.5)
+
+animation-name: bg-cl2;
+animation-duration: 2s;
+animation-iteration-count: 2
+*/
+}
+
+
+</style>
+</head>
+<body>
+<h1>Flex</h1>
+
+<div class="parent">
+Vijay KUmar
+</div>
+
+
+</body>
+</html>
