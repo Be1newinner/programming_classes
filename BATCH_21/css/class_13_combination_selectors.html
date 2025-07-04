@@ -1,0 +1,82 @@
+<html>
+<head>
+   
+<title>Clas_13: combination selectors</title>
+ 
+<style>
+
+/*
+
+div {
+background: green;
+
+& is nested selector
+
+	& p {
+		color: red;
+
+		& > span {
+			color: blue;
+		}
+
+}
+
+}
+*/
+
+
+/*
+ > child selector
+
+.child > span{
+  color: red;
+}
+*/
+
+
+
+/*
+descendent selector
+
+.child p {
+color: red;
+}
+*/
+
+/*
+p {
+color: red;
+}
+*/
+
+/*
+~ general sibling selector
+*/
+
+div span ~ p {
+ color: blue;
+}
+
+/*
++ adjacent sibling selector
+*/
+
+div span + p {
+ font-size: 36px;
+}
+
+</style> 
+</head>
+<body>
+
+<div class="child">
+<p>Hello</p>
+<p>Hello</p>
+<span>Hello</span>
+<p>Hello</p>
+<p>Hello <span>Vijay</span></p>
+</div>
+<p>Hello</p>
+
+</body>
+</html>

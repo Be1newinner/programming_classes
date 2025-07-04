@@ -1,0 +1,67 @@
+<html>
+<head>
+   
+<title>Clas_13: pseudo classes selectors</title>
+ 
+<style>
+
+li:first-child {
+color: red;
+}
+
+div {
+& p:first-child {
+color: green;
+}
+
+& span:first-of-type {
+color: orange;
+}
+
+& p:last-child {
+font-size: 24px;
+}
+
+& span:last-of-type {
+font-size: 24px;
+}
+
+/*
+
+& p:first-child + span {
+color: orange;
+}
+
+*/
+}
+
+</style> 
+</head>
+<body>
+
+<div>
+<p>hello 1</p>
+<span>span 1</span>
+<span>span 2</span>
+<p>hello 2</p>
+<span>span 3</span>
+<p>hello 3</p>
+<span>span 4</span>
+<p>hello 4</p>
+
+</div>
+
+
+<ul>
+
+<li>cow</li>
+<li>Dog</li>
+<li>cat</li>
+<li>cow 2</li>
+<li>Dog 2</li>
+<li>cat 2</li>
+
+</ul>
+
+</body>
+</html>

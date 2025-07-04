@@ -1,0 +1,53 @@
+<html>
+<head>
+   
+<title>Clas_13: pseudo elements selectors</title>
+ 
+<style>
+
+p::first-line {
+color: red;
+}
+
+p::first-letter {
+font-size: 36px;
+}
+
+input {
+color: green;
+
+&::placeholder {
+ color: orange;
+}
+
+}
+
+li::before {
+content: " 😊 ";
+}
+
+li::after {
+content: " 😒 ";
+}
+
+</style> 
+</head>
+<body>
+
+<input placeholder="some text"/>
+
+
+<p>Hello Vijay. how are you. das dasd .sad .asd .asd asd asd asd as dasd asf sadk fhsduf hashd ioashfuiwghfwiug uog fiuasg hfuiags dasyio fgSDAG FUSDFG OUSD GFIUSD FUISD FUAIS FHUSH FUISDA FSDUF HUSDAH FUISH FUWOFH WHIWOHWEHFUIDHF UISDH SUDIHF USDHF USDHFUIASH FIUASHD FOUHSAD FUISHDFISAH FOIASHF UISH FIASHDF OIASUDH FOAISUDHF H FSUDHFUSDHFIUSDHFUSDHFUhusdahfiusd fuisadh uiasdfhauosdhf ouashd odh oasudahsdu asda</p>
+
+
+
+<ul>
+
+<li>cow</li>
+<li>Dog</li>
+<li>cat</li>
+
+</ul>
+
+</body>
+</html>
