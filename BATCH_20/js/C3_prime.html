@@ -1,0 +1,24 @@
+<script>
+
+const num = prompt("enter any number!");
+
+let isPrime = true;
+
+for (let i = 2; i < num; i++) {
+ 
+ if (num%i == 0) {
+	isPrime = false;
+  }
+
+} 
+
+if (isPrime == true) {
+	alert(num + " is prime!");   
+}  else {
+    alert(num + " is not prime!");   
+}
+
+console.log(num + " is prime!")
+
+
+</script>
