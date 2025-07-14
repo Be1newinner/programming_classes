@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+   
+<title>Clas_13: pseudo classes selectors</title>
+ 
+<style>
+
+* {
+box-sizing: border-box;
+
+/*
+box-sizing: content-box;
+
+*/
+}
+
+div#parent {
+background: red;
+height: 20rem;
+width: 20rem;
+
+& #child {
+background: blue;
+height: 50%;
+width: 50%;
+border: 50px solid;
+padding: 20px;
+}
+
+}
+
+/*
+1rem = 16px;
+*/
+
+</style> 
+</head>
+<body>
+
+<div id="parent">
+<div  id="child">
+das
+</div>
+</div>
+
+<div>
+da
+</div>
+
+</body>
+</html>
