@@ -1,0 +1,60 @@
+<html>
+<head></head>
+<body>
+<script>
+// creating a function
+function summing(){
+    let a = 5;
+    let b = 3;
+    let c = b + 2;
+    let result = a + b * c / a;
+    console.log('Result is = > ', result)
+}
+
+
+// calling a function / invoking a function
+summing()
+summing.call()
+
+
+// Anonymous function
+const summing2 = function() {
+    let a = 5;
+    let b = 3;
+    let c = b + 2;
+    let result = a + b * c / a;
+    console.log('Result is = > ', result)
+}
+
+// anonymous arrow function | arrow function
+const summing2 = ()=> {
+    let a = 5;
+    let b = 3;
+    let c = b + 2;
+    let result = a + b * c / a;
+    console.log('Result is = > ', result)
+}
+
+
+// IIFE Function
+// Immediate Invoking Function execution
+// Self execution function
+
+(function() {
+    let a = 5;
+    let b = 3;
+    let c = b + 2;
+    let result = a + b * c / a;
+    console.log('Result is = > ', result)
+})()
+
+(()=> {
+    let a = 5;
+    let b = 3;
+    let c = b + 2;
+    let result = a + b * c / a;
+    console.log('Result is = > ', result)
+})()
+</script>
+</body>
+</html>

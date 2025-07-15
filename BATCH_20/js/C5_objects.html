@@ -1,0 +1,65 @@
+<html>
+<head></head>
+<body>
+<script>
+// Blank object
+const name = {}
+const person = {
+    name:"Vijay",
+    age: 25,
+    height: 5.4 
+}
+
+//read
+console.log(person)
+console.log(person.name)
+console.log(person["name"])
+let key = "name"
+person[key]
+console.log(person[key])
+
+//update
+person["marks"] = 100
+
+// add key
+person["marks"] = 100
+
+// delete key
+delete person["marks"]
+
+// nested object
+const car = {
+    name: "suzuki",
+    age: 10,
+    isNew : true,
+    address: {
+        plotno: 150,
+        country: {
+            city: "delhi",
+            state: "delhi",
+            pin: 110062
+        }
+    },
+    features: ["self driving", "AI", "Food", "GHAR"]
+}
+
+// update nested object
+car.address.country.city = "DELHI"
+
+// extract keys
+Object.keys(car)
+
+// output: ['name', 'age', 'isNew', 'address', 'features']
+
+// extract values
+Object.values(car)
+//output: ['suzuki', 10, true, {…}, Array(4)]
+
+
+//check if key exist in object
+"age" in person
+
+
+</script>
+</body>
+</html>
