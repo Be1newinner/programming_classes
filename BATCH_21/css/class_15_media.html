@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+
+<title>Clas_13: pseudo classes selectors</title>
+
+<style>
+
+div#parent {
+background: red;
+height: 10rem;
+width: 100%;
+max-width: 1080px;
+}
+
+@media (min-width: 640px) {
+	div#parent {
+		background: blue;
+	}
+}
+
+@media (min-width: 720px) {
+	div#parent {
+		background: green;
+	}
+}
+
+@media (min-width: 1080px) {
+	div#parent {
+		background: orange;
+	}
+}
+
+</style> 
+</head>
+<body>
+
+<div id="parent">
+das
+</div>
+
+</body>
+</html>
