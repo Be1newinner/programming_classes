@@ -1,0 +1,72 @@
+<html>
+<head></head>
+<body>
+<script>
+// return value
+function abc(){
+    return Math.random()
+}
+
+let result = abc()
+
+// wrong function 1
+let fname = "Vijay";
+let lname = "Kumar"
+function fullname() {
+    const fname = prompt();
+    const lname = prompt();
+    return "My name is "+ fname+ " " + lname + ".";
+}
+
+
+// wrong function 2
+let fname = "Vijay";
+let lname = "Kumar"
+function fullname() {
+    return "My name is "+ fname+ " " + lname + ".";
+}
+
+//right function
+function fullname(fname, lname) {
+    return "My name is "+ fname+ " " + lname + ".";
+}
+
+// default parameter value
+function fullname(fname, lname = "dsa5das4584") {
+    return "My name is "+ fname+ " " + lname + ".";
+}
+
+fullname("Dhananjay")
+
+// output: 'My name is Dhananjay dsa5das4584.'
+
+function fullname(fname, lname) {
+    const lastname = lname || "Kum"; 
+    return "My name is "+ fname+ " " + lastname  + ".";
+}
+
+fullname("Dhananjay")
+// output: 'My name is Dhananjay Kum.'
+
+
+// methods and setter, getter in functions
+
+const obj = {
+    name: "Vijay",
+    age: 25,
+    increase: function () {
+        this.age++;
+        return this.age + 1
+    },
+    set cname(name) {
+        this.name = name; 
+    },
+    get gname() {
+        return this.name
+    }
+}
+
+
+</script>
+</body>
+</htm2>
