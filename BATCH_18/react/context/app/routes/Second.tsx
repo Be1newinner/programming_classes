@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useContext } from "react";
 import Navbar from "~/components/Navbar";
+import { CounterContext } from "~/service/Counter/CounterContext";
 
 export default function Second() {
-  const [counter, updateCounter] = useState(0);
+  const { counter, increase, decrease, reset } = useContext(CounterContext);
 
   return (
     <div>
@@ -11,13 +12,9 @@ export default function Second() {
         <h1>Second Page</h1>
         <p>Counter: {counter}</p>
 
-        <button onClick={() => updateCounter((prev) => prev + 1)}>
-          Increase
-        </button>
-        <button onClick={() => updateCounter((prev) => prev - 1)}>
-          Decrease
-        </button>
-        <button onClick={() => updateCounter(0)}>Reset</button>
+        <button onClick={increase}>Increase</button>
+        <button onClick={decrease}>Decrease</button>
+        <button onClick={reset}>Reset</button>
       </main>
     </div>
   );

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "~/components/Navbar";
+import { CounterContext } from "~/service/Counter/CounterContext";
 
 export default function Third() {
-  const [counter, updateCounter] = useState(0);
+  const { counter } = useContext(CounterContext);
 
   return (
     <div>
