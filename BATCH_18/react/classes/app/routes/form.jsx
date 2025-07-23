@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navbar from "../components/Navbar";
 
 export function meta() {
   return [
@@ -30,8 +29,6 @@ export default function FormPage() {
 
   return (
     <div className="min-h-screen ">
-      <Navbar />
-
       <div className="flex justify-center items-center py-10 text-white">
         <div className="bg-slate-800 shadow-lg rounded-xl w-full max-w-md p-6">
           <h1 className="text-2xl font-semibold text-center mb-6">Register</h1>

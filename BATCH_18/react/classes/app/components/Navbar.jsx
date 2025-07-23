@@ -1,21 +1,10 @@
 import { Link, useLocation } from "react-router";
+import { menuLocations } from "../routes";
 
 export default function Navbar() {
   const location = useLocation();
   // console.log(location.pathname);
 
-  const pages = [
-    {
-      id: 1,
-      title: "Home Page",
-      path: "/",
-    },
-    {
-      id: 2,
-      title: "Form Page",
-      path: "/form",
-    },
-  ];
   return (
     <header className="p-4">
       <ul
@@ -23,7 +12,7 @@ export default function Navbar() {
           "flex gap-4 *:text-black *:py-2 *:px-4 *:rounded-md *:active:scale-95 *:cursor-pointer "
         }
       >
-        {pages.map((item) => {
+        {menuLocations.map((item) => {
           return (
             <li
               key={item.id}
@@ -31,7 +20,7 @@ export default function Navbar() {
                 location.pathname === item.path ? "bg-red-400" : "bg-red-100"
               }
             >
-              <Link to={item.path}>{item.title}</Link>
+              <Link to={item.slug}>{item.title}</Link>
             </li>
           );
         })}

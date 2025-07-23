@@ -13,3 +13,11 @@ body {
     color-scheme: dark;
   }
 }
+
+input {
+  @apply border border-gray-600 px-4 py-2 rounded-md;
+}
+
+button {
+  @apply text-black py-2 px-4 rounded-md active:scale-95 cursor-pointer bg-red-700;
+}

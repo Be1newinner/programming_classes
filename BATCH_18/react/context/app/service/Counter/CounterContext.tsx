@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, type ReactNode } from "react";
 
 export const CounterContext = createContext({
   counter: 0,
@@ -7,7 +7,11 @@ export const CounterContext = createContext({
   reset: function () {},
 });
 
-export const CounterContextProvider = ({ children }) => {
+export const CounterContextProvider = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
   const [counter, updateCounter] = useState(0);
 
   function increase() {
