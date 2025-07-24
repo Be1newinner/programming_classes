@@ -57,3 +57,35 @@ cat = Animal("omnivores", "kitty", 0.5, 5)
 print(dog.name)
 print(dog.vaccinated)
 print(cat.name)
+
+
+
+
+# Inheritance and polymorphism
+
+class Animal:
+    name: str
+    category: str
+    
+    def speak(self):
+        print("ANIMAL SPEAKING")
+
+# Inheritance
+class Dog(Animal):
+    category: str = "DOG" 
+
+    # Polymorphism 
+    def speak(self):
+        super().speak()
+        print("DOG SPEAKING")
+        
+anim = Animal()
+# print(anim.category)
+
+dogg = Dog()
+
+print(dogg.category)
+# anim.speak()
+dogg.speak()
+
+
