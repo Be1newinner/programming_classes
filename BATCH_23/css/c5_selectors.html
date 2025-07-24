@@ -1,0 +1,59 @@
+<html>
+<head>
+<style>
+* {
+padding: 0px;
+margin: 0px;
+}
+
+.menu span {
+background: red;
+}
+
+section.menu {
+background: green;
+}
+
+span ~ p {
+ background: blue;
+}
+
+span + p {
+ font-size: 30px;
+}
+
+</style>
+</head>
+<body>
+	<div class="menu">
+		<p>Hello 0</p>
+		<span>Menu bar</span>
+		<p>Hello</p>
+		<p>Hello 2</p>
+		<span>Menu bar</span>
+		<h4>heeee</h4>
+		<p>Hello 3</p>
+	</div>
+	
+	<hr />
+	
+	<section class="menu">
+	 hello section
+	</section>
+	
+	<section class="menu1">
+	 hello section
+	</section>
+
+	<hr />
+	
+	<div id="menu1">
+		<span>Menu bar</span>
+		<p>Hello</p>
+		<p>Hello</p>
+		<span>Menu bar</span>
+		<h4>heeee</h4>
+		<p>Hello</p>
+	</div>
+</body>
+</html>
