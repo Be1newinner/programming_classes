@@ -1,0 +1,86 @@
+<html>
+<head>
+<style>
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+.parent {
+background: red;
+height: 450px;
+width: 450px;
+display: flex;
+/*
+when we do flex!
+1. the child will compress so that all the child can be arranged as a single row
+2. flex children direction: row ya x-axis
+*/
+
+flex-wrap: wrap;
+/*
+it will divide the box in equal size of the number of rows available.
+
+flex-wrap: nowrap; --default
+flex-wrap: wrap;
+flex-wrap: wrap-reverse; bottom to top
+*/
+
+flex-direction: row;
+/*
+flex-direction: row; left to right --default
+flex-direction: row-reverse; right to left
+flex-direction: column; top to bottom
+flex-direction: column-reverse; bottom to top
+
+*/
+
+justify-content: space-evenly;
+/*
+eska mtlb hai jis bhi direction me flex-direction ki value us direction me flex ki children to align krna
+
+justify-content: left; --default
+justify-content: right;
+justify-content: center;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+*/
+
+
+}
+
+.child {
+background: blue;
+height: 100px;
+width: 100px;
+border: 1px solid black;
+}
+
+.child1 {
+background: green;
+}
+
+.child2 {
+background: pink;
+}
+
+.child3 {
+background: orange;
+}
+
+</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child child1">1</div>
+		<div class="child child2">2</div>
+		<div class="child child3">3</div>
+		<div class="child child4">4</div>
+		<div class="child child5">5</div>
+		<div class="child child6">6</div>
+		<div class="child child7">7</div>
+	</div>
+</body>
+</html>
