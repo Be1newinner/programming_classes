@@ -1,0 +1,50 @@
+<html>
+<head></head>
+<body>
+<h2>THE TODO</h2>
+
+<div>
+<label>
+TASK <input id="task_input" placeholder="enter something" />
+</label>
+<button id="submit">submit</button>
+</div>
+
+<ul id="todo_container">
+	<li>Task1</li>
+	<li>Task2</li>
+	<li>Task3</li>
+</ul>
+
+<script>
+// finding html elements
+const submit_button = document.getElementById("submit");
+
+const task_input = document.getElementById("task_input");
+
+const todo_container = document.getElementById("todo_container");
+
+function addItemInTodo(){
+ const input_text = task_input.value;
+ // alert(input_text)
+ 
+ if (!input_text) {
+	return alert("Error: Enter an input");
+ }
+ 
+ let newChild = document.createElement("li");
+ 
+ newChild.textContent = input_text;
+ 
+ todo_container.appendChild(newChild);
+ 
+ task_input.value = ""; 
+}
+
+submit_button.addEventListener("click", addItemInTodo);
+
+
+
+</script>
+</body>
+</html>

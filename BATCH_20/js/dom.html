@@ -1,0 +1,53 @@
+<html>
+<head></head>
+<body>
+<h2 id="val_counter">0</h2>
+
+<div>
+<button onclick="increase()">Increase</button>
+<button id="dec_button">Decrease</button>
+<button id="res_button">Reset</button>
+</div>
+
+<script>
+// finding html elements
+const dec_button = document.getElementById("dec_button");
+const res_button = document.getElementById("res_button");
+const val_counter_heading = document.getElementById("val_counter");
+
+function increase() {
+let temp = Number(val_counter_heading.innerText);
+
+temp += 1
+
+val_counter_heading.innerText = temp
+;
+}
+
+function decrease() {
+num -= 1
+
+alert(num)
+}
+
+function reset() {
+num = 0
+
+alert(num)
+}
+
+console.log(val_counter.innerText);
+
+// dec_button.addEventListener("click", ()=>{
+// alert("hello")
+// })
+
+dec_button.addEventListener("click", decrease);
+
+res_button.addEventListener("click", reset);
+
+
+
+</script>
+</body>
+</html>
