@@ -7,11 +7,16 @@ margin: 0px;
 box-sizing: border-box;
 }
 
+.no-parent {
+position: relative;
+}
+
 .parent {
 background: red;
 height: 450px;
 width: 450px;
 display: flex;
+
 /*
 when we do flex!
 1. the child will compress so that all the child can be arranged as a single row
@@ -27,7 +32,7 @@ flex-wrap: wrap;
 flex-wrap: wrap-reverse; bottom to top
 */
 
-flex-direction: row;
+flex-direction: column;
 /*
 flex-direction: row; left to right --default
 flex-direction: row-reverse; right to left
@@ -36,7 +41,7 @@ flex-direction: column-reverse; bottom to top
 
 */
 
-justify-content: space-evenly;
+justify-content: flex-start;
 /*
 eska mtlb hai jis bhi direction me flex-direction ki value us direction me flex ki children to align krna
 
@@ -46,8 +51,29 @@ justify-content: center;
 justify-content: space-between;
 justify-content: space-around;
 justify-content: space-evenly;
+
+justify-content: flex-start;
+justify-content: flex-end;
+
 */
 
+/*
+align-items: flex-start;
+align-items: center;
+align-items: flex-end;
+*/
+
+align-content: center;
+
+/*
+align-content: flex-start;
+align-content: center;
+align-content: flex-end;
+align-content: space-between;
+align-content: space-evenly;
+align-content: space-around;
+
+*/
 
 }
 
@@ -56,6 +82,7 @@ background: blue;
 height: 100px;
 width: 100px;
 border: 1px solid black;
+z-index: 10;
 }
 
 .child1 {
@@ -70,9 +97,20 @@ background: pink;
 background: orange;
 }
 
+
+.no-child {
+position: absolute;
+top: 0;
+left: 0;
+width: 450px;
+height: 225px;
+background: rgba(0,0,255,0.25);
+}
+
 </style>
 </head>
 <body>
+	<div class="no-parent">
 	<div class="parent">
 		<div class="child child1">1</div>
 		<div class="child child2">2</div>
@@ -82,5 +120,9 @@ background: orange;
 		<div class="child child6">6</div>
 		<div class="child child7">7</div>
 	</div>
+	
+	
+	<div class="no-child" />
+	<div/>
 </body>
 </html>
