@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 
 const app = express();
 
@@ -9,8 +10,14 @@ const app = express();
 3. body - POST, PUT, PATCH
 */
 
-app.get("/", (req, res) => {
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/api/", (req, res) => {
   res.send("HELLO WORLD");
+});
+
+app.get("/api/home", (req, res) => {
+  res.send("Home APIS");
 });
 
 // app.get("/products", (req, res) => {
@@ -18,7 +25,7 @@ app.get("/", (req, res) => {
 // });
 
 // 1. Path parameter
-app.get("/products/:productId", (req, res) => {
+app.get("/api/products/:productId", (req, res) => {
   const data = req.params;
   console.log(data.productId);
 
@@ -26,17 +33,24 @@ app.get("/products/:productId", (req, res) => {
 });
 
 // 2. Query parameter
-app.get("/products", (req, res) => {
+app.get("/api/products", (req, res) => {
   const data = req.query;
+
   const age = data.age;
   const gender = data.gender;
-  const name = data.name;
+  const fullname = data.fullname;
+  const hobbies = data.hobbies;
+  const email = data.email;
   console.log(data);
 
-  res.send("PRODUCTS LIST");
+  res.json({
+    fullname,
+    age,
+    gender,
+    hobbies,
+    email,
+  });
 });
-
-
 
 // app.get("/contact", (req, res) => {
 //   // res.send("HELLO CONTACT");

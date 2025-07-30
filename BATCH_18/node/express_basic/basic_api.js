@@ -16,9 +16,6 @@ const app = express();
 
 */
 
-app.get("/", (req, res) => {
-  res.send("HELLO WORLD");
-});
 
 app.get("/contact", (req, res) => {
   // res.send("HELLO CONTACT");

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Example</title>
+  </head>
+  <body>
+    <form action="/api/products" method="GET">
+      <label>
+        <span>Full Name</span>
+        <input name="fullname" placeholder="Type your name" />
+      </label>
+      <br /><br />
+
+      <label>
+        <span>Email ID</span>
+        <input name="email" placeholder="Type your email" />
+      </label>
+      <br /><br />
+
+      <label>
+        <span>Age</span>
+        <input type="number" name="age" placeholder="Your age" />
+      </label>
+      <br /><br />
+
+      <label>
+        <span>Gender</span>
+        <select name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+      <br /><br />
+
+      <fieldset>
+        <legend>Hobbies</legend>
+        <label
+          ><input type="checkbox" name="hobbies" value="Reading" />
+          Reading</label
+        >
+        <label
+          ><input type="checkbox" name="hobbies" value="Gaming" /> Gaming</label
+        >
+        <label
+          ><input type="checkbox" name="hobbies" value="Coding" /> Coding</label
+        >
+      </fieldset>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
