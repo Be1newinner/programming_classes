@@ -21,7 +21,38 @@ app.get("/", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-  res.send("HELLO CONTACT");
+  // res.send("HELLO CONTACT");
+  res.json({
+    name: "Vijay",
+    age: 25,
+    gender: "Male",
+  });
+});
+
+app.get("/contacts", (req, res) => {
+  // res.send("HELLO CONTACT");
+  res.json([
+    {
+      name: "Vijay",
+      age: 25,
+      gender: "Male",
+    },
+    {
+      name: "Vijay",
+      age: 25,
+      gender: "Male",
+    },
+    {
+      name: "Vijay",
+      age: 25,
+      gender: "Male",
+    },
+    {
+      name: "Vijay",
+      age: 25,
+      gender: "Male",
+    },
+  ]);
 });
 
 app.post("/", (req, res) => {
