@@ -7,16 +7,15 @@ margin: 0px;
 box-sizing: border-box;
 }
 
-.no-parent {
-position: relative;
-}
-
 .parent {
-background: red;
+background: linear-gradient(#e66465, #e66465);
+background-size: 100% 225px;
+background-repeat: no-repeat;
+
+background-color: red;
 height: 450px;
 width: 450px;
 display: flex;
-
 /*
 when we do flex!
 1. the child will compress so that all the child can be arranged as a single row
@@ -32,7 +31,7 @@ flex-wrap: wrap;
 flex-wrap: wrap-reverse; bottom to top
 */
 
-flex-direction: column;
+flex-direction: row;
 /*
 flex-direction: row; left to right --default
 flex-direction: row-reverse; right to left
@@ -63,7 +62,7 @@ align-items: center;
 align-items: flex-end;
 */
 
-align-content: center;
+align-content: space-evenly;
 
 /*
 align-content: flex-start;
@@ -97,20 +96,9 @@ background: pink;
 background: orange;
 }
 
-
-.no-child {
-position: absolute;
-top: 0;
-left: 0;
-width: 450px;
-height: 225px;
-background: rgba(0,0,255,0.25);
-}
-
 </style>
 </head>
 <body>
-	<div class="no-parent">
 	<div class="parent">
 		<div class="child child1">1</div>
 		<div class="child child2">2</div>
@@ -121,8 +109,5 @@ background: rgba(0,0,255,0.25);
 		<div class="child child7">7</div>
 	</div>
 	
-	
-	<div class="no-child" />
-	<div/>
 </body>
 </html>
