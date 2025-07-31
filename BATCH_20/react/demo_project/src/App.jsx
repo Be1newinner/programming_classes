@@ -1,13 +1,7 @@
+import React from "react";
 import "./App.css";
+import Todo from "./components/Todo";
 
-function App() {
-  return (
-    <>
-      <h1>Hello</h1>
-      <p>Hello vijay</p>
-      <button>increase</button>
-    </>
-  );
+export default function App() {
+  return <Todo />;
 }
-
-export default App;
