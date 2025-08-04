@@ -1,7 +1,8 @@
-import React from "react";
+// import React from "react";
 import "./App.css";
-import Todo from "./components/Todo";
+import Form from "./components/Form";
+// import Todo from "./components/Todo";
 
 export default function App() {
-  return <Todo />;
+  return <Form />;
 }

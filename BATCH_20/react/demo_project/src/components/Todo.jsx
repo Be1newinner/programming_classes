@@ -73,6 +73,22 @@ export default function Todo() {
     console.table(todos);
   }, [todos]);
 
+  function editTodo(todo) {
+    const newText = prompt("Enter input!", todo.text);
+
+    const clonedArray = [...(todos.clonedArray[0].text = newText)];
+
+    // setTodos((prev) => [
+    //   { id: todo.id, text: newText },
+    //   ...prev.filter((item) => item.id !== todo.id),
+    // ]);
+    setTodos(clonedArray);
+  }
+
+  function deleteTodo(todoID) {
+    setTodos((prev) => [...prev.filter((item) => item.id !== todoID)]);
+  }
+
   return (
     <div className="container">
       {/* {inputValue} */}
@@ -86,21 +102,23 @@ export default function Todo() {
       </div>
 
       <div>
-        {todos.map((todo) => {
-          return (
-            <div key={todo.id}>
-              <span>{todo.text}</span>
-              <div>
+        {todos
+          // .sort((a, b) => a.id - b.id)
+          .map((todo) => {
+            return (
+              <div key={todo.id}>
+                <span>{todo.text}</span>
                 <div>
-                  <SquarePen size={16} />
-                </div>
-                <div>
-                  <Trash2 size={16} />
+                  <div onClick={() => editTodo(todo)}>
+                    <SquarePen size={16} />
+                  </div>
+                  <div onClick={() => deleteTodo(todo.id)}>
+                    <Trash2 size={16} />
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );
