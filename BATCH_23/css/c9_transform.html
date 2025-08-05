@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+.parent {
+background-color: red;
+width: 200px;
+height: 200px;
+margin: 50px;
+
+/*
+
+transform: translateX(100px); move to right by 100px
+transform: translateX(-100px); move to left by 100px
+transform: translateY(100px);  move to bottom by 100px 
+transform: translateY(-100px);  move to top by 100px 
+transform: translateY(-100%); move to top by 100% 
+transform: translate(100px, 100px);  move to bottom and right by 100px 
+
+transform: scale(1.5); make item bigger than 1
+transform: scale(0.5); make item smaller than 1
+transform: scaleX(1.3);
+transform: scaleY(.3);
+
+transform: rotate(-100deg); rotate at z axis anticlockwise
+transform: rotate(100deg); rotate at z axis clockwise
+
+transform: skewX(45deg);
+transform: skewY(45deg);
+
+
+*/
+
+}
+
+
+.parent:hover {
+background: blue;
+/*
+transform: rotate(45deg);
+*/
+}
+
+.parent:active {
+	background: green;
+	/* transform: rotate(45deg) scale(0.95) */
+	transform: scale(0.95)
+}
+
+
+</style>
+</head>
+<body>
+<section class="parent">	
+</section>
+	
+</body>
+</html>

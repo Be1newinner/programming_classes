@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+.parent {
+background-color: red;
+width: 200px;
+height: 200px;
+margin: 50px;
+
+}
+
+
+.parent:hover {
+background: blue;
+transform: rotate(45deg);
+transition-property: transform, background;
+transition-duration: 2s;
+transition-delay: 1s;
+transition-timing-function: linear;
+
+/*
+transition: transform;
+*/
+}
+
+
+
+</style>
+</head>
+<body>
+<section class="parent">	
+</section>
+	
+</body>
+</html>
