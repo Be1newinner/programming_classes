@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>
+
+@keyframes rotation {
+from {
+transform: rotateZ(0);
+}
+to {
+transform: rotateZ(720deg);
+}
+}
+
+@keyframes movement {
+0% {
+transform: translate(0,0) rotateZ(0deg) scale(1) skew();
+}
+
+25% {
+transform: translate(250px,0)  rotateZ(720deg)  scale(1.5);
+}
+
+50% {
+transform: translate(250px,250px)  rotateZ(0deg)  scale(1);
+}
+
+75% {
+transform: translate(0,250px)  rotateZ(720deg)  scale(0.5);
+}
+}
+
+
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+.parent {
+width: 100px;
+height: 100px;
+margin: 50px;
+animation-name: movement;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT72QVveWawR9SKadP5lh6ul8Qe1pHgFZOxPg&s);
+}
+
+
+
+</style>
+</head>
+<body>
+
+<svg class="parent" fill="#000000" width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 5.04V4l4-4h8l4 4v1.04L8 16 0 5.04zM2 5l6 8.5L4 5H2zm12 0h-2l-4 8.5L14 5zM6 5l2 6 2-6H6zM4 2L2 4h2l2-2H4zm8 0h-2l2 2h2l-2-2zM7 2L6 4h4L9 2H7z" fill-rule="evenodd"/>
+</svg>
+	
+</body>
+</html>
