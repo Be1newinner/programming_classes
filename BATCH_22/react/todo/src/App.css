@@ -1,0 +1,71 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 196, 85);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  & > div:nth-child(1) {
+    & > input {
+      height: 40px;
+      padding-left: 10px;
+      font-size: 18px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      &::placeholder {
+        color: silver;
+      }
+    }
+
+    & > button {
+      height: 45px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+
+  & > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.icon_container {
+  background-color: rgb(24, 24, 118);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.task {
+  display: flex;
+  background-color: rgb(74, 74, 224);
+  border-radius: 10px;
+  padding: 0 20px;
+
+  & > p {
+    /* flex: 1; */
+    flex-grow: 1;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
