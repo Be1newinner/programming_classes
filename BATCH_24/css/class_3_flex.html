@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>CSS BASICS</title>
+
+<style>
+
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+
+.parent {
+background-color: green;
+height: 500px;
+width: 500px;
+display: flex; 
+flex-wrap: wrap;
+flex-direction: column;
+
+/*
+column-gap: 10px;
+gap: 10px;
+row-gap: 10px;
+flex-direction: row; --default
+flex-direction: row-reverse;
+flex-direction: column;
+flex-direction: column-reverse;
+
+display: flex;
+this shrink the children as per parent and set the direction of children to row or x axis;
+
+flex-wrap: nowrap; --default
+flex-wrap: wrap;
+flex-wrap: wrap-reverse;
+
+justify-content: flex-start; --default
+justify-content: center;
+justify-content: flex-end;
+justify-content: space-between;
+justify-content: space-around;
+
+align-content: flex-start;
+align-content: flex-end;
+align-content: center;
+align-content: space-between;
+align-content: space-around;
+align-content: space-evenly;
+
+align-items: flex-start;
+align-items: center;
+align-items: flex-end;
+--------------------------------
+
+overflow: hidden;
+overflow-y: auto;
+overflow: scroll;
+overflow-y: scroll;
+overflow-x: scroll;
+*/
+}
+
+.child {
+ background: orange;
+ width: 110px;
+ height: 101px;
+ border: 1px solid black;
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="parent">
+<div class="child child1">1</div>
+<div class="child child2">2</div>
+<div class="child child3">3</div>
+<div class="child child4">4</div>
+<div class="child child5">5</div>
+<div class="child child6">6</div>
+<div class="child child7">7</div>
+<div class="child child8">8</div>
+<div class="child child9">9</div>
+<div class="child child10">10</div>
+<div class="child child11">11</div>
+<div class="child child12">12</div>
+<div class="child child13">13</div>
+<div class="child child14">14</div>
+</div>
+
+
+</body>
+</html>

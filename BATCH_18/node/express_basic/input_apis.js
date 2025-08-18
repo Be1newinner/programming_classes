@@ -52,15 +52,6 @@ app.get("/api/products", (req, res) => {
   });
 });
 
-// app.get("/contact", (req, res) => {
-//   // res.send("HELLO CONTACT");
-//   res.json({
-//     name: "Vijay",
-//     age: 25,
-//     gender: "Male",
-//   });
-// });
-
 app.listen(8002, (error) => {
   console.log("SERVER STARTED");
   if (error) {

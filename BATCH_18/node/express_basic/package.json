@@ -1,15 +1,16 @@
 {
   "name": "express_basic",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "basic_api.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "npx nodemon"
   },
   "keywords": [],
   "author": "Vijay Kumar",
   "license": "ISC",
   "description": "this is basic express application",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
   }
 }

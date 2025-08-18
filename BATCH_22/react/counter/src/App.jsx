@@ -13,7 +13,7 @@ function App() {
             onClick={function () {
               setCounter(counter + 1);
             }}
-          >
+          > 
             increase
           </button>
           <button
