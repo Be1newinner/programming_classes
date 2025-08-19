@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <p>count <span id="counter">0</span></p>
+    <p>hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <button class="button">Increase</button>
+    <button class="button">Decrease</button>
+    <button class="button">Reset</button>
+
+    <script>
+      // Rules
+      // 1. Jitne bhi elements functions ko call krenge and jitne bhi elements functions ke through change honge un sabka reference bana lo
+      //
+      // Select Elements by ID
+      // Method 1
+      const counter_span = document.getElementById("counter");
+      // Method 2
+      //   const counter_span1 = document.querySelector("#counter");
+      //
+      // Select Elements by class Name
+      // Method 1
+      const increase_button = document.getElementsByClassName("button")[0];
+      const decrease_button = document.getElementsByClassName("button")[1];
+      const reset_button = document.getElementsByClassName("button")[2];
+      //
+      // Method 2
+      //   const increase_button1 = document.querySelectorAll(".button")[0];
+
+      function increaseValue() {
+        const value = Number(counter_span.innerText);
+        console.log(value);
+        counter_span.innerText = value + 2;
+      }
+
+      //   setInterval(increaseValue, 1000);
+      //   setTimeout(increaseValue, 2000);
+      //   increaseValue();
+
+      increase_button.addEventListener("click", increaseValue);
+    </script>
+  </body>
+</html>
