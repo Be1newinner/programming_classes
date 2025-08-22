@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <p>count <span id="counter">0</span></p>
+    <div id="container"></div>
+    <ul id="parent">
+      <li>Cow</li>
+    </ul>
+    <p>hello</p>
+    <button class="button">add</button>
+
+    <script>
+      const counter_span = document.getElementById("counter");
+      const parent_ul = document.getElementById("parent");
+      const container_div = document.getElementById("container");
+
+      const addButton = document.getElementsByClassName("button")[0];
+
+      function addChild() {
+        // const child = document.createElement("h1");
+        // child.textContent = "some";
+        // document.querySelector("body").appendChild(child);
+
+        parent_ul.appendChild(document.createElement("li")).textContent =
+          prompt("", "Enter List Item");
+        // parent_ul.innerHTML =
+        //   parent_ul.innerHTML +
+        //   `
+        //   <li>
+        //     ${prompt("what is your name?")}
+        //     </li>
+        //   `;
+
+        // container_div.innerHTML =
+        //   container_div.innerHTML +
+        //   `
+        //   <div>
+        //    <span>Hello</span>
+        //    <button>edit</button>
+        //    <button>delete</button>
+        //   </div>
+        //   `;
+        // counter_span.style.color = "red";
+        // counter_span.style.backgroundColor = "green";
+        // document.querySelector("body").style.backgroundColor = "orange";
+      }
+
+      addButton.addEventListener("click", addChild);
+    </script>
+  </body>
+</html>

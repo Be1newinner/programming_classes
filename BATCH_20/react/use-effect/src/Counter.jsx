@@ -8,10 +8,17 @@ export default function Counter({ countA, setCountA }) {
     console.log("I AM READING FROM COUNTER", id);
   }
 
-  //    jo bhi function aap useEffect ke nadar  call kroge wo sirf componentDidMount pe call hoga. mtlb sirf first time jab bhi mera wo componeent first time load hoga naki rerender pe...
+  // jo bhi function aap useEffect ke nadar  call kroge wo sirf componentDidMount pe call hoga. mtlb sirf first time jab bhi mera wo componeent first time load hoga naki rerender pe...
 
   useEffect(() => {
     read(countA);
+    const interval = setInterval(() => console.log("hello"), 1000);
+    // const timeout = setInterval(() => console.log("hello", 1000));
+
+    return () => {
+      console.log("reseting interval");
+      clearInterval(interval);
+    };
   }, []);
 
   useEffect(() => {

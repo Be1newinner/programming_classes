@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --primary-color: #b8a269;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.underline-primary {
+  text-decoration-color: var(--primary-color);
+  text-decoration-thickness: 2px;
+}
+
+section.hero_section {
+  background-image:
+    linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(https://assets.nicepagecdn.com/d2cc3eaa/6401142/images/smart-pensive-redhead-hipster-with-full-beard-glasses-dressed-casual-clothes-poses-with-hand-chin-studio-isolated-dark-background5-min.jpg);
+  height: calc(100svh - 6.375rem);
+  background-position: left, right;
+  background-size: cover;
+  background-repeat: repeat, no-repeat;
+}
