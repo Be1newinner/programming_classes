@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title>CSS POSITION</title>
+
+<style>
+
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+section.parent h1 {
+color: red;
+}
+
+section.parent p {
+color: green;
+}
+
+section.parent > span {
+font-size: 28;
+}
+
+section.parent > p > span {
+text-decoration: underline;
+}
+
+section ~ div {
+ background: orange;
+}
+
+section > span ~ p {
+ text-decoration: line-through;
+}
+
+section > span + p {
+ background: grey;
+}
+
+</style>
+</head>
+<body>
+
+<div class="parent">
+<h1>Hello</h1>
+<p>Para</p>
+<p>Para 1 <span>BYE</span> </p>
+<span>BYE</span>
+<p>Para 2</p>
+<p>Para 3</p>
+<p>Para 4</p>
+<p>Para 5</p>
+</div>
+
+<section class="parent">
+<h1>Hello</h1>
+<p>Para</p>
+<p>Para 1 <span>BYE</span> </p>
+<span>BYE</span>
+<p>Para 2</p>
+<p>Para 3</p>
+<p>Para 4</p>
+<p>Para 5</p>
+</section>
+
+<div>
+<h1>Hello</h1>
+<p>Para</p>
+<p>Para 1 <span>BYE</span> </p>
+<span>BYE</span>
+<p>Para 2</p>
+<p>Para 3</p>
+<p>Para 4</p>
+<p>Para 5</p>
+</div>
+
+<h1>Hello</h1>
+<p>Para</p>
+<p>Para 1</p>
+<span>BYE</span>
+<p>Para 2</p>
+<p>Para 3</p>
+<p>Para 4</p>
+<p>Para 5</p>
+
+</body>
+</html>
