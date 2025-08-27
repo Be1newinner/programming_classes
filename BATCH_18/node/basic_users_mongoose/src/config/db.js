@@ -2,9 +2,11 @@ const mongoose = require("mongoose");
 
 async function connectDB() {
   try {
-    await mongoose.connect(
-      "mongodb+srv://be1newinner:yt0X6Aev8nWYqamF@dummy.7tc0fx0.mongodb.net/sample_mflix"
-    );
+    const MONGODB_URL = process.env.MONGODB_URL;
+
+    if (!MONGODB_URL) throw Error("MONGODB URL IS REQUIRED!");
+
+    await mongoose.connect(process.env.MONGODB_URL);
     console.log("connected successfully!");
   } catch (error) {
     // console.log(error);
