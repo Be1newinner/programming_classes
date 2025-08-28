@@ -1,0 +1,91 @@
+<html>
+<head>
+  <title>CSS Pseudo Selectors</title>
+<style>
+
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+cursor: none;
+}
+
+ul {
+padding-left: 20px;
+}
+
+
+/*2n = select all even child*/
+div > p:nth-child(2n) {
+color: red;
+}
+
+
+/*2n+1 = select all even child*/
+div > p:nth-child(2n+1) {
+color: purple;
+}
+
+div > :nth-child(even) {
+font-size: 24px;
+}
+
+::selection { 
+background: green;
+color: black;
+}
+
+input {
+height: 30px;
+padding-left: 10px;
+color: green;
+border: 1px solid red;
+border-radius: 20px;
+outline-offset: 5px;
+}
+
+input:focus {
+outline-color: purple;
+background: silver;
+}
+
+input:hover {
+background: yellow;
+}
+
+span:hover {
+color: purple;
+}
+
+input::placeholder {
+color: orange;
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+<li>Cow</li>
+<li>Dog</li>
+<li>Cat</li>
+<li>Rat</li>
+</ul>
+
+<div>
+<p>Hello 1</p>
+<p>Hello 2</p>
+<span>Span 1</span>
+<span>Span 2</span>
+<p>Hello 3</p>
+<span>Span 3</span>
+<span>Span 4</span>
+<p>Hello 4</p>
+<p>Hello 5</p>
+
+</div>
+
+<input placeholder="full name" />
+
+</body>
+</html>

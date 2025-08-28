@@ -1,0 +1,73 @@
+<html>
+<head>
+  <title>CSS Pseudo Selectors</title>
+<style>
+
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+
+li:first-child {
+color: red;
+}
+
+li:last-child {
+color: green;
+}
+
+div > p:first-child {
+color: green;
+}
+
+div > p:last-child {
+color: red;
+}
+
+div > p:nth-child(3) {
+color: orange;
+}
+
+div > p:nth-last-child(3) {
+color: blue;
+}
+
+div > p:nth-of-type(3) {
+color: orange;
+}
+
+div > p:nth-last-of-type(3) {
+color: purple;
+}
+
+ul {
+padding-left: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+<li>Cow</li>
+<li>Dog</li>
+<li>Cat</li>
+<li>Rat</li>
+</ul>
+
+<div>
+<p>Hello 1</p>
+<p>Hello 2</p>
+<span>Span 1</span>
+<span>Span 2</span>
+<p>Hello 3</p>
+<span>Span 3</span>
+<span>Span 4</span>
+<p>Hello 4</p>
+<p>Hello 5</p>
+
+</div>
+
+</body>
+</html>
