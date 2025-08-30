@@ -31,15 +31,17 @@ print(CAR_TYPES)
     a. int - numbers without decimal
     b. float - numbers with decimal
     c. complex - things that can not be counted
-    d. string - array of characters
-    e. boolean
-    d. None
+    d. boolean
+    e. None
+    f. char
 
 # NON Primitive Data Type
     a. List -> Array in JS
     b. dictionary -> Object in JS
     c. Set -> Set in JS
     d. Tupple
+    e. string - array of characters
+    
 """
 
 name = "s"
@@ -65,7 +67,7 @@ Operators
 """
 
 print(4 / 3)  # output 1.3333
-print(4 // 3)  # output floor value of 1.333
+print(4 // 3)  # output floor value of 1
 print(4**3)  # Output 4 to the power 3 = 64
 
 """
@@ -73,7 +75,7 @@ print(4**3)  # Output 4 to the power 3 = 64
 +=, -=, *=, /=, %=, //=, **=
 
 3. comparision Operators
->, <, ==, <=, >=
+>, <, ==, != ,<=, >=
 """
 
 """
