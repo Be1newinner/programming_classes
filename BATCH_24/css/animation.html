@@ -1,0 +1,69 @@
+<DOCTYPE HTML>
+<html>
+<head>
+  <title>animation</title>
+<style>
+@keyframes item_animate {
+ from {}
+ 
+ to {
+ background: red;
+ transform: translate(100px,0);
+ }
+}
+
+@keyframes item_animate_hard {
+ 0% {
+   transform: translate(0,0);
+   }
+ 
+ 25% {
+ background: red;
+ transform: translate(100px,0) rotate(180deg);
+  opacity: 50%; 
+  height: 300px
+ }
+ 
+ 50% {
+  transform: translate(100px,100px);
+  opacity: 75%;
+ }
+ 
+ 75% {
+  transform: translate(0,100px);
+  opacity: 0%;
+ }
+}
+
+.item {
+background: green;
+height: 100px;
+width: 100px;
+animation-name: item_animate_hard;
+animation-duration:  2s;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+animation-timing-function: linear;
+/*
+animation-direction: reverse;
+animation-direction: normal;
+animation-direction: alternate;
+animation-direction: alternate-reverse;
+
+animation-timing-function: ease;
+animation-timing-function: ease-in;
+animation-timing-function: ease-out;
+*/
+}
+
+</style>
+</head>
+<body>
+<h1>Hello</h1>
+
+<div class="item">
+
+</div>
+</body>
+</html>
+
