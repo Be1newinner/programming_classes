@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useAuth } from "../services/auth/AuthContext.jsx";
 
 import type { ChangeEvent, FormEvent } from "react";
 
@@ -17,6 +18,8 @@ const RegisterPage: React.FC = () => {
     confirmPassword: "",
   });
 
+  const { register } = useAuth();
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -31,7 +34,7 @@ const RegisterPage: React.FC = () => {
       alert("Passwords do not match");
       return;
     }
-    console.log("Register:", form);
+    register(form);
   };
 
   const strengthLabel = "Strong";
