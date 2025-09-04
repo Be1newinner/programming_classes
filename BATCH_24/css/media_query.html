@@ -1,0 +1,112 @@
+<DOCTYPE HTML>
+<html>
+<head>
+  <title>Media Query</title>
+
+<style>
+#item {
+/*
+Bina media query ke jo design humne likha wo mobile ke liye hai!
+*/
+
+background: red;
+height: 200px;
+/*
+width: 100%; 100svh
+max-width: 800px;
+min-width: 500px;
+
+/*
+max-height:;
+min-height:;
+*/
+
+}
+
+/*
+Breakpoints:
+ jin screen size k liye apko apne design ko check krna hai!
+ 
+320px = MOBILE
+380px = MOBILE
+420px = MOBILE
+540px = MOBILE
+640px = MOBILE
+720px = TABLET
+1080px = TABLET
+1280px = Min Laptop / Desktop
+1386px = Min Laptop / Desktop (Mostly Apple)
+1536px = General Screen Size in windows 11
+1920px = Other Screen Size
+
+*/
+
+header, ul {
+display: flex;
+list-style-type: none;
+gap: 20px;
+align-items: center;
+}
+
+.mobile_menu {
+display: inline;
+}
+
+.desktop_menu {
+display: none;
+}
+
+
+@media (min-width : 640px) {
+
+#item {
+background: green;
+}
+
+}
+
+@media (min-width : 1080px) {
+
+#item {
+background: blue;
+}
+
+.mobile_menu {
+display: none;
+}
+
+.desktop_menu {
+display: flex;
+}
+
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<header>
+
+<h1>Media Query</h1>
+
+<svg class="mobile_menu" viewBox="0 0 24 24" height="48px" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+
+
+<ul class="desktop_menu">
+<li>Home</li>
+<li>contact</li>
+<li>about</li>
+<li>shop</li>
+</ul>
+
+</header>
+
+<div id="item">
+</div>
+
+</body>
+</html>
+

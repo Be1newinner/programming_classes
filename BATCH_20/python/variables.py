@@ -95,3 +95,10 @@ age -= 1
 print(4 < 5 and 5 < 4)  # if both are True then Output True otherwise False
 print(4 < 5 or 5 < 4)  # if any conditon is True then Output True otherwise False
 print(not (4 < 5 or 5 < 4))  # It will reverse the output
+
+
+# casting
+data = int(input("some question"))
+data = float(input("some question"))
+data = str(input("some question"))
+data = list(input("some question"))
