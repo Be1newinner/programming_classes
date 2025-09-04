@@ -102,3 +102,19 @@ data = int(input("some question"))
 data = float(input("some question"))
 data = str(input("some question"))
 data = list(input("some question"))
+
+"""
+q.1.
+*
+**
+***
+****
+*****
+
+q.2. ls = [1,5,9,6,3,2,5,8, 9]
+
+1 5 9
+6 3 2
+5 8 9
+
+"""
