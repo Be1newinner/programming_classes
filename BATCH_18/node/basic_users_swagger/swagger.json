@@ -1,0 +1,146 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Express API",
+    "version": "1.0.0",
+    "description": "API documentation for the Express app with users and movies endpoints."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8001",
+      "description": "Local server"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Root endpoint",
+        "description": "Returns a hello message.",
+        "responses": {
+          "200": {
+            "description": "A simple hello message",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "hello"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/find-movies": {
+      "get": {
+        "summary": "Find movies",
+        "description": "Currently empty placeholder for movies.",
+        "responses": {
+          "200": {
+            "description": "Movies fetched successfully (to be implemented)."
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "summary": "Get all users",
+        "description": "Returns a list of users without passwords.",
+        "responses": {
+          "200": {
+            "description": "List of users",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/User"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new user",
+        "description": "Creates a user with email, name, and password.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "User created successfully"
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "example": "64f2b3e7a4d2f2c3a1234567"
+          },
+          "name": {
+            "type": "string",
+            "example": "Vijay Sharma"
+          },
+          "email": {
+            "type": "string",
+            "example": "vijay@example.com"
+          }
+        }
+      },
+      "UserInput": {
+        "type": "object",
+        "required": ["name", "email", "password"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "Vijay Sharma"
+          },
+          "email": {
+            "type": "string",
+            "example": "vijay@example.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "secret123"
+          }
+        }
+      }
+    }
+  }
+}
