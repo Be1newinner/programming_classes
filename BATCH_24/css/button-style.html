@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Styling</title>
+    <style>
+      button {
+        background: green;
+        border-radius: 10px;
+        position: relative;
+        cursor: pointer;
+        height: 30px;
+        width: 100px;
+        padding: 0 !important;
+        margin: 0 !important;
+        transition: all 0.1s;
+        box-shadow: -4px 4px 5px 0 rgba(0, 0, 0, 0.4);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+
+      button::after {
+        content: "";
+        width: 0px;
+        height: 100%;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition-property: all;
+        transition-duration: 0.3s;
+        background: #2a7b9b;
+        background: linear-gradient(
+          90deg,
+          rgba(42, 123, 155, 1) 0%,
+          rgba(87, 199, 133, 1) 50%,
+          rgba(237, 221, 83, 1) 100%
+        );
+        margin: 0;
+        padding: 0;
+      }
+
+      button:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Hello World!</h1>
+    <button>Click Me</button>
+  </body>
+</html>
