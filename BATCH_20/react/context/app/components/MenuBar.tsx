@@ -1,6 +1,7 @@
 import { Link } from "react-router";
+import { memo } from "react";
 
-export default function MenuBar() {
+function MenuBar() {
   return (
     <div className="bg-gray-800 py-2 px-4 flex justify-center gap-4 *:hover:underline underline-offset-8">
       <Link to="/">Home</Link>
@@ -9,3 +10,5 @@ export default function MenuBar() {
     </div>
   );
 }
+
+export default memo(MenuBar);
