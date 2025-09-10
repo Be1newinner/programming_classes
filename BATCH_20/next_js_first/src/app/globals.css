@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+h1 {
+  /* font-weight: 700; */
+  @apply font-bold text-xl;
+}

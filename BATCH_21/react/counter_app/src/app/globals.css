@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body {
+  padding: 0.5rem;
+}
+
+.my_list {
+  padding-left: 1.5rem;
+  list-style-type: lower-roman;
+}
+
+button {
+  border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  padding: 5px 20px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  transition-property: all;
+  transition-duration: 0.25s;
+  background-image: linear-gradient(90deg, #e66465, #9198e5);
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
