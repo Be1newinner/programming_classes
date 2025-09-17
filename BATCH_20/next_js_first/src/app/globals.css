@@ -4,3 +4,11 @@ h1 {
   /* font-weight: 700; */
   @apply font-bold text-xl;
 }
+
+input {
+  @apply border px-4 py-2;
+}
+
+button {
+  @apply border px-4 py-2 active:scale-95 cursor-pointer;
+}
