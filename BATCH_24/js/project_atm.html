@@ -1,0 +1,34 @@
+<DOCTYPE HTML>
+<html>
+<head>
+  <title>Project ATM</title>
+</head>
+<body>
+<h1>Project ATM</h1>
+
+<script>
+
+let balance = 5000000000
+
+alert("Hi Vijay!. You have a balance of "+ balance)
+
+let option = prompt("Select one of these options! \nPress 1 for deposit\nPress 2 for withdraw\npress 3 for balance enquiry ");
+
+if (option == 1){
+ const amount = prompt("Enter amount to deposit in multiple of 100s ")
+ balance += amount
+ alert(" Diposit amount of " + amount + " is success!");
+ alert("Your balance is " + balance);
+} else if (option == 2){
+const amount = prompt("Enter amount to withdraw in multiple of 100s")
+ balance -= amount
+ alert("Withdraw amount of " + amount + " is success!");
+ alert("Your balance is " + balance);
+} else if (option == 3) {
+ alert("Your balance is " + balance);
+}
+
+</script>
+</body>
+</html>
+
