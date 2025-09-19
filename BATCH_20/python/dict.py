@@ -1,4 +1,4 @@
-ds: dict[str, str | int] = {"name": "Vijay"}
+ds: dict[str, str | int] = {"name": "Vijay", "marks": 10}
 
 print(ds)
 

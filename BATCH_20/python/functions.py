@@ -12,8 +12,12 @@ def fullname(arg, arg2=10):
 # print(fullname(20, 30))
 # print(fullname(arg2=50, arg=90))
 
+
 # Lambda Functions
 # fullname2 = lambda a, b, c=5: a + b - c
+def fullname2(a, b, c=5):
+    return a + b - c
+
 
 # HOF = Higher Order Functions
 
@@ -53,11 +57,11 @@ def complex_ao(a, b, c, function):
 
 
 def print_vars(func):
-    def print_vars(*args):
+    def print_vars_wrapper(*args):
         print("THIS IS CALLED BEFORE")
         return func(*args)
 
-    return print_vars
+    return print_vars_wrapper
 
 
 @print_vars
@@ -103,7 +107,7 @@ def simple_decorator(func):
 #     return decorator
 
 
-# @repeat(3)
+# @repeat(4)
 # def say(msg):
 #     print(msg)
 

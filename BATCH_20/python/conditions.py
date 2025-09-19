@@ -6,8 +6,8 @@ day = 1
 #     print("BYE")
 # else:
 #     print("HHHHH")
-
 # Else if ladder
+
 if day == 1:
     print("monday")
 elif day == 2:
