@@ -18,10 +18,23 @@ export default function Home() {
       {SomethingCircle()}
       {SomethingCircle()} */}
 
-      <SomethingCircle dasdsadasd={"Vijay1"} asd={4} />
+      {/* <SomethingCircle dasdsadasd={"Vijay1"} asd={4} />
       <SomethingCircle dasdsadasd={"Vijay2"} asd={4} />
       <SomethingCircle dasdsadasd={"Vijay3"} asd={4} />
-      <SomethingCircle dasdsadasd={"Vijay4"} asd={4} />
+      <SomethingCircle dasdsadasd={"Vijay4"} asd={4} /> */}
+
+      {Array.from({ length: 10 }, (_, index) => ({
+        id: index + 1,
+        title: (index % 2 == 0 ? "Vijay" : "Ajay") + (index + 1),
+      })).map((item) => {
+        return (
+          <SomethingCircle
+            key={item.id}
+            dasdsadasd={item.title}
+            asd={item.id}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -43,7 +56,7 @@ function SomethingCircle({
   return (
     <div className="bg-red-500 w-50 h-50 rounded-[50%] flex items-center justify-center">
       <span>{dasdsadasd}</span>
-      <span>{asd}</span>
+      {/* <span>{asd}</span> */}
     </div>
   );
 }
