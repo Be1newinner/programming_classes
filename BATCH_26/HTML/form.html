@@ -1,0 +1,150 @@
+<doctype HTML>
+<html>
+<head>
+</head>
+<body>
+
+
+<!--
+FORM NOTES:
+type = text , email, submit, radio, checkbox, number, search
+placeholder=""
+value=""
+id=""
+name=""
+
+
+minlength and maxlength can only be used in type="text or email or password"
+
+min and max can be used in type="number"
+
+-->
+
+<form method="POST">
+ <label>
+  full name*
+  <input type="search" placeholder="type your name" name="fullname" required="true" minlength="3" maxlength="10" />
+ </label>
+
+<!--
+
+ <label>
+  full name
+  <input type="text" placeholder="type your name" value="something" name="fullname" />
+ </label>
+
+-->
+
+<br />
+<br />
+
+ <label for="nearby">Nearby</label>
+ <input type="text" placeholder="type your nearby" name="nearby" id="nearby" />
+
+<br />
+<br />
+
+ <label>
+  Email ID:
+  <input type="email" placeholder="type your email" name="email" />
+ </label>
+
+<br />
+<br />
+
+<label>
+  Age:
+  <input type="number" placeholder="type your age" name="age" min="18"   
+  max="100"
+/>
+ </label>
+
+<br />
+<br />
+
+<label>
+  Password:
+  <input type="password" placeholder="type your password" name="password" />
+ </label>
+
+<br />
+<br />
+
+
+<div>
+<span>Gender: </span>
+<label> Male 
+  <input type="radio" name="gender" value="male" />
+</label>
+<label> Female
+  <input type="radio" name="gender" value="female" />
+</label>
+<label> Other
+  <input type="radio" name="gender" value="other" />
+</label>
+</div>
+
+
+<br />
+
+<div>
+<span>Class: </span>
+<label> Xth 
+  <input type="radio" name="class" value="10" />
+</label>
+<label> XIth
+  <input type="radio" name="class" value="11" />
+</label>
+<label> XIIth
+  <input type="radio" name="class" value="12" />
+</label>
+</div>
+
+<br />
+
+<div>
+<span>Hobby: </span>
+<label> Singing 
+  <input type="checkbox" name="hobby" value="sing" />
+</label>
+<label> Dance
+  <input type="checkbox" name="hobby" value="dance" />
+</label>
+<label> Read
+  <input type="checkbox" name="hobby" value="read" />
+</label>
+</div>
+
+<br />
+
+<label>
+
+Graduation Degree
+
+<select>
+<option>BCA</option>
+<option>MCA</option>
+<option>BTECH</option>
+<option>BA</option>
+</select>
+
+</label>
+
+
+<input type="date" />
+<input type="time" />
+<input type="file" />
+<input type="color" />
+<br />
+
+ <button type="submit">Submit</button>
+ <input type="submit" />
+ <input type="reset" />
+ <input type="button" value="Call me" />
+
+
+  
+</form>
+
+</body>
+</html>
