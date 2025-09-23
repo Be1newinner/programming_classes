@@ -1,6 +1,8 @@
 "use client";
 
-import { ReactNode } from "react";
+import SuperDiv, { name, Square } from "@/components/SuperDiv";
+import SuperDiv2 from "@/components/SuperDiv2";
+// import { name } from "@/components/SuperDiv";
 
 export default function ComponentsKhatarnaak() {
   function some() {
@@ -33,29 +35,15 @@ export default function ComponentsKhatarnaak() {
         <p>somemore</p>
       </SuperDiv>
       <SuperDiv />
-      <SuperDiv></SuperDiv>
+      <SuperDiv
+        className="underline bg-blue-500"
+        onClick={() => alert("dsafs")}
+      >
+        <h1>HO</h1>
+      </SuperDiv>
+      <SuperDiv2 className="text-lg underline" onClick={() => alert("hi")}>
+        <div>dsa</div>
+      </SuperDiv2>
     </div>
   );
-}
-
-function Square({
-  title,
-  desc,
-  func,
-}: {
-  title: string;
-  desc: string;
-  func: () => void;
-}) {
-  return (
-    <div className="bg-red-500 w-50 h-50 rounded">
-      <h1>{title}</h1>
-      <p>{desc}</p>
-      <button onClick={func}>Click</button>
-    </div>
-  );
-}
-
-function SuperDiv({ children = "" }: { children?: ReactNode }) {
-  return <div className="bg-green-500 w-50 h-50 rounded">{children}</div>;
 }
