@@ -1,13 +1,18 @@
-require('dotenv').config()
+require("dotenv").config();
 
 const express = require("express");
 const connectDB = require("./src/config/db");
 const UserModel = require("./src/models/users");
+const cors = require("cors");
 
 const app = express();
 
-
 app.use(express.json());
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://shipsar.in"],
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("hello");
