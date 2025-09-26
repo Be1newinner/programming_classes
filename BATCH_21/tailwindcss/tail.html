@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      .bg-red-150 {
+        background-color: #ff5000;
+      }
+
+      .container {
+        @apply bg-red-500 text-lg sm:text-2xl sm:bg-red-500 md:text-3xl lg:text-4xl;
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    
+    What is CSS => 
+
+    1. Sizing of elements
+    2. Color of elements
+    3. position of elements
+
+
+    # Sizing
+    a. tailwind default units e.g. w-4 , p-6, m-5 { 1 = 4 Pixels}
+        0.25 = 1px, 0.5 = 2px, 0.75 = 3px;
+        e.g. w-4.5 = 18px
+    b. tailwind sizing names
+       w-3xs = 16rem
+
+    c. w-full = width : 100%;
+       w-screen = width: 100svw;
+       h-screen = height: 100svh;
+       h-min = min-content
+       h-max = max-content
+       h-fit = fit-content
+       
+    d. width in fix css units use square brackets e.g. w-[4]
+        e.g. [4rem] and [4px] and [4em]
+
+
+
+    # color => 'color_where'-'which_color'-'color_weight'
+        color-weight = 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950 
+
+        a. color_where
+        background = bg
+        text = text
+        border = border
+        shadow = shadow
+    
+    applying custom color = bg-[#ff5000]
+
+
+    # position
+        variety of options
+
+
+    => events = hover: 
+                active:
+
+    => media queries breakpoints
+        RULE: mobile first design!
+        sm  > 640px
+        md  > 768px
+        lg  > 1024px
+        xl  > 1280px
+        2xl > 1536px
+
+    -->
+
+    <div
+      class="bg-red-200 w-fit hover:bg-blue-500 active:bg-green-500 sm:bg-red-500"
+    >
+      <span
+        class="bg-red-500 text-green-500 hover:text-sky-500 hover:bg-green-500"
+        >something</span
+      >
+      <br />
+      <span class="container">Something ELse is there</span>
+    </div>
+  </body>
+</html>

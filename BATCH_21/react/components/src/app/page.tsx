@@ -22,7 +22,7 @@ export default function Home() {
       <SomethingCircle dasdsadasd={"Vijay2"} asd={4} />
       <SomethingCircle dasdsadasd={"Vijay3"} asd={4} />
       <SomethingCircle dasdsadasd={"Vijay4"} asd={4} /> */}
-
+      {/* <SomethingCircle  /> */}
       {Array.from({ length: 10 }, (_, index) => ({
         id: index + 1,
         title: (index % 2 == 0 ? "Vijay" : "Ajay") + (index + 1),
@@ -46,12 +46,10 @@ export default function Home() {
 // condition of component
 // a. function name should be in PascalCase
 // b. This will return html component
+// c. THe arguments will be passed as object in component
 function SomethingCircle({
   dasdsadasd,
   asd,
-}: {
-  dasdsadasd: string;
-  asd: number;
 }) {
   return (
     <div className="bg-red-500 w-50 h-50 rounded-[50%] flex items-center justify-center">

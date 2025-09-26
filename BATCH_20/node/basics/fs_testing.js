@@ -6,10 +6,10 @@ const fs = require("fs");
 
 // const data = fs.readFileSync("abc.txt", "utf-8");
 
-for (let i = 0; i < 10; i++){
-   fs.cpSync("abc.txt", `abc${i}.txt`);
-}
+// for (let i = 0; i < 10; i++) {
+//   fs.cpSync("abc.txt", `abc${i}.txt`);
+// }
 
 // console.log(data);
 
-// console.log(fs);
+console.log(fs.statSync("./index.js"));
