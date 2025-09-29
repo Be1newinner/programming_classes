@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="flex flex-wrap gap-4">
-      {/* {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => {
+      {/* {new Array(50).map((item, index) => {
         return (
           <div
             key={item}
@@ -23,7 +23,7 @@ export default function Home() {
       <SomethingCircle dasdsadasd={"Vijay3"} asd={4} />
       <SomethingCircle dasdsadasd={"Vijay4"} asd={4} /> */}
       {/* <SomethingCircle  /> */}
-      {Array.from({ length: 10 }, (_, index) => ({
+      {Array.from({ length: 500 }, (_, index) => ({
         id: index + 1,
         title: (index % 2 == 0 ? "Vijay" : "Ajay") + (index + 1),
       })).map((item) => {
@@ -47,10 +47,7 @@ export default function Home() {
 // a. function name should be in PascalCase
 // b. This will return html component
 // c. THe arguments will be passed as object in component
-function SomethingCircle({
-  dasdsadasd,
-  asd,
-}) {
+function SomethingCircle({ dasdsadasd, asd }) {
   return (
     <div className="bg-red-500 w-50 h-50 rounded-[50%] flex items-center justify-center">
       <span>{dasdsadasd}</span>
