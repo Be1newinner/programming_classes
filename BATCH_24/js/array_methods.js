@@ -17,8 +17,6 @@
 // console.log(names)
 // console.log(names3)
 
-
-
 // ===========================================
 
 // add an item in array in the last
@@ -33,7 +31,7 @@
 
 // console.log(names)
 
-// remove an itemn from last 
+// remove an itemn from last
 // array.pop()
 
 // remove item from start
@@ -43,7 +41,7 @@
 
 // console.log(names);
 
-
-const newArray = Array.from({length: 500}).fill("V")
-
-console.log(newArray)
+const newArray = Array.from({ length: 50 }).fill("");
+newArray[0] = "Vijay";
+newArray[1] = "Ajay";
+console.log(newArray);
