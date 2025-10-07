@@ -4,6 +4,7 @@
 // CRUD OPERATIONS OF OBJECT
 // 1. Creating an object
 const person = {
+    
   name: "Vijay",
   age: 27,
   marks: 101,
