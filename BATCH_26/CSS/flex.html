@@ -1,0 +1,49 @@
+<style>
+
+/* 
+row = horizontal
+ column = vertical
+*/
+
+.parent {
+width: 480px;
+height: 480px;
+background: green;
+display: flex;
+flex-wrap: wrap-reverse; /* nowrap is default*/
+
+
+/*
+flex-wrap: nowrap; /* nowrap is default*/
+flex-wrap: wrap; /* nowrap is default*/
+flex-wrap: wrap-reverse; /* nowrap is default*/
+
+
+1. by default parent k andar items bahar jaa sakte hai aur items column wise arrange hote hai.
+
+2. jese hi hum flex use krenge to children ki direction row ho jaegi and mere items shrink hone lagg jaenge
+
+*/
+
+}
+
+.child {
+width: 96px;
+height: 96px;
+background: red;
+border: 2px solid black;
+}
+
+
+</style>
+
+<div class="parent">
+
+<div class="child">1</div>
+<div class="child">2</div>
+<div class="child">3</div>
+<div class="child">4</div>
+<div class="child">5</div>
+<div class="child">6</div>
+
+</div>

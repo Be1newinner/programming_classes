@@ -1,4 +1,5 @@
 // to install tsx use this command:   npm i tsx -g
+// typescript = type safety + javascript
 
 let name2: string | number;
 name2 = 5 // invalid data type
@@ -11,9 +12,9 @@ let ages2: number[] = []
 
 
 type addressType = {
-        roomno?: number,
-        city?: string
-    }
+    roomno?: number,
+    city?: string
+}
 
 type personParams = {
     name: string,
@@ -27,6 +28,71 @@ type personParams2 = {
     age: number,
     marks?: number,
 } & addressType;
+
+
+interface AddressType {
+    roomno?: number,
+    city?: string
+}
+
+interface PersonParams3 extends AddressType {
+    name: string,
+    age: number,
+    marks?: number,
+}
+
+
+const personParams3: PersonParams3 = {
+    name: "Vijay",
+    age: 27,
+    marks: 101,
+    roomno: 550,
+    city: "delhi"
+}
+
+
+
+interface PersonParams4 {
+    name: string,
+    age: number,
+    marks?: number,
+    address: AddressType
+}
+
+const personParams4: PersonParams4 = {
+    name: "Vijay",
+    age: 27,
+    marks: 101,
+    address: {
+        roomno: 550,
+        city: "delhi"
+    }
+}
+
+
+interface PersonParams5 {
+    name: string,
+    age: number,
+    marks?: number,
+    address: AddressType[]
+}
+
+
+const personParams5: PersonParams5 = {
+    name: "Vijay",
+    age: 27,
+    marks: 101,
+    address: [{
+        roomno: 550,
+        city: "delhi"
+    }, {
+        roomno: 550,
+        city: "delhi"
+    }, {
+        roomno: 550,
+        city: "delhi"
+    }]
+}
 
 let person: personParams = {
     name: "Vijay",

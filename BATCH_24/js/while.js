@@ -31,18 +31,15 @@ Question. prime
 const num = 11;
 let divided = false;
 
-for(let i = 2; i < num; i += 1){
- if (num%i == 0) {
+for (let i = 2; i < num; i += 1) {
+  if (num % i == 0) {
     divided = true;
     break;
   }
 }
 
-if (divided === true){
-    console.log("NOT PRIME");
+if (divided === true) {
+  console.log("NOT PRIME");
 } else {
-    console.log("PRIME");
+  console.log("PRIME");
 }
-
-
-

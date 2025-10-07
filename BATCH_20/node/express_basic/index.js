@@ -2,11 +2,12 @@ const express = require("express");
 // const path = require("path");
 
 const app = express();
-const PORT = 8000;
+const PORT = 3000;
 
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded());
+// app.use()
 
 /*
 
@@ -32,6 +33,18 @@ HEAD
   res: DATA SENT BY OUR SERVER TO USER
     */
 
+/*
+
+Cookies!
+
+1. Backend recieve kese krega  ( FROTNEND => BACKEND )  
+2. Frontend recieve kese krega ( BACKEND => FROTNEND )
+
+** FRONTEND KO KUCH NaHi KRNA COOKIE SE RELATED!
+** KAAM KREGA BACKEND ENGINEER
+
+*/
+
 app.get("/", (req, res) => {
   res.send("WELCOME TO HOMEPAGE GET! vijay kumar");
 });
@@ -40,12 +53,23 @@ app.get("/contact", (req, res) => {
   // res.send("WELCOME TO HOMEPAGE GET! vijay kumar");
 
   const params = req.query;
+  // const date = new Date();
+  // date.setHours(9);
 
-  res.json({
-    message: "Welcome to Homepage",
-    name: "Vijay",
-    params,
-  });
+  res
+    .cookie("refresh-token3", "dasd484534fcujo3cmlwe436", {
+      maxAge: 21 * 24 * 60 * 60 * 1000,
+      // expires: date.toUTCString(),
+      path: "/contact",
+      secure: true,
+      httpOnly: true,
+      domain: "localhost",
+    })
+    .json({
+      message: "Welcome to Homepage",
+      name: "Vijay",
+      params,
+    });
 });
 
 app.get("/contact/:id", (req, res) => {
