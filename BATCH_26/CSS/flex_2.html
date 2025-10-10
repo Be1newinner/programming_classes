@@ -1,0 +1,81 @@
+<style>
+
+.parent {
+width: 480px;
+height: 480px;
+background: green;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-content: center;
+justify-content: center;
+row-gap: 10px;
+column-gap: 20px;
+
+/*
+gap: 10px;
+row-gap: 10px;
+
+align-content: flex-start;
+align-content: center;
+align-content: flex-end;
+align-content: space-between;
+align-content: space-around;
+align-content: space-evenly;
+
+justify-content: left;
+justify-content: flex-start;
+justify-content: center;
+justify-content: right;
+justify-content: flex-end;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+
+align-items: flex-start; --default
+align-items: center;
+align-items: flex-end;
+
+flex-direction: row; --default
+flex-direction: row-reverse; 
+flex-direction: column;
+flex-direction: column-reverse; 
+
+// 
+1. Jis bhi direction me flex hai usi direction me agar items ko align krna hai to use krenge justify-content
+
+
+2. Jis bhi direction me flex hai uske opposite direction me agar items ko align krna hai to use krenge align-content ya fir align-items
+
+
+align-items = this respect the gap between rows
+align-content = this reset gap between rows
+
+*/
+
+}
+
+.child {
+width: 96px;
+height: 96px;
+background: red;
+border: 2px solid black;
+}
+
+
+</style>
+
+<div class="parent">
+
+<div class="child">1</div>
+<div class="child">2</div>
+<div class="child">3</div>
+<div class="child">4</div>
+<div class="child">5</div>
+<div class="child">6</div>
+<div class="child">7</div>
+<div class="child">8</div>
+<div class="child">9</div>
+<div class="child">10</div>
+
+</div>

@@ -117,13 +117,13 @@ function calculations(a, b, c) {
   const divide = a / b / c;
   const sum = a + b + c;
   const sub = a - b - c;
-  //   console.log(result);
   const result = {
     mult: multiply,
     div: divide,
     sum: sum,
     sub: sub,
   };
+  //   console.log(result);
   return result;
 }
 
