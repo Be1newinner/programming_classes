@@ -1,0 +1,71 @@
+<style>
+
+* {
+box-sizing: border-box;
+}
+
+/* 
+row = horizontal
+ column = vertical
+*/
+
+.parent {
+width: 480px;
+height: 480px;
+background: green;
+display: flex;
+flex-wrap: wrap; 
+align-content: flex-start;
+position: relative;
+}
+
+.child {
+width: 96px;
+height: 96px;
+background: red;
+border: 2px solid black;
+}
+
+.child1{
+background: orange;
+position: absolute;
+bottom: 20px;
+right: 20px;
+height: 40px;
+width: 40px;
+border-radius: 100%;
+padding: 10px;
+
+/*
+position: static; --default
+position: relative;
+position: absolute;
+top: 0px;
+left: 0px;
+
+top:
+left:
+right:
+bottom
+
+top: 50px;
+left: 50px;
+
+top: -50px;
+left: -50px;
+*/
+
+}
+
+</style>
+
+<div class="parent">
+
+<div class="child child1" draggable="true">1</div>
+<div class="child">2</div>
+<div class="child">3</div>
+<div class="child">4</div>
+<div class="child">5</div>
+<div class="child">6</div>
+
+</div>

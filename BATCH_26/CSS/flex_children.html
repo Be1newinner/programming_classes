@@ -1,0 +1,67 @@
+<style>
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.parent {
+width: 480px;
+height: 480px;
+background: green;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+.child {
+width: 96px;
+height: 96px;
+background: red;
+border: 2px solid black;
+order:4;
+}
+
+
+#child1 {
+background: orange;
+/*
+flex-shrink: 0;
+flex-grow: 2;
+*/
+order: 3;
+flex-basis: 100%;
+}
+
+#child3 {
+order: 2;
+flex-basis: 20%;
+}
+
+#child2 {
+background: yellow;
+order: 1;
+/*
+flex-shrink: 3;
+flex-grow: 1;
+*/
+flex-basis: 80%;
+}
+
+</style>
+
+<div class="parent">
+
+<div class="child" id="child1">1</div>
+<div class="child" id="child2">2</div>
+<div class="child" id="child3">3</div>
+<div class="child" id="child4">4</div>
+<div class="child" id="child5">5</div>
+<div class="child" id="child6">6</div>
+<div class="child" id="child7">7</div>
+<div class="child" id="child8">8</div>
+<div class="child" id="child9">9</div>
+<div class="child" id="child10">10</div>
+
+</div>
