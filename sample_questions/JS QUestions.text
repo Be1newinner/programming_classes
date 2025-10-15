@@ -1,0 +1,4 @@
+// Array
+
+// Build a product array with keys ( id, title, price, category_name ) atleast 10 items
+// Build a category array with keys ( id, title )  atleast 3 items
