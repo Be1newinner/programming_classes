@@ -1,0 +1,11 @@
+types of selectors
+1. Basic Selectors -> 
+    a. element selector e.g. body, div
+    b. class selector
+    c. id selector
+    d. universal selector e.g. "*"
+    
+2. Combination selector
+3. Pseudo class Selector
+4. Pseudo element selector
+

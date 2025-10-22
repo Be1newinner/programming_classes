@@ -1,0 +1,65 @@
+<DOCTYPE HTML>
+<html>
+<head>
+  <title>Combination Selector</title>
+  
+<style>
+
+/*
+Decedent Selector
+#container h1 {
+background: red;
+}
+*/
+
+/*
+Child Selector
+
+#container>p {
+background: orange;
+}
+*/
+
+/*
+Nested Selector
+*/
+
+#container {
+background: green;
+
+& h1 {
+  font-size: 40px;
+ }
+ 
+&>p {
+  font-size: 30px;
+ }
+ 
+& > div {
+  background: skyblue;
+  & > p {
+    text-align: center;
+   }
+}
+}
+</style>
+</head>
+<body>
+
+<div id="container"> 
+<h1>Hello</h1>
+<p>Bye</p>
+
+<div>
+ <p>something</p>
+</div>
+</div>
+
+<div>
+<h1>Hello</h1>
+<p>Bye</p>
+</div>
+
+</body>
+</html>
+
