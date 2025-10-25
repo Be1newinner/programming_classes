@@ -13,12 +13,12 @@ app.use(express.urlencoded());
 
 API REQUEST METHOD:
 
-GET
-POST
-PUT
-PATCH
-DELETE
-HEAD
+GET => Retrieve data, send non sensitive data, for basic form inputs
+POST => GET ka alternative for large data input or sensitive input and large output. to add new data in the database
+PUT => Update ( We take full document as input and replace full document in db )
+PATCH => update a few keys ( one or more ) of a document. e.g. change name in db 
+DELETE => delete a data.
+HEAD => when we want to retrieve only the response header like status and cookies.
 
 */
 
@@ -29,6 +29,7 @@ HEAD
   3. path params
   4. cookies
   5. headers
+  6. Authorization
   
   res: DATA SENT BY OUR SERVER TO USER
     */
@@ -61,8 +62,8 @@ app.get("/contact", (req, res) => {
       maxAge: 21 * 24 * 60 * 60 * 1000,
       // expires: date.toUTCString(),
       path: "/contact",
-      secure: true,
-      httpOnly: true,
+      secure: true, // only https website can access it on https backend
+      httpOnly: true, // only server can access this cookie, js in client can not
       domain: "localhost",
     })
     .json({
@@ -72,6 +73,7 @@ app.get("/contact", (req, res) => {
     });
 });
 
+// sample url: http://localhost:8000/contact/45
 app.get("/contact/:id", (req, res) => {
   // res.send("WELCOME TO HOMEPAGE GET! vijay kumar");
   const { id } = req.params;
@@ -83,9 +85,23 @@ app.get("/contact/:id", (req, res) => {
   });
 });
 
-app.get("/admin/users/:id/name", (req, res) => {
+// sample url: http://localhost:8000/contact?id=45&hobby=gaming&hobby=food
+app.get("/contact/", (req, res) => {
   // res.send("WELCOME TO HOMEPAGE GET! vijay kumar");
-  const { id } = req.params;
+  const { id } = req.query;
+  // res.end();
+  // return;
+
+  res.json({
+    message: "Welcome to Homepage",
+    name: "Vijay",
+    id,
+  });
+});
+
+app.get("/admin/users/:id/:name/data", (req, res) => {
+  // res.send("WELCOME TO HOMEPAGE GET! vijay kumar");
+  const { id, name } = req.params;
 
   res.json({
     message: "Welcome to Homepage",
@@ -97,7 +113,12 @@ app.get("/admin/users/:id/name", (req, res) => {
 app.post("/", (req, res) => {
   const body = req.body;
   const headers = req.headers;
+  const authorization = req.headers.authorization;
   const cookies = req.cookies;
+
+  // sample authorization output for bearer token
+  // authorization = "Bearer dasda4d5as84d86a54das84d6as"
+  // token = authorization.split(" ")[1];
 
   // console.log(body.name);
   res.json({
