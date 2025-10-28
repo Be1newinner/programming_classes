@@ -57,6 +57,9 @@ app.get("/contact", (req, res) => {
   // const date = new Date();
   // date.setHours(9);
 
+  // res.cookie();
+  // res.json();
+
   res
     .cookie("refresh-token3", "dasd484534fcujo3cmlwe436", {
       maxAge: 21 * 24 * 60 * 60 * 1000,
@@ -113,6 +116,7 @@ app.get("/admin/users/:id/:name/data", (req, res) => {
 app.post("/", (req, res) => {
   const body = req.body;
   const headers = req.headers;
+  // Accessing Tokens
   const authorization = req.headers.authorization;
   const cookies = req.cookies;
 

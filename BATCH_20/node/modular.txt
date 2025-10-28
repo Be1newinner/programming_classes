@@ -1,0 +1,10 @@
+/*
+ MODULAR STRUCTURE
+
+ /src/
+    /models         - for databsase related
+    /controller     - for controlling input and output in api
+    /routes         - for api method and path and path params and middlewares
+    /service        - for business logic of api other than route and controller and models 
+    /utils          - reusable functions or varibales
+ */
