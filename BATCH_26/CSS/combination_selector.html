@@ -1,18 +1,17 @@
 <DOCTYPE HTML>
-<html>
-<head>
-  <title>Combination Selector</title>
-  
-<style>
+  <html>
+    <head>
+      <title>Combination Selector</title>
 
-/*
+      <style>
+        /*
 Decedent Selector
 #container h1 {
 background: red;
 }
 */
 
-/*
+        /*
 Child Selector
 
 #container>p {
@@ -20,46 +19,72 @@ background: orange;
 }
 */
 
-/*
+        /*
 Nested Selector
 */
 
-#container {
-background: green;
+        #container {
+          background: green;
 
-& h1 {
-  font-size: 40px;
- }
- 
-&>p {
-  font-size: 30px;
- }
- 
-& > div {
-  background: skyblue;
-  & > p {
-    text-align: center;
-   }
-}
-}
-</style>
-</head>
-<body>
+          & h1 {
+            font-size: 40px;
+          }
 
-<div id="container"> 
-<h1>Hello</h1>
-<p>Bye</p>
+          & > p {
+            font-size: 30px;
+          }
 
-<div>
- <p>something</p>
-</div>
-</div>
+          & > div {
+            background: skyblue;
+            & > p {
+              text-align: center;
+            }
 
-<div>
-<h1>Hello</h1>
-<p>Bye</p>
-</div>
+            /* 
+        big sibling selector
+        */
+            & h1 ~ p,
+            & h1 ~ span {
+              color: red;
+            }
 
-</body>
-</html>
+            & h1 ~ * {
+              font-size: 40px;
+            }
 
+            /* 
+        big Adjacent sibling selector
+        */
+
+            & h1 + * {
+              text-decoration: underline;
+            }
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <div id="container">
+        <h1>Hello</h1>
+        <p>Bye</p>
+
+        <div>
+          <p>something</p>
+          <p>something</p>
+          <h1>Hello</h1>
+          <p>something</p>
+          <span>something span</span>
+          <p>something</p>
+        </div>
+      </div>
+
+      <div>
+        <p>Bye</p>
+        <p>Bye</p>
+        <h1>Hello</h1>
+        <p>Bye</p>
+        <p>Bye</p>
+      </div>
+    </body>
+  </html>
+</DOCTYPE>
