@@ -1,6 +1,6 @@
 "use client";
 
-import { Plus } from "lucide-react";
+import { Delete, Plus } from "lucide-react";
 import React, { useState } from "react";
 // CRUD operations with Array of Objects and useState 
 export default function TodoPage() {
@@ -12,6 +12,7 @@ export default function TodoPage() {
      1. Jab bhi hum input banaenge tab humesha ek use state bhi banenge aur use link krenge input k sath me!
     */
 
+    //  useState me value wale part me age datatype object, set, map, array un methods use nahi kr sakte jo original data ko modify kre sirf wo method use krte hai jo clone provide kre.
     const [todoData, setTodoData] = useState([
         {
             createdAt: "1",
@@ -44,6 +45,24 @@ export default function TodoPage() {
     }
 
 
+
+    function editTodo(createdAt: string) {
+        const todo = todoData.slice()
+        const indexToUpdate = todo.findIndex((item) => item.createdAt === createdAt);
+        const title = prompt("Type new title", todo[indexToUpdate].title);
+        if (!title) return;
+        todo[indexToUpdate].title = title;
+        setTodoData(todo);
+        // alert("editing at " + indexToUpdate);
+
+    }
+
+    function deleteTodo(createdAt: string) {
+        const updatedTodo = todoData.filter((e) => e.createdAt !== createdAt)
+        setTodoData(updatedTodo);
+    }
+
+
     return (
         //    React Fragment
         <main className="flex flex-col w-full bg-[#49243E] h-screen justify-center items-center text-[#DBAFA0]">
@@ -70,8 +89,11 @@ export default function TodoPage() {
                 <ol className="py-4 pl-4">
                     {todoData.map((item) => {
                         return (
-                            <li key={item.createdAt} className="border-b py-2 list-decimal" draggable="true">
-                                <span>{item.title}</span>
+                            <li key={item.createdAt} className="border-b list-decimal flex justify-between items-center">
+                                <div className="flex-1 py-2" onClick={() => editTodo(item.createdAt)}>
+                                    <span>{item.title}</span>
+                                </div>
+                                <Delete onClick={() => deleteTodo(item.createdAt)} />
                             </li>
                         )
                     })}

@@ -1,0 +1,57 @@
+<DOCTYPE HTML>
+  <html>
+    <head>
+      <title>Pseudo Selector</title>
+
+      <style>
+        li:first-child,
+        li:last-child,
+        div p:first-child,
+        div span:first-of-type,
+        div span:last-of-type {
+          color: red;
+        }
+
+        li:nth-child(3) {
+          font-size: 36px;
+        }
+
+        span:nth-of-type(3) {
+          font-size: 36px;
+        }
+      </style>
+    </head>
+    <body>
+      <ul>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+      </ul>
+
+      <ol>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+        <li>Ajay</li>
+      </ol>
+
+      <div>
+        <p>Ajay 1</p>
+        <p>Ajay 2</p>
+        <span>span</span>
+        <span>span</span>
+        <p>Ajay 3</p>
+        <p>Ajay 4</p>
+        <span>das</span>
+        <p>Ajay 5</p>
+      </div>
+    </body>
+  </html>
+</DOCTYPE>
