@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+      }
+      /* @keyframes moveCar {
+        from {
+        }
+        to {
+          translate: calc(100svw - 100%);
+          rotate: calc(50 * 360deg);
+        }
+      } */
+
+      @keyframes moveCar {
+        25% {
+          translate: calc(100svw - 120%) 0;
+          rotate: calc(5 * 360deg);
+        }
+
+        50% {
+          translate: calc(100svw - 120%) calc(100svh - 120%);
+          rotate: calc(8 * 360deg);
+        }
+
+        75% {
+          translate: 0 calc(100svh - 120%);
+          rotate: calc(5 * 360deg);
+        }
+
+        /* 100% {
+        } */
+
+        /* to {
+          translate: calc(100svw - 100%);
+          rotate: calc(50 * 360deg);
+        } */
+      }
+
+      .container {
+        /* background-color: red; */
+        height: 200px;
+        width: 200px;
+        border-radius: 200px;
+        background-image: url(images/tyre.png);
+        background-size: cover;
+        animation-name: moveCar;
+        animation-duration: 8s;
+        animation-iteration-count: 2;
+        /* animation-timing-function: linear; */
+        animation-timing-function: cubic-bezier(0,.84,.06,.23);
+        /* animation-iteration-count: infinite; */
+        /* animation-direction: normal; */
+        /* animation-direction: reverse; */
+        animation-direction: alternate;
+        animation-direction: alternate-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>
