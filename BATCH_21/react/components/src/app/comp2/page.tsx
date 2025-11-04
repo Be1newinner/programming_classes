@@ -18,7 +18,7 @@ export default function ComponentsKhatarnaak() {
           alert("Hello");
         }}
       />
-      <Square title="SOME" desc="Desccirtption data" func={some} />
+      <Square title="SOME" desc="Descirtption data" func={some} />
 
       <div>
         <h1>dasd</h1>

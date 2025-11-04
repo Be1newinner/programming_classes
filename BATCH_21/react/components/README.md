@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NOTES
 
-## Getting Started
+- Html code me javascript inject krne k liye {} use krenge
+- Javascript me html use krne k liye return keyword
 
-First, run the development server:
+## Components
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+it is a function which implements following conditions
+
+1. function name should be in PascalCase
+2. This will return html component
+3. The arguments will be passed as object in component
+4. The file extension will be .tsx or .jsx
+5. for importing we will use
+
+```javascript
+// default import
+import componentName from "filename.tsx";
+
+// named import
+import { componentName } from "filename.tsx";
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. for exporting we will use
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```javascript
+// default export
+export default componentName;
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+// named export
+export { componentName };
+```
 
-## Learn More
+- ONLY ONE COMPONENT in a file will be default import and default export. all other components will lie in named export and named import
 
-To learn more about Next.js, take a look at the following resources:
+7. export variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```javascript
+const name = "Vijay";
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+// default export
+export default name;
 
-## Deploy on Vercel
+// named export
+export const name = "Vijay";
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+// or
+export { name }; // since it is defined above already
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
