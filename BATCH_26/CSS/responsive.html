@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /* 
+      by default jo design hai wo mobile ka design ya minimum screen size ka;
+      min-width k andar usse jada ka design likhte hai
+      */
+
+      header {
+        /* background-color: red; */
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        width: 100%;
+        /* width: 800px; */
+        /* max-width: 800px; */
+        /* min-width: 800px; */
+
+        & ul {
+          /* display: flex; */
+          display: none;
+          list-style-type: none;
+          gap: 10px;
+
+          & li {
+            font-size: 24px;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+              text-decoration-line: underline;
+              text-decoration-color: blue;
+              text-decoration-thickness: 5px;
+              text-underline-offset: 10px;
+            }
+          }
+        }
+
+        & h2:hover {
+          font-size: 38px;
+          text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      /* this is desktop design */
+      @media screen and (min-width: 640px) {
+        header {
+          background-color: green;
+
+          & ul {
+            display: flex;
+          }
+
+          & img {
+            display: none;
+          }
+        }
+      }
+
+      @media screen and (min-width: 1080px) {
+        header {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>SHIPSAR</h2>
+      <ul>
+        <li>Home</li>
+        <li>Shop</li>
+        <li>Contact</li>
+        <li>About</li>
+      </ul>
+
+      <img
+        src="https://www.svgrepo.com/download/532195/menu.svg"
+        height="32px"
+      />
+    </header>
+  </body>
+</html>
