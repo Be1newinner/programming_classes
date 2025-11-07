@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics of css</title>
+    <!-- 
+    css: 
+    1. inline
+    2. internal
+    3. external
+    -->
+
+    <!-- 
+    internal
+    -->
+    <style>
+      /* 
+      selector { 
+         property: value
+      } 
+    */
+
+      /* 
+    Basics selector
+    1. id
+    2. class
+    3. tag
+    4. universal selector ( * )
+    */
+
+      div {
+        background-color: blue;
+        width: 300px;
+        /* height: 100px; */
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      #main_heading {
+        color: pink;
+      }
+
+      .heading {
+        font-weight: 100; /* 100 - 900 */
+      }
+
+      .heading2 {
+        /* text-decoration: underline; */
+        /* text-decoration: overline; */
+        /* text-decoration: line-through; */
+        text-decoration: line-through underline;
+        text-decoration-color: blueviolet;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 10px;
+      }
+
+      .heading2.heading#sd {
+        /* left right center justify */
+        /* text-align: left; */
+        /* text-align: center;  */
+        /* text-align: right;  */
+        /* text-align: justify; */
+        color: orange;
+      }
+
+      #circle {
+        background-color: blueviolet;
+        height: 100px;
+        width: 100px;
+        /* border-radius: 10px; */
+        /* border-radius: 50px; */
+        /* border-radius: 50%; */
+        /* 
+        border: size style-of-border color-of-border;
+        */
+        border: 2px solid red;
+        border-style: dotted;
+        border-style: dashed;
+        border-style: double;
+        /* border-style: none ;   */
+        border-width: 10px;
+        border-color: green;
+
+        /* border-left: ; */
+        border-left-color: blue;
+        border-top-color: green;
+        border-right-color: yellow;
+        border-bottom-color: orange;
+        /* box-shadow: x-axis y-axis blur spread color */
+
+        box-shadow: 20px -10px 5px 10px rgba(0, 0, 0, 0.25);
+        margin-bottom: 50px;
+      }
+
+      .shadow {
+        /* text-shadow: x-axis y-axis blue color */
+        text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.25);
+      }
+
+      .drop-shadow {
+        filter: drop-shadow(red 1px 1px 2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 id="main_heading">Hello Vijay</h1>
+    </div>
+
+    <div>
+      <h1 class="heading2">
+        Hello Vijay das dagsdh ash jdgashjdgahs gsa gdhjas gdjasg sag hjasgh
+        askhj gdhajsfkadhsahkjsf hjs gdfhjasg kgask jfgkahs gfkshg fhsgf hkjsg
+        fhksgdf hjsg fhsgdf uiysd gfyishdg
+      </h1>
+    </div>
+
+    <div>
+      <h1 class="heading heading2" id="sd">Hello Vijay</h1>
+    </div>
+
+    <div>
+      <h1 class="heading">Hello Vijay</h1>
+    </div>
+
+    <div id="circle"></div>
+
+    <h1 class="shadow">SOMETHING</h1>
+
+    <svg
+      class="drop-shadow"
+      width="80px"
+      height="80px"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12Z"
+        fill="#1C274C"
+      />
+      <path
+        d="M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z"
+        fill="#1C274C"
+      />
+      <path
+        d="M17 12C17 12.5523 16.5523 13 16 13C15.4477 13 15 12.5523 15 12C15 11.4477 15.4477 11 16 11C16.5523 11 17 11.4477 17 12Z"
+        fill="#1C274C"
+      />
+      <path
+        d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8"
+        stroke="#1C274C"
+        stroke-width="1.5"
+        stroke-linecap="round"
+      />
+    </svg>
+  </body>
+</html>
