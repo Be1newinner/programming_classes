@@ -5,10 +5,27 @@ import UsersRouter from "./src/routes/users.js";
 import AuthRouter from "./src/routes/auth.js";
 import connectDB from "./src/config/db.js";
 
+// STEP 1
+// Install following
+// https://www.npmjs.com/package/swagger-ui-express
+// https://www.npmjs.com/package/swagger-jsdoc
+
+
+// Step2 import following
+import swaggerUi from "swagger-ui-express";
+import { openapiSpecification } from "./src/config/swagger.js";
+
 const app = express();
 const PORT = 8000;
 
 app.use(express.json());
+
+// Step 3 use swagger for middleware
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(openapiSpecification));
+
+
+
+
 
 app.get("/", (_, res) => {
   res.json({

@@ -1,0 +1,162 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Sample ToDo API",
+    "description": "A simple ToDo API example documented with Swagger (OpenAPI 3.0).",
+    "version": "1.0.0",
+    "contact": {
+      "name": "API Support",
+      "email": "support@example.com"
+    }
+  },
+  "paths": {
+    "/todos": {
+      "get": {
+        "summary": "Get all todos",
+        "operationId": "getTodos",
+        "tags": ["ToDos"],
+        "responses": {
+          "200": {
+            "description": "List of all todos",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Todo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new todo",
+        "operationId": "createTodo",
+        "tags": ["ToDos"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TodoInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Todo created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Todo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/todos/{id}": {
+      "get": {
+        "summary": "Get a todo by ID",
+        "operationId": "getTodoById",
+        "tags": ["ToDos"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "ID of the todo to fetch",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Todo found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Todo"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Todo not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a todo",
+        "operationId": "deleteTodo",
+        "tags": ["ToDos"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "ID of the todo to delete",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Todo deleted successfully"
+          },
+          "404": {
+            "description": "Todo not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Todo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "64e8f67c4b1e2a45e4b0f1d1"
+          },
+          "title": {
+            "type": "string",
+            "example": "Buy groceries"
+          },
+          "completed": {
+            "type": "boolean",
+            "example": false
+          }
+        },
+        "required": ["id", "title", "completed"]
+      },
+      "TodoInput": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Finish coding task"
+          },
+          "completed": {
+            "type": "boolean",
+            "example": false
+          }
+        },
+        "required": ["title"]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "ToDos",
+      "description": "Operations related to ToDo management"
+    }
+  ]
+}
