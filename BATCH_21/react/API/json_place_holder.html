@@ -1,0 +1,84 @@
+<script>
+  // fetch function
+
+  // Get Request
+  // jab bhi fetch function ko call kroge tab hume ek promise return hoga!
+  // PROMISE
+  //   console.log(fetch("https://jsonplaceholder.typicode.com/posts/1/comments"));
+  //   console.log("hi");
+
+  // Promise
+  //   const promise = new Promise(
+  //     (res) => res("hi"),
+  //     (rej) => rej("error")
+  //   );
+
+  //   console.log(promise);
+
+  //   Intervals and Timeout
+  //   const timeout1 = setTimeout(() => console.log("Hello"), 3000);
+  //   const interval1 = setInterval(() => console.log("Hello"), 1000);
+  //   setTimeout(() => clearInterval(interval1), 5000);
+
+  // Promise ka data kab milta hai?
+  // Jab tk promise resolve (Success) ya reject na ho jae
+
+  // ########### How to Create a Promise
+  // Failed Promise
+  //   const timeoutPromise = new Promise((_, reject) => {
+  //     setTimeout(() => {
+  //       reject(new Error(`500 Error occured`));
+  //     }, 2000);
+  //   });
+
+  // success Promise
+  //   const timeoutPromise2 = new Promise((resolve, _) => {
+  //     setTimeout(() => {
+  //       resolve({ message: "Promise resolved successfully!" });
+  //     }, 2000);
+  //   });
+  //
+  //    console log use krte hai synchronous code ko console krne k liye
+  //    jabki promise ek asyncrous code hai
+  //   console.log(timeoutPromise);
+  //   console.log(timeoutPromise2);
+
+  //    ######## HOW TO Handle A PROMISE
+  //    Type 1 dot then chaining
+  //    then chain tab run kregi jab promise me data aa jaega
+  //    then chain ko Browser handle krta hai js handle nahi krta
+  //   timeoutPromise2.then((data) => console.log(data));
+  //   timeoutPromise
+  //     .then((data) => console.log(data))
+  //     .catch((e) => console.warn("THE ERROR IS ", e));
+  // .catch((e) => console.error("THE ERROR IS ", e));
+  // .catch((e) => console.log("THE ERROR IS ", e));
+
+  //
+
+  function verifyAge(age) {
+    const timeoutPromise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (age < 18) {
+          reject(new Error(`You are not eligible for bihar voting!`));
+        } else {
+          resolve("You are eligible to vote!");
+        }
+      }, 2000);
+    });
+
+    return timeoutPromise;
+  }
+  let a = null;
+
+  verifyAge(19)
+    .then((data) => {
+      console.log(data);
+      a = data;
+    })
+    .catch((e) => console.warn(e))
+    .finally(() => {
+      console.log("THIS IS FINAL MESSAGE");
+      if (!a) a = "SOEMTHIGN";
+    });
+</script>
