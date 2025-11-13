@@ -3,11 +3,11 @@
 <script>
   let i = 0;
   const interval = setInterval(() => {
-    if (i <= 500) {
-      document.querySelector("#count").innerHTML = i;
+    if (i <= 10) {
+      document.querySelector("#count").innerHTML = i + "k";
       i++;
     } else {
       clearInterval(interval);
     }
-  }, 10);
+  }, 100);
 </script>
