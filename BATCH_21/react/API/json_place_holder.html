@@ -7,12 +7,6 @@
   //   console.log(fetch("https://jsonplaceholder.typicode.com/posts/1/comments"));
   //   console.log("hi");
 
-  // Promise
-  //   const promise = new Promise(
-  //     (res) => res("hi"),
-  //     (rej) => rej("error")
-  //   );
-
   //   console.log(promise);
 
   //   Intervals and Timeout
@@ -25,23 +19,23 @@
 
   // ########### How to Create a Promise
   // Failed Promise
-  //   const timeoutPromise = new Promise((_, reject) => {
-  //     setTimeout(() => {
-  //       reject(new Error(`500 Error occured`));
-  //     }, 2000);
-  //   });
+  // const timeoutPromise = new Promise((_, reject) => {
+  //   setTimeout(() => {
+  //     reject(new Error(`500 Error occured`));
+  //   }, 2000);
+  // });
 
-  // success Promise
-  //   const timeoutPromise2 = new Promise((resolve, _) => {
-  //     setTimeout(() => {
-  //       resolve({ message: "Promise resolved successfully!" });
-  //     }, 2000);
-  //   });
+  //    success Promise
+  //    const timeoutPromise2 = new Promise((resolve, _) => {
+  //        setTimeout(() => {
+  //          resolve({ message: "Promise resolved successfully!" });
+  //        }, 2000);
+  //    });
   //
   //    console log use krte hai synchronous code ko console krne k liye
   //    jabki promise ek asyncrous code hai
-  //   console.log(timeoutPromise);
-  //   console.log(timeoutPromise2);
+  //    console.log(timeoutPromise);
+  //    console.log(timeoutPromise2);
 
   //    ######## HOW TO Handle A PROMISE
   //    Type 1 dot then chaining
@@ -51,10 +45,8 @@
   //   timeoutPromise
   //     .then((data) => console.log(data))
   //     .catch((e) => console.warn("THE ERROR IS ", e));
-  // .catch((e) => console.error("THE ERROR IS ", e));
-  // .catch((e) => console.log("THE ERROR IS ", e));
-
-  //
+  //     .catch((e) => console.error("THE ERROR IS ", e));
+  //     .catch((e) => console.log("THE ERROR IS ", e));
 
   function verifyAge(age) {
     const timeoutPromise = new Promise((resolve, reject) => {
@@ -71,14 +63,23 @@
   }
   let a = null;
 
-  verifyAge(19)
+  verifyAge(17)
     .then((data) => {
       console.log(data);
       a = data;
     })
-    .catch((e) => console.warn(e))
+    // .catch((e) => console.warn(e))
+    // .catch((e) => console.warn(e.stackTrace()))
+    // .catch((e) => console.warn(e.message))
     .finally(() => {
       console.log("THIS IS FINAL MESSAGE");
-      if (!a) a = "SOEMTHIGN";
+      if (!a) a = "SOMETHING";
     });
+
+  /*
+   componenets Error
+    1. message
+    2. status_code
+    3. stackTrace
+  */  
 </script>

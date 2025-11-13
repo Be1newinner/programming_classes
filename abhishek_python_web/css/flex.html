@@ -1,0 +1,52 @@
+<style>
+  /* 
+        display: list, block, inline, inline-block, flex, grid, inline-flex, inline-grid, table, none
+    */
+
+  p {
+    /* display: inline-block; */
+  }
+
+  .parent {
+    /* display: block; */
+    display: flex; /* techincal keyword shrink */
+    background: red;
+    /* border: 5px solid red; */
+    width: 480px;
+    height: 500px;
+    flex-wrap: wrap; /* wrap, nowrap, wrap-reverse*/
+    justify-content: space-evenly; /* left , flex-start, right, flex-end, center, space-between, space-around, space-evenly */
+    align-items: center; /*left, flex-start, flex-end, right, center*/
+  }
+
+  .child {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+  }
+</style>
+
+<body>
+  <!-- <p>
+    Hello das da das das dasd aSF WEVH EUHIOWHFIO2EHFIO HOIFH IASHFI SHDALKF HASKL DJKLAJ DKLASJD KAS JKL
+  </p>
+  <p>
+    Hello AJS DGKLJF Gsjdh gfjhsgfkjadhs fjasgdfkjagsfasgfjsa fsd fsd fsd fhsd
+    fgsdjhsdgfjsdg fhjsgdf hjsgd fj
+  </p>
+  <span>BYE</span>
+  <span>BYE</span>
+  <span>BYE</span> -->
+
+  <div class="parent">
+    <div class="child child-1">1</div>
+    <div class="child child-2">2</div>
+    <div class="child child-3">3</div>
+    <div class="child child-4">4</div>
+    <div class="child child-5">5</div>
+    <div class="child child-6">6</div>
+    <div class="child child-7">7</div>
+    <div class="child child-8">8</div>
+    <div class="child child-9">9</div>
+  </div>
+</body>

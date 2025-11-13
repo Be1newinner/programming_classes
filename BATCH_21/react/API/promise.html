@@ -1,0 +1,25 @@
+<script>
+  // Simple API Calling (then chain)
+  // fetch("https://jsonplaceholder.typicode.com/todos/1")
+  // .then((e) => e.text())
+  // .then((e) => e.json())
+  // .then((e) => console.log(e))
+  // .catch((error) => console.log(error.message));
+  //   old method used by axios and fetch
+  //   XMLHttpRequest
+
+  async function callApi() {
+    try {
+      const data = await fetch("https://jsonplaceholde.typicode.com/todos/1");
+      const d2 = await data.json();
+      document.write(JSON.stringify(d2));
+      console.log(d2);
+    } catch (error) {
+      // document.write("Unexpected Error")
+      document.write(`<p style="color: red">${error.message}<p>`);
+      // console.log("Unexpected error!");
+    }
+  }
+
+  callApi();
+</script>
