@@ -1,0 +1,27 @@
+<script>
+  document.write("<main></main>");
+  const main = document.querySelector("main");
+
+  const button = document.createElement("button");
+  button.textContent = "Increase";
+  button.setAttribute("id", "increase_button");
+  //   button.style.backgroundColor = "blue";
+
+  main.appendChild(button);
+
+  const countInLocalStorage = localStorage.getItem("count");
+  let count = Number(countInLocalStorage) || 1;
+
+  document.write(`<p id="count">${count}</p>`);
+
+  const countElem = document.querySelector("#count");
+
+  button.addEventListener("click", () => {
+    count++;
+    countElem.innerHTML = count;
+    localStorage.setItem("count", count);
+  });
+
+  // Adding Cookies
+  document.cookie = "cookie_name=cookie_data; Max-Age=3600;";
+</script>
