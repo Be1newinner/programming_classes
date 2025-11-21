@@ -1,0 +1,31 @@
+<script>
+  // Jab humare paas ek hi person ka bahut sara alag alag data hai tab hum log object use krenge
+  //   e.g. ashok ek person hai uski hume age, name, roll no, class, address
+
+  //   empty object
+  //   const person = {};
+
+  //   object with data
+  const person = {
+    name: "Ashok",
+    age: 21,
+    roll: 1,
+    class: "BCA",
+    isGraduated: false,
+  };
+
+  //   console.log(person);
+
+  console.log(person.name);
+  console.log(person.age);
+  console.log(person.roll);
+  console.log(person.isGraduated);
+
+  person.age = 22;
+
+  console.log(person);
+
+  delete person.class;
+
+  console.log(person);
+</script>

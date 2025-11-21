@@ -1,0 +1,36 @@
+<script>
+  const names = ["Vijay", "Ajay", "Sanjay", "Ashok", "Ruby"];
+
+  /*
+  // ***** To insert data in the middle of array
+  // bich me 0 likhenge agar data add kr rahe hai
+  names.splice(2, 0, "Karan");
+  names.splice(2, 0, "Arjun");
+
+  // ***** To delete data in the middle array
+  //   bich me 1 likhenge agar data remove kr rahe hai
+  names.splice(1, 1);
+  */
+
+  // ***** to check if the data exist in array
+  //   here the spelling and casing is imortant
+  //   console.log(names.includes("ajay"));
+
+  // ***** hume check krna hai ke agar data hai to kis index pe hain
+  //   console.log(names.indexOf("Sanjay"));
+
+  // *** Agar hume original array me sirf part of array
+  //   const names2 = names.slice(1, 4);
+  console.log(names);
+  //   console.log(names2);
+
+  // *** hume array ko sort krna hai
+  //   agar aapko ascending krna hai to hum .sort()
+  names.sort();
+  console.log(names);
+
+  // agar hume descending order me krna hai to hum .sort().reverse()
+
+  names.sort().reverse();
+  console.log(names);
+</script>
