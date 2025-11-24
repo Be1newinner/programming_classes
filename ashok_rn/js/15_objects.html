@@ -6,7 +6,7 @@
   //   const person = {};
 
   //   object with data
-  const person = {
+  const a = {
     name: "Ashok",
     age: 21,
     roll: 1,
@@ -14,18 +14,25 @@
     isGraduated: false,
   };
 
+  // Pure object ko read krne k liye
   //   console.log(person);
 
+  // Object ke andar single single keys ko read krne k liye
   console.log(person.name);
   console.log(person.age);
   console.log(person.roll);
   console.log(person.isGraduated);
 
+  // Object ke andar kisi key k data ko update krne k liye
   person.age = 22;
 
   console.log(person);
 
+  // Object ke andar kisi key ko delete krne k liye
   delete person.class;
+
+  // Object ke andar ek new key add krni hai
+  person.section = "A";
 
   console.log(person);
 </script>
