@@ -16,3 +16,18 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+button {
+  background-color: aquamarine;
+  font-size: 8px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.3);
+
+  &:active {
+    scale: 0.9;
+      box-shadow: none;
+  }
+
+}
