@@ -32,3 +32,112 @@ body {
 .btn-filled {
     @apply bg-black rounded text-xs text-white px-4 py-1 cursor-pointer  active:scale-[0.95];
 }
+
+*{
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+h1{
+  text-align: center;
+  color:rgb(90, 88, 88);
+  margin-top: 80px;
+  margin-bottom: 60px;
+  font-size: 45px;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  }
+
+.header{
+  width:80%;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  /* padding-top: 10px; */
+  padding-bottom:10px;
+  margin: 0 auto;
+}
+button{
+  background-color: rgb(111, 111, 217);
+  border-radius:8px;
+  border-width: 2px;
+  border-color: rgb(111, 111, 217);
+  color: white;
+  width:150px;
+  font-size: 18px;
+  font-weight: bold;
+  height:40px;
+}
+.dropdown{
+  width:165px;
+  font-size: 15px;
+  padding-left: 5px;
+  background-color: rgb(210, 200, 200);
+  border-radius: 8px;
+  border-width: 0;
+}
+
+.container{
+  background-color: rgb(226, 226, 226);
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  margin: 0 auto;
+  width:80%;
+  /* height:200px; */
+  border-radius:10px;
+}
+
+.box1 {
+  display:flex; 
+  gap: 5px;
+  padding-left:5px;
+  border-radius: 5px;
+  align-items: center;
+  background-color:white;
+  height:50px;
+}
+.box2 {
+  display:flex; 
+  gap: 5px;
+  padding-left:5px;
+  border-radius: 5px;  
+  align-items: center;
+  background-color: white; 
+  height: 50px;
+}
+.box3 {
+  display:flex;
+  gap: 5px;
+  padding-left:5px;
+  border-radius: 5px;  
+  align-items: center;
+  background-color: white;  
+  height: 50px;
+  /* text-decoration:line-through; */
+}
+
+.dlticon{
+  height:25px;
+  width:25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right:200;
+  margin:5px;
+  border-radius: 5px;
+  background-color: rgb(226, 226, 226);
+}
+.penicon{
+  height:25px;
+  width:25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right:165;  
+  margin:5px;
+  border-radius: 5px;
+  background-color: rgb(226, 226, 226);
+}
