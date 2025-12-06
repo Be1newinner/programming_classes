@@ -55,6 +55,8 @@ export default function State() {
       <p>{person.name}</p>
       <p>{person.age}</p>
       <p>{person.city}</p> */} 
+
+      
       {/* <div>{persons[0].name}</div>
       <div>{persons[1].name}</div>
       <div>{persons[2].name}</div> */}
