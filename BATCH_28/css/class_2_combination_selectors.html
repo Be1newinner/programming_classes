@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Universal Selectors */
+        /* * {
+            font-size: 20px;
+            background-color: red;
+        } */
+
+        /* Descendent Selector */
+       #the_cat h1 {
+            color: red
+        }
+
+        /* child selector  */
+        #the_cat > h1 {
+            background-color: green;
+        }
+
+        /* Sibling selector */
+        #the_cat ~ div {
+            background: orange
+        }
+        /* #the_cat ~ div h1 {
+            background: blue
+        } */
+
+        /* Adjacent Sibling selector */
+        /* #the_cat + div h1 {
+            background: pink
+        } */
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <div id="the_cat">
+        <h1>The Cat</h1>
+        <p>Cat is beautiful</p>
+        <p>Cat has 4 legs</p>
+        <p>Cat has <span>7 lives</span></p>
+        <div>
+            <h1>The Cat inner</h1>
+            <p>Cat is beautiful</p>
+        </div>
+    </div>
+
+    <div>
+        <h1>The Cow</h1>
+        <p>Cow is beautiful</p>
+        <p>Cow has 4 legs</p>
+        <p>Cow has <span>Infinite lives</span></p>
+    </div>
+
+    <div>
+        <h1>The Dog</h1>
+        <p>Dog is beautiful</p>
+        <p>Dog has 4 legs</p>
+        <p>Dog has <span>Infinite lives</span></p>
+    </div>
+    
+</body>
+</html>
