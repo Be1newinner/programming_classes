@@ -34,6 +34,14 @@ export default function Home() {
     }])
   }
 
+  function editTask(index) {
+    // alert("WORKING" + index);
+    const task = prompt("Enter your task!");
+    const todoListClone = todolist.slice();
+    todoListClone[index].title = task;
+    setTodolist(todoListClone);
+  }
+
   return (
     <main className="min-h-screen bg-black text-white font-sans selection:bg-purple-500/30">
       <div className="max-w-xl mx-auto py-16 px-4">
@@ -59,7 +67,7 @@ export default function Home() {
         </div>
 
         <div className="space-y-4">
-          {todolist.map((item) => (
+          {todolist.map((item, index) => (
             <div
               key={item.id}
               className="group bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-5 flex items-start gap-4 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/10 hover:-translate-y-1"
@@ -88,7 +96,7 @@ export default function Home() {
                     alt="delete"
                   />
                 </button>
-                <button className="p-2 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-purple-400 transition-colors" aria-label="Edit">
+                <button className="p-2 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-purple-400 transition-colors" aria-label="Edit" onClick={() => editTask(index)}>
                   <img
                     src="https://www.svgrepo.com/show/433895/pen.svg"
                     className="w-5 h-5 invert opacity-70 hover:opacity-100"
