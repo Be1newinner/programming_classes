@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Positioning</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container_green, .container_red {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black
+        }
+
+        .container_green {
+            background-color: green;
+            /* margin-top: 50px; */
+            position: relative;
+            top: 50px;
+            /* left: 10px; */
+            right: 20px;
+            /* bottom: 20px; */
+            z-index: 0;
+        }
+
+        .container_red {
+            z-index: 1;
+            /* position: relative; */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container_green">
+
+    </div>
+
+
+    <div class="container_red">
+
+    </div>
+    
+</body>
+</html>
