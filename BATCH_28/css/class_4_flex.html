@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        background-color: red;
+        height: 480px;
+        width: 480px;
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        /* align-content: flex-start; */
+        /* align-content: center; */
+        /* align-content: flex-end; */
+        /* align-content: flex-end; */
+        /* align-content: space-between; */
+        /* align-content: space-around; */
+        /* align-content: space-evenly; */
+        /* flex-direction: row; */
+        /* flex-direction: column; */
+        /* gap: 10px */
+        /* padding: 10px; */
+      }
+
+      .child {
+        background-color: green;
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+      }
+
+      .child1 {
+        background-color: blue;
+        /* flex-grow: 2; */
+        flex-basis: 50%;
+      }
+      .child2 {
+        background-color: orange;
+        /* flex-grow: 1; */
+        flex-basis: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child child1">1</div>
+      <div class="child child2">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+      <div class="child">6</div>
+      <div class="child">7</div>
+      <div class="child">8</div>
+      <div class="child">9</div>
+      <div class="child">10</div>
+    </div>
+  </body>
+</html>
