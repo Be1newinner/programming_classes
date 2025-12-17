@@ -1,3 +1,15 @@
+/*
+ Data Types ( primitive )
+1. Number
+2. String
+3. Boolean
+5. null
+6. undefined
+7. BigInt
+8. Symbol
+*/
+
+
 // let name2 = "Vijay";
 // console.log("Hello World" , name2)
 // console.warn("This is warning")
