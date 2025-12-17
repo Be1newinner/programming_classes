@@ -10,4 +10,4 @@ const names = ["Vijay", "Ajay", "karan", "arjun"];
 
 // for (const i of names) {
 //   console.log(i);
-// }
+// }  
