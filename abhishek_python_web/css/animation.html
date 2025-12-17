@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform and Transition</title>
+    <style>
+      @keyframes movein {
+        /* from {
+        }
+        to {
+          transform: rotateZ(360000deg);
+          background-color: blue;
+          padding: 50px;
+        } */
+        /* 0% {
+        } */
+        50% {
+          transform: translateX(250px);
+          background-color: blue;
+        }
+
+        75% {
+            background-color: orange;
+        }
+
+        100% {
+          transform: translate(0px, 250px);
+          background-color: green;
+        }
+      }
+
+      .parent {
+        background-color: red;
+        height: 200px;
+        width: 200px;
+        animation-name: movein;
+        animation-duration: 3000ms;
+        animation-delay: 1s;
+        /* animation-iteration-count: 2; */
+        /* animation-iteration-count: infinite; */
+        /* animation-direction: reverse; */
+        animation-direction: normal;
+      }
+
+      .parent:hover {
+        /* .parent:active { */
+        /* transform: translateX(20px); */
+        /* transform: translateX(-20px); */
+        /* transform: translateY(20px); */
+        /* transform: translateY(-20px); */
+
+        /* transform: rotateX(45deg); */
+        /* transform: rotateY(180deg); */
+        /* transform: rotateZ(-45deg); */
+
+        /* transform-origin: 100% 100%; */
+        /* transform-origin: 0 100%; */
+        /* transform-origin: 50px 50px; */
+        transform: rotateZ(360000deg);
+        background-color: blue;
+        padding: 50px;
+
+        /* transform: scaleX(1.2); */
+        /* transform: scaleY(1.2); */
+        /* transform: scale(1.2); */
+        /* transform: scale(0.8); */
+
+        /* transform: skewX(10deg); */
+        /* transform: skewY(10deg); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <p>Hello Vijay</p>
+    </div>
+  </body>
+</html>
