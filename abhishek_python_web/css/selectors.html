@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Selectors</title>
+
+    <style>
+      /* Nested Selector */
+      /* .container {
+            background-color: orange;
+            height: 200px;
+        }
+
+        .container p {
+            color: green;
+        } 
+
+        .container p span {
+            color: red
+        } */
+
+      /* .container {
+        background-color: orange;
+        height: 200px;
+
+        & p {
+          color: green;
+
+          & span {
+            color: red;
+          }
+        }
+
+        & h1 {
+          color: yellow;
+        }
+      } */
+
+      /* pseudo Selectors */
+      /* .container {
+        background-color: red;
+
+        &:hover {
+          background-color: green;
+        }
+
+        &:active {
+          background-color: orange;
+        }
+      } */
+
+      ul li:not(:nth-child(1)) {
+        color: green;
+      }
+
+      .parent {
+        & p:first-child {
+          color: green;
+        }
+
+        & p:nth-child(2) {
+          color: blue;
+        }
+
+        & span:nth-child(3) {
+          color: blue;
+        }
+
+        & span:nth-of-type(1) {
+          background-color: green;
+        }
+
+        & p:last-child {
+          color: orange;
+        }
+      }
+
+      .container {
+        & :not(p) {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Hi i am <span>Vijay</span></p>
+      <span>Span</span>
+      <h1>red</h1>
+    </div>
+
+    <ul>
+      <li>Cow</li>
+      <li>Dog</li>
+      <li>Cat</li>
+      <li>Rat</li>
+    </ul>
+
+    <div class="parent">
+      <p>Rat</p>
+      <p>Dog</p>
+      <span>SPANNN</span>
+      <p>Cat</p>
+      <p>Bat</p>
+      <p>Mat</p>
+    </div>
+  </body>
+</html>
