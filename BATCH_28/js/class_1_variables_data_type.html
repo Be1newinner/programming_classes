@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .heading {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Variable can be created using const or let
+      // const = when variable aree constant or fixed
+      const PI = 3.14;
+      let name = "Vijay"; //string
+      // var name = "Vijay"
+      /*
+        Data types in javascript
+       1. Primitive
+            a. String
+            b. Number
+            c. Boolean
+            d. Null
+            e. undefined
+            f. BigInt
+            g. Symbol
+       2. Non Primitive
+      */
+
+      let age = "6"; // String
+      let age2 = 5;
+
+      console.log(age);
+      console.log(age2);
+
+      age2 = 99;
+      console.log(age2);
+      // Boolean
+      const isRun = false;
+      const isRun2 = true;
+      //
+      let car = null;
+
+      let bm; // undefined
+
+      // Big Int
+      // let age3 = 555555555555555555555555555555555555555555555
+      // eska output hoga '5.555555555555556e+44'
+      let age3 = 555555555555555555555555555555555555555555555n;
+      // ouput = 555555555555555555555555555555555555555555555n
+
+      //   alert("The value in age is " + age);
+      //   es6 / es2015
+
+
+      // Checking data type of variables
+      typeof age;
+
+      //   Printing data in DOM / DOCUMENT
+      document.write(
+        "<h1 class='heading'>The value in age is " + age + "</h1>"
+      );
+      document.write("<p class='para'>The value in age is " + age + "</p>");
+    </script>
+  </body>
+</html>

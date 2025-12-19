@@ -7,7 +7,9 @@ export default function CounterApp() {
   return (
     <div>
       <h1>Counter App</h1>
-      <p>Counter : {counter}</p>
+      <p>Counter : {counter}
+        
+      </p>
 
       <button
         onClick={() => {
