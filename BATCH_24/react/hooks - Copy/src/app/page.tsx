@@ -1,12 +1,13 @@
 "use client";
-import { CounterContext } from "@/service/CounterContext";
-import { useContext } from "react";
+import { useState } from "react";
 
 export default function CounterApp() {
-  const { counter, setCounter } = useContext(CounterContext);
+  const [counter, setCounter] = useState(0);
+
   return (
     <div>
       <h1>Counter App</h1>
+
       <p>Counter : {counter}</p>
 
       <button
